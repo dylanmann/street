@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ArticleViewController.h
 //  street
 //
 //  Created by Graham Mosley on 2/20/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ArticleViewController : UIViewController
 
 @end
-

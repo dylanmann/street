@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		BFC5A3931C78F77B00903BE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC5A3921C78F77B00903BE1 /* main.m */; };
 		BFC5A3961C78F77B00903BE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC5A3951C78F77B00903BE1 /* AppDelegate.m */; };
-		BFC5A3991C78F77B00903BE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC5A3981C78F77B00903BE1 /* ViewController.m */; };
 		BFC5A39C1C78F77B00903BE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC5A39A1C78F77B00903BE1 /* Main.storyboard */; };
 		BFC5A39E1C78F77B00903BE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC5A39D1C78F77B00903BE1 /* Assets.xcassets */; };
 		BFC5A3A11C78F77B00903BE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC5A39F1C78F77B00903BE1 /* LaunchScreen.storyboard */; };
 		BFC5A3AC1C78F77B00903BE1 /* streetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC5A3AB1C78F77B00903BE1 /* streetTests.m */; };
 		BFC5A3B71C78F77B00903BE1 /* streetUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC5A3B61C78F77B00903BE1 /* streetUITests.m */; };
+		BFC5A3C61C78F7AD00903BE1 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC5A3C51C78F7AD00903BE1 /* ArticleViewController.m */; };
+		BFC5A3C81C78F8E700903BE1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC5A3C71C78F8E700903BE1 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 		BFC5A3921C78F77B00903BE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFC5A3941C78F77B00903BE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFC5A3951C78F77B00903BE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BFC5A3971C78F77B00903BE1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BFC5A3981C78F77B00903BE1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BFC5A39B1C78F77B00903BE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFC5A39D1C78F77B00903BE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFC5A3A01C78F77B00903BE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,9 @@
 		BFC5A3B21C78F77B00903BE1 /* streetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = streetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC5A3B61C78F77B00903BE1 /* streetUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = streetUITests.m; sourceTree = "<group>"; };
 		BFC5A3B81C78F77B00903BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC5A3C41C78F7AD00903BE1 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		BFC5A3C51C78F7AD00903BE1 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		BFC5A3C71C78F8E700903BE1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC5A3C81C78F8E700903BE1 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		BFC5A3851C78F77B00903BE1 = {
 			isa = PBXGroup;
 			children = (
+				BFC5A3C71C78F8E700903BE1 /* WebKit.framework */,
 				BFC5A3901C78F77B00903BE1 /* street */,
 				BFC5A3AA1C78F77B00903BE1 /* streetTests */,
 				BFC5A3B51C78F77B00903BE1 /* streetUITests */,
@@ -103,8 +107,8 @@
 			children = (
 				BFC5A3941C78F77B00903BE1 /* AppDelegate.h */,
 				BFC5A3951C78F77B00903BE1 /* AppDelegate.m */,
-				BFC5A3971C78F77B00903BE1 /* ViewController.h */,
-				BFC5A3981C78F77B00903BE1 /* ViewController.m */,
+				BFC5A3C41C78F7AD00903BE1 /* ArticleViewController.h */,
+				BFC5A3C51C78F7AD00903BE1 /* ArticleViewController.m */,
 				BFC5A39A1C78F77B00903BE1 /* Main.storyboard */,
 				BFC5A39D1C78F77B00903BE1 /* Assets.xcassets */,
 				BFC5A39F1C78F77B00903BE1 /* LaunchScreen.storyboard */,
@@ -273,9 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC5A3991C78F77B00903BE1 /* ViewController.m in Sources */,
 				BFC5A3961C78F77B00903BE1 /* AppDelegate.m in Sources */,
 				BFC5A3931C78F77B00903BE1 /* main.m in Sources */,
+				BFC5A3C61C78F7AD00903BE1 /* ArticleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
