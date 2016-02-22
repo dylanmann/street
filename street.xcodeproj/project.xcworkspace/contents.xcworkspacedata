@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:street.xcodeproj">
+      location = "self:/Users/jchen/Documents/Penn/Spring 2016/CIS350/Local Project/Street/street.xcodeproj">
    </FileRef>
 </Workspace>
