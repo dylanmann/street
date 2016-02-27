@@ -11,11 +11,18 @@
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
 @end
 
+//TODO: try and refactor this so can specify which section
+//SECTIONS: Highbrow, Word on the Street, Ego, Music & TV, Vice and Virtue, Arts, Lowbrow, Letter, Features
+//Tech
+
 @implementation SectionViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;  
+    self.navigationController.navigationBar.translucent = YES;
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )

@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;  
+    self.navigationController.navigationBar.translucent = YES;
+    
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
