@@ -6,9 +6,9 @@
 //  Copyright 2011 Charcoal Design. All rights reserved.
 //
 
-#import "ExampleViewController.h"
+#import "SwipeViewController.h"
 
-@interface ExampleViewController () <SwipeViewDataSource, SwipeViewDelegate>
+@interface SwipeViewController () <SwipeViewDataSource, SwipeViewDelegate>
 
 @property (nonatomic) IBOutlet SwipeView* swipeView;
 @property (nonatomic, strong) NSMutableArray *items;
@@ -18,7 +18,7 @@
 @end
 
 
-@implementation ExampleViewController
+@implementation SwipeViewController
 
 - (void)awakeFromNib
 {
