@@ -10,7 +10,7 @@
 #import "SwipeView.h"
 
 
-@interface ExampleViewController : UIViewController
+@interface SwipeViewController : UIViewController
 
 //@property (nonatomic, weak) IBOutlet SwipeView *swipeView;
 
