@@ -34,48 +34,19 @@
             </objects>
             <point key="canvasLocation" x="697" y="752"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Data Source-->
         <scene sceneID="9dn-3g-hds">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IHS-Te-pvE" customClass="HomeViewController" sceneMemberID="viewController">
-                    <textView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="zOD-gt-3tQ">
+                <viewController storyboardIdentifier="ExampleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IHS-Te-pvE" customClass="ExampleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PT6-wd-u0Y" customClass="SwipeView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <string key="text">It's not hard to go downtown for a night.
-
-Leave the pregame at Harvest just after 11 p.m. Pay $5 for an Uber to the club. Pay $20 to get in the door. Pay $9 for a mediocre gin and tonic. Watch five handles of Belvedere cross the room with sparklers taped to them. They’re being delivered to the Scene. 
-
-The Scene is a ubiquitous concept at Penn that lacks a definition. It is identified by a series of traits that allow us to point to someone else––“Oh, he’s Sceney, but I’m certainly not,”––that keeps the Scene in a perpetual state of otherness, and thus, undefined. But what’s behind the Scene? What even is it? 
-
-Part of it is an attitude, a certain defiance of knowing that regardless of where you are or what you’re doing, you can enter a certain space and belong. There’s a camaraderie that comes with that demeanor and links members of the Scene together. However, what separates members of the Scene from any other group is their reluctance to admit their involvement in it. This reluctance stems from something simple: The Scene is easy to judge. But it’s much more useful to try and understand the Scene––and to understand, you must immerse yourself. There’s more to the Scene than knowing the Sceney. 
-
-As Michelle*, a New York prep schooler who’s now in a sorority, puts it, “I think if you have to define the Scene in a sentence, you just don’t know what it is.” 
-
-The Genesis of The Scene
-
-The Scene is a birthright, handed down from parents to children in the form of wealth and access to prestigious institutions. Michelle cites New York specifically as the origin point of the Scene. “It’s the epitome of New York City Upper East Side privilege.” 
-
-The Scene, though, can hail from anywhere. When I ask Donald* (a board member of a Sceney frat who hails from the Main Line) where the Scene emanates from, he cracks a grin and turns around in his seat at United By Blue. “If I could just pull down my map,” he says, pointing to an imaginary map on the wall behind him, “I would point to New York, LA and all of Europe. It’s Horace Mann, Harvard–Westlake and any school in the Northeast that has ‘St.’ in front of it.” 
-
-The international Scene searches for similarity amongst like kinds. Ahmed*, a wealthy international student, thinks he was initially invited into the Scene because he has an “international perspective. They see a kid from Egypt and think, 'This kid can probably hang, he’s probably very wealthy, he’s probably similarly interested,’ which, in my case, I hopelessly was not [similarly interested].” Ahmed went to one Castle event and a few Theos parties before he decided to stop rushing altogether.
-
-Usually, though, the Scene is well aware of its members before they even set foot on campus. Their parents are connected through networks established at schools like Penn or at the firms that recruit here, and access to these networks is passed down to their children. 
-
-Their children become acquainted with each other through participation in the same extracurricular activities. “You’ve got all these kids who went to the same Hebrew school or camp, or do a volunteer thing with their moms at the same soup kitchen,” Michelle explains. She mentions participation in service trips to Fiji as an example. 
-
-The Scene attends a specific kind of school, and attendees of these schools tend to know each other. As an alumna of Trinity School, a prominent New York private school, Katie Hartman (C '17), a former Street staffer, was exposed to the Scene back in high school. “I had a lot of interaction with kids from other prep schools in a way that I might not have had if I lived in the suburbs. My social circle in high school was not just people enrolled in my high school,” Katie notes.
-
-Once the children of the Scene are ready to matriculate to college, their parents use their established networks to make sure their children are connected with each other. Michelle tells me of cocktail parties organized by overzealous New York City mothers for Penn Early Decision admits to meet each other. Before Regular Decision kids know they’ve been admitted, the Scene has formed a friend group.
-
-Transition to Penn
-
-Once the track carries the Scene to Penn, the Scene takes advantage of established networks for connections and insider knowledge. “I think the way it translates once you get here is like, 'I knew.' I knew what Tabard was before I ever fucking stepped foot on this campus. I knew what Oz and Theos and Apes were. I didn’t get here and have a learning curve,” Michelle says. Knowledge that would take most students weeks to catch up on is taught to the Scene before they get to campus. 
-
-</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
+                        <connections>
+                            <outlet property="dataSource" destination="IHS-Te-pvE" id="3Vy-lU-GXR"/>
+                            <outlet property="delegate" destination="IHS-Te-pvE" id="xYx-GQ-ljZ"/>
+                        </connections>
+                    </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3AA-T3-Oi6">
                         <nil key="title"/>
@@ -85,16 +56,18 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <state key="normal" title="34th Street">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </state>
                         </button>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="revealButtonItem" destination="0Cm-Ub-RIS" id="N9v-HX-U4d"/>
+                        <outlet property="swipeView" destination="PT6-wd-u0Y" id="2Oo-xO-j7k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdI-Ys-Ht6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,15 +77,8 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
         <!--Section View Controller-->
         <scene sceneID="vqL-qd-ja9">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6n-3a-Zfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7k1-p9-rbO" customClass="SectionViewController" sceneMemberID="viewController">
-                    <textView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="6id-Nd-PyX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
                     <navigationItem key="navigationItem" id="KbI-f5-Z2j">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="Inx-Wl-XPE"/>
@@ -132,7 +98,6 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                         <outlet property="revealButtonItem" destination="Inx-Wl-XPE" id="2KA-Hv-hg1"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G6n-3a-Zfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1843" y="-726"/>
         </scene>
@@ -140,10 +105,6 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
         <scene sceneID="b85-mt-qZe">
             <objects>
                 <viewController storyboardIdentifier="AboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V7q-bn-KzI" customClass="AboutViewController" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy.jpg" id="ZbI-ij-tOK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </imageView>
                     <navigationItem key="navigationItem" id="cFb-HM-sC7">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="snw-0j-SM0"/>
@@ -313,11 +274,10 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
         </scene>
     </scenes>
     <resources>
-        <image name="dummy.jpg" width="760" height="445"/>
         <image name="reveal-icon.png" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TGm-jo-LJQ"/>
+        <segue reference="hPr-3i-ofo"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
 </document>
