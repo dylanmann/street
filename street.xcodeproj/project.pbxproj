@@ -25,6 +25,8 @@
 		87CFE7B41C792B63001D60A3 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
+		BFFBB7731C83AFBD006A3983 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7701C83AFBD006A3983 /* Article.m */; };
+		BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7721C83AFBD006A3983 /* ArticleData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,10 @@
 		87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon@2x.png"; path = "Street/reveal-icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		BFFBB76F1C83AFBD006A3983 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = street/Article.h; sourceTree = SOURCE_ROOT; };
+		BFFBB7701C83AFBD006A3983 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = street/Article.m; sourceTree = SOURCE_ROOT; };
+		BFFBB7711C83AFBD006A3983 /* ArticleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleData.h; path = street/ArticleData.h; sourceTree = SOURCE_ROOT; };
+		BFFBB7721C83AFBD006A3983 /* ArticleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleData.m; path = street/ArticleData.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */,
 				87CFE7A11C792B2F001D60A3 /* AppDelegate.h */,
 				87CFE7A21C792B2F001D60A3 /* AppDelegate.m */,
+				BFFBB76F1C83AFBD006A3983 /* Article.h */,
+				BFFBB7701C83AFBD006A3983 /* Article.m */,
+				BFFBB7711C83AFBD006A3983 /* ArticleData.h */,
+				BFFBB7721C83AFBD006A3983 /* ArticleData.m */,
 				87CFE7A41C792B3E001D60A3 /* HomeViewController.h */,
 				87CFE7A51C792B3E001D60A3 /* HomeViewController.m */,
 				87CFE7A61C792B3E001D60A3 /* MenuViewController.h */,
@@ -219,6 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */,
+				BFFBB7731C83AFBD006A3983 /* Article.m in Sources */,
 				879B91321C8392D6004DE9BB /* SwipeViewController.m in Sources */,
 				879B91351C8392E1004DE9BB /* SwipeView.m in Sources */,
 				874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */,
