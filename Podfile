@@ -3,15 +3,7 @@ platform :ios, '8.0'
 # Uncomment this line if you're using Swift
 # use_frameworks!
 
-target 'street' do
+target 'Street' do
   pod 'Ono'
-end
-
-target 'streetTests' do
-
-end
-
-target 'streetUITests' do
-
 end
 
