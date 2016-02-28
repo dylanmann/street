@@ -32,7 +32,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRK-ta-J0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="654"/>
+            <point key="canvasLocation" x="697" y="752"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="9dn-3g-hds">
@@ -42,7 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <mutableString key="text">It's not hard to go downtown for a night.
+                        <string key="text">It's not hard to go downtown for a night.
 
 Leave the pregame at Harvest just after 11 p.m. Pay $5 for an Uber to the club. Pay $20 to get in the door. Pay $9 for a mediocre gin and tonic. Watch five handles of Belvedere cross the room with sparklers taped to them. They’re being delivered to the Scene. 
 
@@ -72,7 +72,7 @@ Transition to Penn
 
 Once the track carries the Scene to Penn, the Scene takes advantage of established networks for connections and insider knowledge. “I think the way it translates once you get here is like, 'I knew.' I knew what Tabard was before I ever fucking stepped foot on this campus. I knew what Oz and Theos and Apes were. I didn’t get here and have a learning curve,” Michelle says. Knowledge that would take most students weeks to catch up on is taught to the Scene before they get to campus. 
 
-</mutableString>
+</string>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
@@ -83,13 +83,13 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                         <button key="titleView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DTS-vs-Nqg">
                             <rect key="frame" x="55" y="-21" width="216" height="86"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <state key="normal" title="34th Street">
                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </state>
                         </button>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -99,7 +99,7 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdI-Ys-Ht6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1771" y="407"/>
+            <point key="canvasLocation" x="1259" y="736"/>
         </scene>
         <!--Section View Controller-->
         <scene sceneID="vqL-qd-ja9">
@@ -109,8 +109,8 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <navigationItem key="navigationItem" id="KbI-f5-Z2j">
@@ -126,8 +126,8 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                             </connections>
                         </button>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="revealButtonItem" destination="Inx-Wl-XPE" id="2KA-Hv-hg1"/>
                     </connections>
@@ -135,6 +135,53 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6n-3a-Zfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1843" y="-726"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="b85-mt-qZe">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V7q-bn-KzI" customClass="AboutViewController" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy.jpg" id="ZbI-ij-tOK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </imageView>
+                    <navigationItem key="navigationItem" id="cFb-HM-sC7">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="snw-0j-SM0"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E4N-Eh-HSt">
+                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <state key="normal" title="34th Street"/>
+                            <connections>
+                                <segue destination="fWZ-H6-3Jr" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="TGm-jo-LJQ"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="revealButtonItem" destination="snw-0j-SM0" id="mTB-RA-J61"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KbS-7e-eW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="-873"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mdv-22-vxl">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationControllerAbout" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Mx-He-2F0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kml-mG-moc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="V7q-bn-KzI" kind="relationship" relationship="rootViewController" id="zIn-fb-7RX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ThI-eL-o66" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="-873"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="cdx-7p-qaC">
@@ -221,6 +268,7 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="EdB-Z5-vj9" id="c6e-C6-hu7"/>
+                                    <segue destination="6Mx-He-2F0" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="LvK-If-utS"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pSb-Xx-XgB" customClass="SWUITableViewCell">
@@ -240,12 +288,12 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5G-Bd-u7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528" y="-253"/>
+            <point key="canvasLocation" x="868" y="-61"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ha0-6q-JcM">
             <objects>
-                <navigationController storyboardIdentifier="NavigationControllerColor" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vjx-U5-Non" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationControllerSection" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vjx-U5-Non" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zt4-Qm-0EX">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -254,15 +302,22 @@ Once the track carries the Scene to Penn, the Scene takes advantage of establish
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svp-Pv-5y6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kSc-Ox-Wzi">
+                    <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <state key="normal" title="34th Street"/>
+                </button>
             </objects>
             <point key="canvasLocation" x="1400" y="-726"/>
         </scene>
     </scenes>
     <resources>
+        <image name="dummy.jpg" width="760" height="445"/>
         <image name="reveal-icon.png" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hPr-3i-ofo"/>
+        <segue reference="TGm-jo-LJQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
 </document>

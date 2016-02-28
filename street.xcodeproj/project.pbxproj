@@ -12,6 +12,7 @@
 		01FB866E169E2D8B00A0A1A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */; };
 		01FB86B0169E42B600A0A1A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB86AF169E42B600A0A1A8 /* MapKit.framework */; };
 		874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */; };
+		87712D971C8221390047B9BC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87712D961C8221390047B9BC /* AboutViewController.m */; };
 		87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A21C792B2F001D60A3 /* AppDelegate.m */; };
 		87CFE7AA1C792B3F001D60A3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A51C792B3E001D60A3 /* HomeViewController.m */; };
 		87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A71C792B3E001D60A3 /* MenuViewController.m */; };
@@ -31,8 +32,9 @@
 		01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		01FB86AF169E42B600A0A1A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4EE902381964A22200AA3B42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		874ABDB41C7AE1AE00B767D4 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Street/SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
 		874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Street/SWRevealViewController/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
+		87712D931C8220B30047B9BC /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = street/AboutViewController.h; sourceTree = SOURCE_ROOT; };
+		87712D961C8221390047B9BC /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = street/AboutViewController.m; sourceTree = SOURCE_ROOT; };
 		8789094E1C7ADD0A00977837 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Street/SWRevealViewController/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		87CFE7A01C792A89001D60A3 /* street.temp_caseinsensitive_rename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "street.temp_caseinsensitive_rename-Prefix.pch"; path = "Street/street.temp_caseinsensitive_rename-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		87CFE7A11C792B2F001D60A3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Street/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -70,7 +72,6 @@
 		01FB865A169E2D8B00A0A1A8 = {
 			isa = PBXGroup;
 			children = (
-				874ABDB41C7AE1AE00B767D4 /* SWRevealViewController.m */,
 				01FB866F169E2D8B00A0A1A8 /* street */,
 				01FB868C169E2DA500A0A1A8 /* SWRevealViewController */,
 				01FB8668169E2D8B00A0A1A8 /* Frameworks */,
@@ -107,6 +108,8 @@
 				87CFE7A51C792B3E001D60A3 /* HomeViewController.m */,
 				87CFE7A61C792B3E001D60A3 /* MenuViewController.h */,
 				87CFE7A71C792B3E001D60A3 /* MenuViewController.m */,
+				87712D931C8220B30047B9BC /* AboutViewController.h */,
+				87712D961C8221390047B9BC /* AboutViewController.m */,
 				87CFE7A81C792B3E001D60A3 /* SectionViewController.h */,
 				87CFE7A91C792B3E001D60A3 /* SectionViewController.m */,
 				01FB8670169E2D8B00A0A1A8 /* Supporting Files */,
@@ -209,6 +212,7 @@
 				874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */,
 				87CFE7AC1C792B3F001D60A3 /* SectionViewController.m in Sources */,
 				87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */,
+				87712D971C8221390047B9BC /* AboutViewController.m in Sources */,
 				87CFE7AA1C792B3F001D60A3 /* HomeViewController.m in Sources */,
 				87CFE7B01C792B57001D60A3 /* main.m in Sources */,
 				87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */,
