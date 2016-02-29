@@ -14,6 +14,7 @@
 @interface ArticlePageViewController () <UIPageViewControllerDataSource>
 
 @property (nonatomic) UIPageViewController *pageViewController;
+@property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
 
 @end
 
@@ -33,6 +34,15 @@
     [self.pageViewController didMoveToParentViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     NSLog(@"start page view load");
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.revealButtonItem setTarget: self.revealViewController];
+        [self.revealButtonItem setAction: @selector( revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

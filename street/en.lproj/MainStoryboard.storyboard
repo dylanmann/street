@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5LO-oQ-zpe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <deployment identifier="iOS"/>
         <development version="5100" identifier="xcode"/>
@@ -12,64 +12,37 @@
                 <viewController storyboardIdentifier="SWRevealViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <connections>
                         <segue destination="vRn-8p-pLv" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="tdg-ex-6WR"/>
-                        <segue destination="fWZ-H6-3Jr" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="bla-Jd-Bu2"/>
+                        <segue destination="5LO-oQ-zpe" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="AQA-Mr-4rh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="736"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="b5Y-SE-MeC">
-            <objects>
-                <navigationController storyboardIdentifier="NavigationControllerMap" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fWZ-H6-3Jr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xkz-rr-sTC">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SRK-ta-J0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="697" y="752"/>
+            <point key="canvasLocation" x="-831" y="1136"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="9dn-3g-hds">
             <objects>
                 <viewController storyboardIdentifier="ExampleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IHS-Te-pvE" customClass="ArticlePageViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PT6-wd-u0Y" customClass="SwipeView">
+                    <view key="view" contentMode="scaleToFill" id="Iey-Tm-pia" customClass="SwipeView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
-                            <outlet property="dataSource" destination="IHS-Te-pvE" id="3Vy-lU-GXR"/>
-                            <outlet property="delegate" destination="IHS-Te-pvE" id="xYx-GQ-ljZ"/>
+                            <outlet property="dataSource" destination="IHS-Te-pvE" id="OxD-uK-eqY"/>
+                            <outlet property="delegate" destination="IHS-Te-pvE" id="YT3-mv-f1L"/>
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="3AA-T3-Oi6">
-                        <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="0Cm-Ub-RIS"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DTS-vs-Nqg">
-                            <rect key="frame" x="55" y="-21" width="216" height="86"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                            <state key="normal" title="34th Street">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="revealButtonItem" destination="0Cm-Ub-RIS" id="N9v-HX-U4d"/>
-                        <outlet property="swipeView" destination="PT6-wd-u0Y" id="2Oo-xO-j7k"/>
+                        <outlet property="view" destination="Iey-Tm-pia" id="Fwd-kF-0BD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdI-Ys-Ht6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="1406"/>
+            <point key="canvasLocation" x="782" y="1458"/>
         </scene>
         <!--Slide Navigation Controller-->
         <scene sceneID="1bh-Sz-uG8">
@@ -85,7 +58,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVL-HG-meG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26" y="1406"/>
+            <point key="canvasLocation" x="-46" y="1458"/>
         </scene>
         <!--Article Page View Controller-->
         <scene sceneID="S0u-Sn-dH8">
@@ -96,43 +69,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RDd-vn-0eG"/>
+                    <navigationItem key="navigationItem" id="RDd-vn-0eG">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="fJB-fh-2iD">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QhK-72-qFh">
+                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <state key="normal" title="34th Street">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="revealButtonItem" destination="fJB-fh-2iD" id="a0R-Hf-sRK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mhu-yd-ONb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="1406"/>
-        </scene>
-        <!--Section View Controller-->
-        <scene sceneID="vqL-qd-ja9">
-            <objects>
-                <viewController storyboardIdentifier="SectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7k1-p9-rbO" customClass="SectionViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="KbI-f5-Z2j">
-                        <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="Inx-Wl-XPE"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fud-vQ-cI6">
-                            <rect key="frame" x="96" y="7" width="128" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                            <state key="normal" title="34th Street"/>
-                            <connections>
-                                <segue destination="fWZ-H6-3Jr" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="hPr-3i-ofo"/>
-                            </connections>
-                        </button>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="revealButtonItem" destination="Inx-Wl-XPE" id="2KA-Hv-hg1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G6n-3a-Zfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1843" y="-726"/>
+            <point key="canvasLocation" x="387" y="1458"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="b85-mt-qZe">
             <objects>
                 <viewController storyboardIdentifier="AboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V7q-bn-KzI" customClass="AboutViewController" sceneMemberID="viewController">
+                    <textView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="qHM-hJ-7Sc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <mutableString key="text">What is Street?
+
+34th Street Magazine is the arts and culture magazine of the Daily Pennsylvanian. 
+
+Entirely student run, we serve a thought–provoking mixture of gossip, food reviews, movie recs, student life features, humor and in–depth features. Neither all serious or all fun, we’re a place for undergrad students to learn, grow and create. Sometimes we win awards. Street is snarky, inclusive and embraces the ups and downs of the Penn experience. We are proud to live, study and play in Philadelphia and explore it wholeheartedly. Street produces a weekly print issue (out on Thursdays) and publishes daily right here.
+
+Follow us on Twitter, instagram and Facebook for even more.
+
+What we’re known for
+
+-inventing the term SABS (see and be seen)
+
+-airing a semester’s worth of angst with SHOUTOUTS
+
+-helping you eat the best of Philly with Dining Guides
+
+-Sharing the hottest gossip in THE ROUND UP
+
+-Sending off the senior class in style with Senior Superlatives
+
+Email sternlicht@34st.com to get in with Street. </mutableString>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                     <navigationItem key="navigationItem" id="cFb-HM-sC7">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="snw-0j-SM0"/>
@@ -142,7 +132,7 @@
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <state key="normal" title="34th Street"/>
                             <connections>
-                                <segue destination="fWZ-H6-3Jr" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="TGm-jo-LJQ"/>
+                                <segue destination="5LO-oQ-zpe" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="jT4-8C-W3N"/>
                             </connections>
                         </button>
                     </navigationItem>
@@ -154,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbS-7e-eW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="-873"/>
+            <point key="canvasLocation" x="903" y="613"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mdv-22-vxl">
@@ -170,7 +160,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThI-eL-o66" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="-873"/>
+            <point key="canvasLocation" x="441" y="613"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="cdx-7p-qaC">
@@ -197,50 +187,11 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="tAK-e5-jMH" id="B8L-qf-YtT"/>
-                                    <segue destination="fWZ-H6-3Jr" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="OE9-CE-qWx"/>
+                                    <segue destination="5LO-oQ-zpe" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="CPr-Ct-HWf"/>
                                 </connections>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sections" textLabel="9IU-ld-WpS" style="IBUITableViewCellStyleDefault" id="uo6-Tw-dml" customClass="SWUITableViewCell">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uo6-Tw-dml" id="aRi-5X-9KM">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Sections" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9IU-ld-WpS">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="label" destination="9IU-ld-WpS" id="ykt-7M-GBL"/>
-                                    <segue destination="vjx-U5-Non" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="8Cx-KQ-7u8"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="popular" id="FJo-U2-acl" customClass="SWUITableViewCell">
-                                <rect key="frame" x="0.0" y="110" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJo-U2-acl" id="PUl-b6-5nF">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xhg-rB-ggg">
-                                            <rect key="frame" x="16" y="0.0" width="304" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="about" textLabel="EdB-Z5-vj9" style="IBUITableViewCellStyleDefault" id="ICq-x9-agr" customClass="SWUITableViewCell">
-                                <rect key="frame" x="0.0" y="154" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ICq-x9-agr" id="8Xz-UG-y4L">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -260,14 +211,6 @@
                                     <segue destination="6Mx-He-2F0" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="LvK-If-utS"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pSb-Xx-XgB" customClass="SWUITableViewCell">
-                                <rect key="frame" x="0.0" y="198" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pSb-Xx-XgB" id="zFL-uH-eJm">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="vRn-8p-pLv" id="wBz-TM-xaS"/>
@@ -277,35 +220,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5G-Bd-u7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="-25"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ha0-6q-JcM">
-            <objects>
-                <navigationController storyboardIdentifier="NavigationControllerSection" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vjx-U5-Non" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zt4-Qm-0EX">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="7k1-p9-rbO" kind="relationship" relationship="rootViewController" id="iQA-45-dxz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="svp-Pv-5y6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kSc-Ox-Wzi">
-                    <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                    <state key="normal" title="34th Street"/>
-                </button>
-            </objects>
-            <point key="canvasLocation" x="1400" y="-726"/>
+            <point key="canvasLocation" x="-3" y="607"/>
         </scene>
     </scenes>
     <resources>
         <image name="reveal-icon.png" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TGm-jo-LJQ"/>
+        <segue reference="jT4-8C-W3N"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
 </document>

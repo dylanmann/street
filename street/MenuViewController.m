@@ -19,7 +19,7 @@ NSArray *menuItems;
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    menuItems = @[@"home", @"sections", @"popular", @"about"];
+    menuItems = @[@"home", @"about"];
     
 }
 
