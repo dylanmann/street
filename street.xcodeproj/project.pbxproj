@@ -10,7 +10,6 @@
 		01FB866A169E2D8B00A0A1A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB8669169E2D8B00A0A1A8 /* UIKit.framework */; };
 		01FB866C169E2D8B00A0A1A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB866B169E2D8B00A0A1A8 /* Foundation.framework */; };
 		01FB866E169E2D8B00A0A1A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */; };
-		01FB86B0169E42B600A0A1A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB86AF169E42B600A0A1A8 /* MapKit.framework */; };
 		874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */; };
 		87712D971C8221390047B9BC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87712D961C8221390047B9BC /* AboutViewController.m */; };
 		879B91321C8392D6004DE9BB /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879B91311C8392D6004DE9BB /* SwipeViewController.m */; };
@@ -25,8 +24,12 @@
 		87CFE7B41C792B63001D60A3 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
+		BFAA027A1C83C8DF00C4D8E2 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA02791C83C8DF00C4D8E2 /* ArticleViewController.m */; };
 		BFFBB7731C83AFBD006A3983 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7701C83AFBD006A3983 /* Article.m */; };
 		BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7721C83AFBD006A3983 /* ArticleData.m */; };
+		BFFBB7761C83B459006A3983 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFBB7751C83B459006A3983 /* WebKit.framework */; };
+		BFFBB77E1C83C7B1006A3983 /* ArticlePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB77D1C83C7B1006A3983 /* ArticlePageViewController.m */; };
+		CDB0B1CEC24F6F776C6F6047 /* libPods-Street.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE34E5AB4B9F85EFD0B417A1 /* libPods-Street.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +37,9 @@
 		01FB8669169E2D8B00A0A1A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01FB866B169E2D8B00A0A1A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		01FB86AF169E42B600A0A1A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4EE902381964A22200AA3B42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		5CF087F45ECE0EBD1FAB5685 /* Pods-Street.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.debug.xcconfig"; sourceTree = "<group>"; };
+		676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.release.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.release.xcconfig"; sourceTree = "<group>"; };
 		874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Street/SWRevealViewController/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
 		87712D931C8220B30047B9BC /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = street/AboutViewController.h; sourceTree = SOURCE_ROOT; };
 		87712D961C8221390047B9BC /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = street/AboutViewController.m; sourceTree = SOURCE_ROOT; };
@@ -60,10 +64,16 @@
 		87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon@2x.png"; path = "Street/reveal-icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		BFAA02781C83C8DF00C4D8E2 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = SOURCE_ROOT; };
+		BFAA02791C83C8DF00C4D8E2 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = SOURCE_ROOT; };
 		BFFBB76F1C83AFBD006A3983 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = street/Article.h; sourceTree = SOURCE_ROOT; };
 		BFFBB7701C83AFBD006A3983 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = street/Article.m; sourceTree = SOURCE_ROOT; };
 		BFFBB7711C83AFBD006A3983 /* ArticleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleData.h; path = street/ArticleData.h; sourceTree = SOURCE_ROOT; };
 		BFFBB7721C83AFBD006A3983 /* ArticleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleData.m; path = street/ArticleData.m; sourceTree = SOURCE_ROOT; };
+		BFFBB7751C83B459006A3983 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		BFFBB77C1C83C7B1006A3983 /* ArticlePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlePageViewController.h; sourceTree = SOURCE_ROOT; };
+		BFFBB77D1C83C7B1006A3983 /* ArticlePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlePageViewController.m; sourceTree = SOURCE_ROOT; };
+		EE34E5AB4B9F85EFD0B417A1 /* libPods-Street.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Street.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +81,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FB86B0169E42B600A0A1A8 /* MapKit.framework in Frameworks */,
+				BFFBB7761C83B459006A3983 /* WebKit.framework in Frameworks */,
 				01FB866A169E2D8B00A0A1A8 /* UIKit.framework in Frameworks */,
 				01FB866C169E2D8B00A0A1A8 /* Foundation.framework in Frameworks */,
 				01FB866E169E2D8B00A0A1A8 /* CoreGraphics.framework in Frameworks */,
+				CDB0B1CEC24F6F776C6F6047 /* libPods-Street.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +99,7 @@
 				01FB868C169E2DA500A0A1A8 /* SWRevealViewController */,
 				01FB8668169E2D8B00A0A1A8 /* Frameworks */,
 				01FB8666169E2D8B00A0A1A8 /* Products */,
+				1B8309B234AC567BC200EBC9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,10 +114,11 @@
 		01FB8668169E2D8B00A0A1A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01FB86AF169E42B600A0A1A8 /* MapKit.framework */,
+				BFFBB7751C83B459006A3983 /* WebKit.framework */,
 				01FB8669169E2D8B00A0A1A8 /* UIKit.framework */,
 				01FB866B169E2D8B00A0A1A8 /* Foundation.framework */,
 				01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */,
+				EE34E5AB4B9F85EFD0B417A1 /* libPods-Street.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,25 +126,10 @@
 		01FB866F169E2D8B00A0A1A8 /* street */ = {
 			isa = PBXGroup;
 			children = (
-				87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */,
-				87CFE7A11C792B2F001D60A3 /* AppDelegate.h */,
-				87CFE7A21C792B2F001D60A3 /* AppDelegate.m */,
-				BFFBB76F1C83AFBD006A3983 /* Article.h */,
-				BFFBB7701C83AFBD006A3983 /* Article.m */,
-				BFFBB7711C83AFBD006A3983 /* ArticleData.h */,
-				BFFBB7721C83AFBD006A3983 /* ArticleData.m */,
-				87CFE7A41C792B3E001D60A3 /* HomeViewController.h */,
-				87CFE7A51C792B3E001D60A3 /* HomeViewController.m */,
-				87CFE7A61C792B3E001D60A3 /* MenuViewController.h */,
-				87CFE7A71C792B3E001D60A3 /* MenuViewController.m */,
-				87712D931C8220B30047B9BC /* AboutViewController.h */,
-				87712D961C8221390047B9BC /* AboutViewController.m */,
-				87CFE7A81C792B3E001D60A3 /* SectionViewController.h */,
-				87CFE7A91C792B3E001D60A3 /* SectionViewController.m */,
-				879B91301C8392D0004DE9BB /* SwipeViewController.h */,
-				879B91311C8392D6004DE9BB /* SwipeViewController.m */,
-				879B91331C8392DC004DE9BB /* SwipeView.h */,
-				879B91341C8392E1004DE9BB /* SwipeView.m */,
+				BFFBB7771C83B590006A3983 /* Application */,
+				BFFBB77A1C83B5BF006A3983 /* Controller */,
+				BFFBB7791C83B5B5006A3983 /* View */,
+				BFFBB7781C83B5A4006A3983 /* Model */,
 				01FB8670169E2D8B00A0A1A8 /* Supporting Files */,
 			);
 			name = street;
@@ -163,6 +161,66 @@
 			path = ../SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		1B8309B234AC567BC200EBC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CF087F45ECE0EBD1FAB5685 /* Pods-Street.debug.xcconfig */,
+				676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFFBB7771C83B590006A3983 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				87CFE7A11C792B2F001D60A3 /* AppDelegate.h */,
+				87CFE7A21C792B2F001D60A3 /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		BFFBB7781C83B5A4006A3983 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBB76F1C83AFBD006A3983 /* Article.h */,
+				BFFBB7701C83AFBD006A3983 /* Article.m */,
+				BFFBB7711C83AFBD006A3983 /* ArticleData.h */,
+				BFFBB7721C83AFBD006A3983 /* ArticleData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BFFBB7791C83B5B5006A3983 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */,
+				879B91331C8392DC004DE9BB /* SwipeView.h */,
+				879B91341C8392E1004DE9BB /* SwipeView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BFFBB77A1C83B5BF006A3983 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				87CFE7A41C792B3E001D60A3 /* HomeViewController.h */,
+				87CFE7A51C792B3E001D60A3 /* HomeViewController.m */,
+				87CFE7A61C792B3E001D60A3 /* MenuViewController.h */,
+				87CFE7A71C792B3E001D60A3 /* MenuViewController.m */,
+				87712D931C8220B30047B9BC /* AboutViewController.h */,
+				87712D961C8221390047B9BC /* AboutViewController.m */,
+				87CFE7A81C792B3E001D60A3 /* SectionViewController.h */,
+				87CFE7A91C792B3E001D60A3 /* SectionViewController.m */,
+				879B91301C8392D0004DE9BB /* SwipeViewController.h */,
+				879B91311C8392D6004DE9BB /* SwipeViewController.m */,
+				BFFBB77C1C83C7B1006A3983 /* ArticlePageViewController.h */,
+				BFFBB77D1C83C7B1006A3983 /* ArticlePageViewController.m */,
+				BFAA02781C83C8DF00C4D8E2 /* ArticleViewController.h */,
+				BFAA02791C83C8DF00C4D8E2 /* ArticleViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01FB8689169E2D8B00A0A1A8 /* Build configuration list for PBXNativeTarget "Street" */;
 			buildPhases = (
+				E4C862367F259C28949551FF /* Check Pods Manifest.lock */,
 				01FB8661169E2D8B00A0A1A8 /* Sources */,
 				01FB8662169E2D8B00A0A1A8 /* Frameworks */,
 				01FB8663169E2D8B00A0A1A8 /* Resources */,
+				464A0E316A2B41107D9FBA05 /* Embed Pods Frameworks */,
+				9FC54BA9311D5519F7EDF1A6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,8 +250,20 @@
 		01FB865C169E2D8B00A0A1A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					PageViewController,
+				);
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CoDeveloper;
+				TargetAttributes = {
+					01FB8664169E2D8B00A0A1A8 = {
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 01FB865F169E2D8B00A0A1A8 /* Build configuration list for PBXProject "street" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -224,6 +297,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		464A0E316A2B41107D9FBA05 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Street/Pods-Street-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC54BA9311D5519F7EDF1A6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Street/Pods-Street-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4C862367F259C28949551FF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01FB8661169E2D8B00A0A1A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -233,12 +354,14 @@
 				BFFBB7731C83AFBD006A3983 /* Article.m in Sources */,
 				879B91321C8392D6004DE9BB /* SwipeViewController.m in Sources */,
 				879B91351C8392E1004DE9BB /* SwipeView.m in Sources */,
+				BFAA027A1C83C8DF00C4D8E2 /* ArticleViewController.m in Sources */,
 				874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */,
 				87CFE7AC1C792B3F001D60A3 /* SectionViewController.m in Sources */,
 				87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */,
 				87712D971C8221390047B9BC /* AboutViewController.m in Sources */,
 				87CFE7AA1C792B3F001D60A3 /* HomeViewController.m in Sources */,
 				87CFE7B01C792B57001D60A3 /* main.m in Sources */,
+				BFFBB77E1C83C7B1006A3983 /* ArticlePageViewController.m in Sources */,
 				87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,10 +442,12 @@
 		};
 		01FB868A169E2D8B00A0A1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CF087F45ECE0EBD1FAB5685 /* Pods-Street.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Street/street.temp_caseinsensitive_rename-Prefix.pch";
 				INFOPLIST_FILE = "Street/street.temp_caseinsensitive_rename-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Street;
 				PRODUCT_NAME = street.temp_caseinsensitive_rename;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,10 +457,12 @@
 		};
 		01FB868B169E2D8B00A0A1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Street/street.temp_caseinsensitive_rename-Prefix.pch";
 				INFOPLIST_FILE = "Street/street.temp_caseinsensitive_rename-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Street;
 				PRODUCT_NAME = street.temp_caseinsensitive_rename;
 				TARGETED_DEVICE_FAMILY = "1,2";

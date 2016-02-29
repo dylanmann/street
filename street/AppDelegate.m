@@ -5,12 +5,15 @@
 //
 
 #import "AppDelegate.h"
+#import "MenuViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
+                                                             bundle: nil];
+    
     return YES;
 }
 							
