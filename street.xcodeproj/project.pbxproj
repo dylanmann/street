@@ -22,11 +22,11 @@
 		87CFE7B41C792B63001D60A3 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
-		BFAA027A1C83C8DF00C4D8E2 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA02791C83C8DF00C4D8E2 /* ArticleViewController.m */; };
+		BFEDD46A1C9B194700497922 /* ArticlePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEDD4671C9B194700497922 /* ArticlePageViewController.m */; };
+		BFEDD46B1C9B194700497922 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEDD4691C9B194700497922 /* ArticleViewController.m */; };
 		BFFBB7731C83AFBD006A3983 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7701C83AFBD006A3983 /* Article.m */; };
 		BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7721C83AFBD006A3983 /* ArticleData.m */; };
 		BFFBB7761C83B459006A3983 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFBB7751C83B459006A3983 /* WebKit.framework */; };
-		BFFBB77E1C83C7B1006A3983 /* ArticlePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB77D1C83C7B1006A3983 /* ArticlePageViewController.m */; };
 		CDB0B1CEC24F6F776C6F6047 /* libPods-Street.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE34E5AB4B9F85EFD0B417A1 /* libPods-Street.a */; };
 /* End PBXBuildFile section */
 
@@ -58,15 +58,15 @@
 		87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon@2x.png"; path = "Street/reveal-icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
-		BFAA02781C83C8DF00C4D8E2 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = SOURCE_ROOT; };
-		BFAA02791C83C8DF00C4D8E2 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = SOURCE_ROOT; };
+		BFEDD4661C9B194700497922 /* ArticlePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticlePageViewController.h; path = street/ArticlePageViewController.h; sourceTree = SOURCE_ROOT; };
+		BFEDD4671C9B194700497922 /* ArticlePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticlePageViewController.m; path = street/ArticlePageViewController.m; sourceTree = SOURCE_ROOT; };
+		BFEDD4681C9B194700497922 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleViewController.h; path = street/ArticleViewController.h; sourceTree = SOURCE_ROOT; };
+		BFEDD4691C9B194700497922 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleViewController.m; path = street/ArticleViewController.m; sourceTree = SOURCE_ROOT; };
 		BFFBB76F1C83AFBD006A3983 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = street/Article.h; sourceTree = SOURCE_ROOT; };
 		BFFBB7701C83AFBD006A3983 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = street/Article.m; sourceTree = SOURCE_ROOT; };
 		BFFBB7711C83AFBD006A3983 /* ArticleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleData.h; path = street/ArticleData.h; sourceTree = SOURCE_ROOT; };
 		BFFBB7721C83AFBD006A3983 /* ArticleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleData.m; path = street/ArticleData.m; sourceTree = SOURCE_ROOT; };
 		BFFBB7751C83B459006A3983 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		BFFBB77C1C83C7B1006A3983 /* ArticlePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlePageViewController.h; sourceTree = SOURCE_ROOT; };
-		BFFBB77D1C83C7B1006A3983 /* ArticlePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlePageViewController.m; sourceTree = SOURCE_ROOT; };
 		EE34E5AB4B9F85EFD0B417A1 /* libPods-Street.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Street.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,16 +197,16 @@
 		BFFBB77A1C83B5BF006A3983 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BFEDD4661C9B194700497922 /* ArticlePageViewController.h */,
+				BFEDD4671C9B194700497922 /* ArticlePageViewController.m */,
+				BFEDD4681C9B194700497922 /* ArticleViewController.h */,
+				BFEDD4691C9B194700497922 /* ArticleViewController.m */,
 				87CFE7A61C792B3E001D60A3 /* MenuViewController.h */,
 				87CFE7A71C792B3E001D60A3 /* MenuViewController.m */,
 				87712D931C8220B30047B9BC /* AboutViewController.h */,
 				87712D961C8221390047B9BC /* AboutViewController.m */,
 				879B91301C8392D0004DE9BB /* SwipeViewController.h */,
 				879B91311C8392D6004DE9BB /* SwipeViewController.m */,
-				BFFBB77C1C83C7B1006A3983 /* ArticlePageViewController.h */,
-				BFFBB77D1C83C7B1006A3983 /* ArticlePageViewController.m */,
-				BFAA02781C83C8DF00C4D8E2 /* ArticleViewController.h */,
-				BFAA02791C83C8DF00C4D8E2 /* ArticleViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -340,16 +340,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEDD46A1C9B194700497922 /* ArticlePageViewController.m in Sources */,
 				BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */,
 				BFFBB7731C83AFBD006A3983 /* Article.m in Sources */,
+				BFEDD46B1C9B194700497922 /* ArticleViewController.m in Sources */,
 				879B91321C8392D6004DE9BB /* SwipeViewController.m in Sources */,
 				879B91351C8392E1004DE9BB /* SwipeView.m in Sources */,
-				BFAA027A1C83C8DF00C4D8E2 /* ArticleViewController.m in Sources */,
 				874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */,
 				87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */,
 				87712D971C8221390047B9BC /* AboutViewController.m in Sources */,
 				87CFE7B01C792B57001D60A3 /* main.m in Sources */,
-				BFFBB77E1C83C7B1006A3983 /* ArticlePageViewController.m in Sources */,
 				87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
