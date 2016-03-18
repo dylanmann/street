@@ -11,6 +11,8 @@
 
 @interface ArticleData : NSObject
 
++ (ArticleData*)sharedInstance;
+
 @end
 
 
