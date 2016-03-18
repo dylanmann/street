@@ -35,6 +35,7 @@
     [self.view addSubview:self.pageViewController.view];
     NSLog(@"start page view load");
     
+    //for menu control
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -53,22 +54,24 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     
     ArticleViewController *avc = (ArticleViewController *)viewController;
-    if (avc.index == 1) {
-        return [self viewControllerAtIndex:0];
-    } else {
+
+    if ((avc.index == 0) || (avc.index == NSNotFound)) {
         return nil;
     }
     
+    return [self viewControllerAtIndex:avc.index - 1];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
     ArticleViewController *avc = (ArticleViewController *)viewController;
-    if (avc.index == 1) {
+    
+    //Assumes 11 sections
+    if ((avc.index == 11) || (avc.index == NSNotFound)) {
         return nil;
-    } else {
-        return [self viewControllerAtIndex:1];
     }
+
+    return [self viewControllerAtIndex:avc.index + 1];
 }
 
 - (ArticleViewController *)viewControllerAtIndex:(int) index {
@@ -96,9 +99,12 @@
     if (index == 0) {
         label.text = @"ESSENTIALS \n The Roundup \n 2.22.16";
         articleURL = [NSURL URLWithString:@"http://www.34st.com/article/2016/02/round-up-02-25-16"];
-    } else {
+    } else if (index == 1){
         label.text = @"Quiz: Which Member of the Beatles are You?";
         articleURL = [NSURL URLWithString:@"http://www.34st.com/article/2016/02/paul-is-alive"];
+    } else {
+        label.text = @"DOES THIS WORK?";
+        articleURL = [NSURL URLWithString:@"http://www.34st.com/article/2016/03/texts-from-last-night-spring-break-edition"];
     }
     Article *a = [[Article alloc] initWithURL:articleURL];
     

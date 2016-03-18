@@ -26,7 +26,6 @@
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
-        printf("here");
         [self.revealButtonItem setTarget: revealViewController];
         [self.revealButtonItem setAction: @selector( revealToggle: )];
         [self.navigationController.navigationBar addGestureRecognizer:revealViewController.panGestureRecognizer];
