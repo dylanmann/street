@@ -21,6 +21,7 @@
 		87CFE7B41C792B63001D60A3 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
+		BFC0143E1C9C7088004CC863 /* street_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC0143D1C9C7088004CC863 /* street_Tests.m */; };
 		BFEDD46A1C9B194700497922 /* ArticlePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEDD4671C9B194700497922 /* ArticlePageViewController.m */; };
 		BFEDD46B1C9B194700497922 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEDD4691C9B194700497922 /* ArticleViewController.m */; };
 		BFFBB7731C83AFBD006A3983 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7701C83AFBD006A3983 /* Article.m */; };
@@ -28,6 +29,16 @@
 		BFFBB7761C83B459006A3983 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFBB7751C83B459006A3983 /* WebKit.framework */; };
 		CDB0B1CEC24F6F776C6F6047 /* libPods-Street.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE34E5AB4B9F85EFD0B417A1 /* libPods-Street.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFC014401C9C7088004CC863 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01FB865C169E2D8B00A0A1A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01FB8664169E2D8B00A0A1A8;
+			remoteInfo = Street;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01FB8665169E2D8B00A0A1A8 /* street.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = street.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +66,9 @@
 		87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon@2x.png"; path = "Street/reveal-icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		BFC0143B1C9C7087004CC863 /* street.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = street.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC0143D1C9C7088004CC863 /* street_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = street_Tests.m; sourceTree = "<group>"; };
+		BFC0143F1C9C7088004CC863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFEDD4661C9B194700497922 /* ArticlePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticlePageViewController.h; path = street/ArticlePageViewController.h; sourceTree = SOURCE_ROOT; };
 		BFEDD4671C9B194700497922 /* ArticlePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticlePageViewController.m; path = street/ArticlePageViewController.m; sourceTree = SOURCE_ROOT; };
 		BFEDD4681C9B194700497922 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleViewController.h; path = street/ArticleViewController.h; sourceTree = SOURCE_ROOT; };
@@ -80,6 +94,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFC014381C9C7087004CC863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +109,7 @@
 			children = (
 				01FB866F169E2D8B00A0A1A8 /* street */,
 				01FB868C169E2DA500A0A1A8 /* SWRevealViewController */,
+				BFC0143C1C9C7088004CC863 /* street.Tests */,
 				01FB8668169E2D8B00A0A1A8 /* Frameworks */,
 				01FB8666169E2D8B00A0A1A8 /* Products */,
 				1B8309B234AC567BC200EBC9 /* Pods */,
@@ -98,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				01FB8665169E2D8B00A0A1A8 /* street.temp_caseinsensitive_rename.app */,
+				BFC0143B1C9C7087004CC863 /* street.Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +182,15 @@
 				676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFC0143C1C9C7088004CC863 /* street.Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BFC0143D1C9C7088004CC863 /* street_Tests.m */,
+				BFC0143F1C9C7088004CC863 /* Info.plist */,
+			);
+			path = street.Tests;
 			sourceTree = "<group>";
 		};
 		BFFBB7771C83B590006A3983 /* Application */ = {
@@ -229,6 +261,24 @@
 			productReference = 01FB8665169E2D8B00A0A1A8 /* street.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BFC0143A1C9C7087004CC863 /* street.Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFC014441C9C7088004CC863 /* Build configuration list for PBXNativeTarget "street.Tests" */;
+			buildPhases = (
+				BFC014371C9C7087004CC863 /* Sources */,
+				BFC014381C9C7087004CC863 /* Frameworks */,
+				BFC014391C9C7087004CC863 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFC014411C9C7088004CC863 /* PBXTargetDependency */,
+			);
+			name = street.Tests;
+			productName = street.Tests;
+			productReference = BFC0143B1C9C7087004CC863 /* street.Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -248,6 +298,11 @@
 							};
 						};
 					};
+					BFC0143A1C9C7087004CC863 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 69E3GT48PB;
+						TestTargetID = 01FB8664169E2D8B00A0A1A8;
+					};
 				};
 			};
 			buildConfigurationList = 01FB865F169E2D8B00A0A1A8 /* Build configuration list for PBXProject "street" */;
@@ -263,6 +318,7 @@
 			projectRoot = "";
 			targets = (
 				01FB8664169E2D8B00A0A1A8 /* Street */,
+				BFC0143A1C9C7087004CC863 /* street.Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +333,13 @@
 				87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */,
 				87CFE7B41C792B63001D60A3 /* reveal-icon@2x.png in Resources */,
 				87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC014391C9C7087004CC863 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +411,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFC014371C9C7087004CC863 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC0143E1C9C7088004CC863 /* street_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFC014411C9C7088004CC863 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01FB8664169E2D8B00A0A1A8 /* Street */;
+			targetProxy = BFC014401C9C7088004CC863 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4EE902371964A22200AA3B42 /* InfoPlist.strings */ = {
@@ -452,6 +531,68 @@
 			};
 			name = Release;
 		};
+		BFC014421C9C7088004CC863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = street.Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "cis350.street-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/street.temp_caseinsensitive_rename.app/street.temp_caseinsensitive_rename";
+			};
+			name = Debug;
+		};
+		BFC014431C9C7088004CC863 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = street.Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "cis350.street-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/street.temp_caseinsensitive_rename.app/street.temp_caseinsensitive_rename";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,6 +613,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		BFC014441C9C7088004CC863 /* Build configuration list for PBXNativeTarget "street.Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC014421C9C7088004CC863 /* Debug */,
+				BFC014431C9C7088004CC863 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
