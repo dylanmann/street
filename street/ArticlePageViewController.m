@@ -22,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.translucent = NO;
 
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
@@ -103,7 +105,7 @@
         label.text = @"Quiz: Which Member of the Beatles are You?";
         articleURL = [NSURL URLWithString:@"http://www.34st.com/article/2016/02/paul-is-alive"];
     } else {
-        label.text = @"DOES THIS WORK?";
+        label.text = @"is this even changing/";
         articleURL = [NSURL URLWithString:@"http://www.34st.com/article/2016/03/texts-from-last-night-spring-break-edition"];
     }
     Article *a = [[Article alloc] initWithURL:articleURL];
@@ -113,13 +115,18 @@
     [webview loadHTMLString:a.articleHTML baseURL:NULL];
     bottom += webview.bounds.size.height;
     
+   /*
     UIScrollView *sv = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [sv addSubview:imageview];
     [sv addSubview:label];
     [sv addSubview:webview];
-    [sv setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
+    [sv setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];*/
     
-    [avc.view addSubview:sv];
+     UIView *small = [[UIView alloc] initWithFrame:self.view.bounds];
+     [small addSubview:imageview];
+     [small addSubview:label];
+    
+     [avc.view addSubview:small];
     
     return avc;
 }

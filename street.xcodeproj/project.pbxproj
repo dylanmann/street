@@ -12,7 +12,6 @@
 		01FB866E169E2D8B00A0A1A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */; };
 		874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */; };
 		87712D971C8221390047B9BC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87712D961C8221390047B9BC /* AboutViewController.m */; };
-		879B91321C8392D6004DE9BB /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879B91311C8392D6004DE9BB /* SwipeViewController.m */; };
 		879B91351C8392E1004DE9BB /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 879B91341C8392E1004DE9BB /* SwipeView.m */; };
 		879B91371C8399EA004DE9BB /* roundup.png in Resources */ = {isa = PBXBuildFile; fileRef = 879B91361C8399EA004DE9BB /* roundup.png */; };
 		87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A21C792B2F001D60A3 /* AppDelegate.m */; };
@@ -53,8 +52,6 @@
 		87712D931C8220B30047B9BC /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = street/AboutViewController.h; sourceTree = SOURCE_ROOT; };
 		87712D961C8221390047B9BC /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = street/AboutViewController.m; sourceTree = SOURCE_ROOT; };
 		8789094E1C7ADD0A00977837 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Street/SWRevealViewController/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
-		879B91301C8392D0004DE9BB /* SwipeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwipeViewController.h; path = street/SwipeViewController.h; sourceTree = SOURCE_ROOT; };
-		879B91311C8392D6004DE9BB /* SwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwipeViewController.m; path = street/SwipeViewController.m; sourceTree = SOURCE_ROOT; };
 		879B91331C8392DC004DE9BB /* SwipeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwipeView.h; path = street/SwipeView.h; sourceTree = SOURCE_ROOT; };
 		879B91341C8392E1004DE9BB /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwipeView.m; path = street/SwipeView.m; sourceTree = SOURCE_ROOT; };
 		879B91361C8399EA004DE9BB /* roundup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roundup.png; sourceTree = SOURCE_ROOT; };
@@ -237,8 +234,6 @@
 				87CFE7A71C792B3E001D60A3 /* MenuViewController.m */,
 				87712D931C8220B30047B9BC /* AboutViewController.h */,
 				87712D961C8221390047B9BC /* AboutViewController.m */,
-				879B91301C8392D0004DE9BB /* SwipeViewController.h */,
-				879B91311C8392D6004DE9BB /* SwipeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -407,7 +402,6 @@
 				BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */,
 				BFFBB7731C83AFBD006A3983 /* Article.m in Sources */,
 				BFEDD46B1C9B194700497922 /* ArticleViewController.m in Sources */,
-				879B91321C8392D6004DE9BB /* SwipeViewController.m in Sources */,
 				879B91351C8392E1004DE9BB /* SwipeView.m in Sources */,
 				874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */,
 				87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */,
