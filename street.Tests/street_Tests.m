@@ -27,9 +27,35 @@
 }
 
 - (void)testArticleDataInstance {
-    ArticleData* aData = [ArticleData sharedInstance];
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    NSLog(@"TEST STARTED");
+    
+    // ArticleData is a singleton that stores info on articles
+    ArticleData* articleData = [ArticleData sharedInstance];
+    
+    // articleData has a sectionNames property which contains an array of all the section names
+    for (NSString *sectionName in articleData.sectionNames) {
+        NSLog(@"Section Name %@", sectionName);
+        NSArray *articlesForSection = [articleData articlesForSection:sectionName];
+        NSLog(@"section %@ has articles %@", sectionName, articlesForSection);
+    }
+    
+    // get an array of all articles in a section
+    // currently there's no way to request more than the first page of articles (15) for each section
+    // but it should be (relatively) easy to implement
+    NSArray *egoArticles = [articleData articlesForSection:@"ego"];
+    
+    // get an individual article
+    Article *egoArticle = (Article *)egoArticles[4];
+    
+    // access individual properties of a article
+    NSLog(@"The 4th article in ego is %@ written by %@ has abstract %@", egoArticle.title, egoArticle.author, egoArticle.abstract);
+    
+    //HTML content will at the first call, so two repeated calls will be referentially equal
+    NSString *html = [egoArticle articleContent];
+    NSString *html2 = [egoArticle articleContent];
+    XCTAssert(html == html2);
+    
+    NSLog(@"TEST ENDED");
 }
 
 //- (void)testPerformanceExample {

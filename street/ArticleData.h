@@ -9,9 +9,15 @@
 #ifndef ArticleData_h
 #define ArticleData_h
 
+#import "Article.h"
+
 @interface ArticleData : NSObject
 
+@property NSArray* sectionNames;
+
 + (ArticleData*)sharedInstance;
+
+- (NSArray*)articlesForSection:(NSString *)sectionName;
 
 @end
 

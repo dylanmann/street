@@ -156,8 +156,8 @@
 		01FB8670169E2D8B00A0A1A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				879B91361C8399EA004DE9BB /* roundup.png */,
 				87CFE7A01C792A89001D60A3 /* street.temp_caseinsensitive_rename-Prefix.pch */,
+				879B91361C8399EA004DE9BB /* roundup.png */,
 				87CFE7AD1C792B4F001D60A3 /* street.temp_caseinsensitive_rename-Info.plist */,
 				87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */,
 				87CFE7B11C792B63001D60A3 /* reveal-icon.png */,
@@ -627,6 +627,7 @@
 				BFC014431C9C7088004CC863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
