@@ -78,6 +78,8 @@
 
 - (ArticleViewController *)viewControllerAtIndex:(int) index {
 
+    NSLog(@"PLS");
+    
     CGFloat bottom = 0;
     
     ArticleViewController *avc = [[ArticleViewController alloc] init];
@@ -115,18 +117,18 @@
     [webview loadHTMLString:a.articleHTML baseURL:NULL];
     bottom += webview.bounds.size.height;
     
-   /*
     UIScrollView *sv = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [sv addSubview:imageview];
     [sv addSubview:label];
     [sv addSubview:webview];
-    [sv setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];*/
+    [sv setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
+    [avc.view addSubview:sv];
     
-     UIView *small = [[UIView alloc] initWithFrame:self.view.bounds];
-     [small addSubview:imageview];
-     [small addSubview:label];
-    
-     [avc.view addSubview:small];
+//     UIView *small = [[UIView alloc] initWithFrame:self.view.bounds];
+//     [small addSubview:imageview];
+//     [small addSubview:label];
+//    
+//     [avc.view addSubview:small];
     
     return avc;
 }

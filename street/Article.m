@@ -39,8 +39,8 @@
         
         //articleHTML = [[NSString alloc] init];
         articleHTML = stuffToRender;
+        NSLog(@"articleHTML = %@", articleHTML);
     }
-    
     return self;
 }
 
