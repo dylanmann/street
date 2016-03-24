@@ -13,7 +13,6 @@
 		874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */; };
 		87712D971C8221390047B9BC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87712D961C8221390047B9BC /* AboutViewController.m */; };
 		879B91351C8392E1004DE9BB /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 879B91341C8392E1004DE9BB /* SwipeView.m */; };
-		879B91371C8399EA004DE9BB /* roundup.png in Resources */ = {isa = PBXBuildFile; fileRef = 879B91361C8399EA004DE9BB /* roundup.png */; };
 		87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A21C792B2F001D60A3 /* AppDelegate.m */; };
 		87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A71C792B3E001D60A3 /* MenuViewController.m */; };
 		87CFE7B01C792B57001D60A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7AF1C792B57001D60A3 /* main.m */; };
@@ -54,7 +53,6 @@
 		8789094E1C7ADD0A00977837 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Street/SWRevealViewController/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		879B91331C8392DC004DE9BB /* SwipeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwipeView.h; path = street/SwipeView.h; sourceTree = SOURCE_ROOT; };
 		879B91341C8392E1004DE9BB /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwipeView.m; path = street/SwipeView.m; sourceTree = SOURCE_ROOT; };
-		879B91361C8399EA004DE9BB /* roundup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roundup.png; sourceTree = SOURCE_ROOT; };
 		87CFE7A01C792A89001D60A3 /* street-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "street-Prefix.pch"; path = "Street/street-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		87CFE7A11C792B2F001D60A3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Street/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		87CFE7A21C792B2F001D60A3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Street/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				87CFE7A01C792A89001D60A3 /* street-Prefix.pch */,
-				879B91361C8399EA004DE9BB /* roundup.png */,
 				87CFE7AD1C792B4F001D60A3 /* street-Info.plist */,
 				87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */,
 				87CFE7B11C792B63001D60A3 /* reveal-icon.png */,
@@ -329,7 +326,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */,
-				879B91371C8399EA004DE9BB /* roundup.png in Resources */,
 				87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */,
 				87CFE7B41C792B63001D60A3 /* reveal-icon@2x.png in Resources */,
 				87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */,

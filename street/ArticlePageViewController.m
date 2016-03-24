@@ -22,6 +22,8 @@
 
 @implementation ArticlePageViewController
 
+int static startIndex = 0;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,8 +32,8 @@
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
     
-    ArticleViewController *start = [self viewControllerAtIndex:0];
-    [_screenTitle setTitle:@"Highbrow" forState:UIControlStateNormal];
+    ArticleViewController *start = [self viewControllerAtIndex: startIndex];
+    [self syncTitle: startIndex];
     
     [self.pageViewController setViewControllers:@[start] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     self.pageViewController.view.frame = self.view.bounds;
@@ -49,6 +51,10 @@
         [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     }
     
+}
+
++ (void) changeStartIndex: (int) index {
+    startIndex = index;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -137,7 +143,7 @@
     ArticleData* articleData = [ArticleData sharedInstance];
     NSArray *articlesInSection = [articleData articlesForSection:section];
     
-    //TODO: this should be refactored eventually but I was too lazy to figure out what the issue is -- something is different between initializing articles using Article.m and ArticleData.m
+    //TODO: eventually will not be initializing article text and html in this place
     
     Article *a = (Article *) articlesInSection[0];
     

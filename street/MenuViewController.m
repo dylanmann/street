@@ -1,11 +1,11 @@
 //
 //  MenuViewController.m
-//  RevealControllerStoryboardExample
 //
 //  Created by Jenny Chen on 2/20/16
 //
 
 #import "MenuViewController.h"
+#import "ArticlePageViewController.h"
 
 @implementation SWUITableViewCell
 @end
@@ -19,14 +19,27 @@ NSArray *menuItems;
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    menuItems = @[@"home", @"about"];
+    menuItems = @[@"home", @"about", @"highbrow", @"wordOnStreet", @"ego"];
     
 }
 
-
+//when a section is pressed in the menu, switch the ArticlePageViewController to the right index
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
+    NSLog(@"segue here");
+    
+    SWUITableViewCell *senderCell = sender;
+    NSString *label = senderCell.textLabel.text;
 
+    if ([label  isEqual: @"Highbrow"]) {
+        [ArticlePageViewController changeStartIndex: 0];
+    } else if ([label  isEqual: @"Word on the Street"]) {
+         NSLog(@"here");
+        [ArticlePageViewController changeStartIndex: 1];
+    } else if ([label  isEqual: @"Ego"]) {
+        [ArticlePageViewController changeStartIndex: 2];
+    }
+    
 }
 
 
@@ -49,29 +62,6 @@ NSArray *menuItems;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     return cell;
-}
-
-#pragma mark state preservation / restoration
-- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    
-    // TODO save what you need here
-    
-    [super encodeRestorableStateWithCoder:coder];
-}
-
-- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    
-    // TODO restore what you need here
-    
-    [super decodeRestorableStateWithCoder:coder];
-}
-
-- (void)applicationFinishedRestoringState {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    
-    // TODO call whatever function you need to visually restore
 }
 
 @end

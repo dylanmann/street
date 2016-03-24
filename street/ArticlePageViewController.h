@@ -10,4 +10,6 @@
 
 @interface ArticlePageViewController : UIViewController
 
++ (void)changeStartIndex:(int)index;
+
 @end
