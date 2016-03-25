@@ -36,7 +36,12 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"close" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
+    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"BACK" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
+    [close setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                        [UIFont fontWithName:@"Effra" size:12.0], NSFontAttributeName,
+                                        [UIColor blackColor], NSForegroundColorAttributeName,
+                                        nil] 
+                              forState:UIControlStateNormal];
     [self.navigationItem setLeftBarButtonItem:close];
     
 
@@ -61,9 +66,12 @@
     bottom += 100;
     
     NSMutableString* htmlToRender = [[_article articleContent] mutableCopy];
+    //htmlToRender = [NSMutableString stringWithFormat:@"<span style=\"font-family: %@; font-size: %i\">%@</span>", @"Effra", 14, htmlToRender];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     WKWebView *webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, 500) configuration:config];
+    
+    
     [webview loadHTMLString:htmlToRender baseURL:NULL];
     //webview.scrollView.scrollEnabled = NO;
     bottom += webview.bounds.size.height;
