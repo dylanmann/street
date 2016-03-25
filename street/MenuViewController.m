@@ -32,12 +32,12 @@ NSArray *menuItems;
     NSString *label = senderCell.textLabel.text;
     //label.font = [UIFont fontWithName:@"Effra" size:24];
 
-    if ([label  isEqual: @"Highbrow"] || [label  isEqual: @"Home"]) {
+    if ([label  isEqual: @"HIGHBROW"] || [label  isEqual: @"HOME"]) {
         [ArticlePageViewController changeStartIndex: 0];
-    } else if ([label  isEqual: @"Word on the Street"]) {
+    } else if ([label  isEqual: @"WORD ON THE STREET"]) {
          //NSLog(@"here");
         [ArticlePageViewController changeStartIndex: 1];
-    } else if ([label  isEqual: @"Ego"]) {
+    } else if ([label  isEqual: @"EGO"]) {
         [ArticlePageViewController changeStartIndex: 2];
     }
     

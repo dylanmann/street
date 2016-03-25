@@ -93,11 +93,11 @@ int static startIndex = 0;
 - (void)syncTitle:(int) index {
     
     if (index == 0) {
-        [_screenTitle setTitle:@"Highbrow" forState:UIControlStateNormal];
+        [_screenTitle setTitle:@"HIGHBROW" forState:UIControlStateNormal];
     } else if (index == 1) {
-        [_screenTitle setTitle:@"Word on the Street" forState:UIControlStateNormal];
+        [_screenTitle setTitle:@"WORD ON THE STREET" forState:UIControlStateNormal];
     } else if (index == 2) {
-        [_screenTitle setTitle:@"Ego" forState:UIControlStateNormal];
+        [_screenTitle setTitle:@"EGO" forState:UIControlStateNormal];
     }
     
 }
