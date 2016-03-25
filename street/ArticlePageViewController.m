@@ -114,7 +114,7 @@ int static startIndex = 0;
     label.backgroundColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     //label.font = [label.font fontWithSize:30];
-    label.font = [UIFont fontWithName:@"Effra" size:35];
+    label.font = [UIFont fontWithName:@"Effra" size:24];
     label.textColor = [UIColor blackColor];
     label.numberOfLines = 0;
     label.frame = CGRectMake(0,self.view.frame.size.height/2,320,150);
@@ -153,6 +153,7 @@ int static startIndex = 0;
     
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
     imageview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2);
+    imageview.contentMode = UIViewContentModeScaleAspectFit;
     
     UIScrollView *scrollBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 3 * self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/4)];
     [scrollBar addSubview:[[ThumbnailView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:a1.title image:a1.image]];

@@ -27,7 +27,7 @@
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor redColor];
         label.textAlignment = NSTextAlignmentCenter;
-        label.font = [UIFont fontWithName:@"Effra" size:25];
+        label.font = [UIFont fontWithName:@"Effra" size:14];
         label.textColor = [UIColor blackColor];
         label.numberOfLines = 0;
         label.frame = CGRectMake(5,self.frame.size.height/2 +5,self.frame.size.width -10,self.frame.size.height/2 -10);
@@ -39,6 +39,7 @@
         
         UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
         imageview.frame = CGRectMake(5, 5, self.frame.size.width - 10, self.frame.size.height / 2 - 10);
+        imageview.contentMode = UIViewContentModeScaleAspectFit;
         
         
         [self addSubview:label];
