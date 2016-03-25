@@ -23,7 +23,6 @@
     self = [self initWithFrame:frame];
     
     if(self = [super init]){
-        //NSLog(@"inited");
         [self setBackgroundColor:[UIColor grayColor]];
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor redColor];

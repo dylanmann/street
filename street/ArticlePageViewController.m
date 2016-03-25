@@ -41,7 +41,6 @@ int static startIndex = 0;
     [self addChildViewController:self.pageViewController];
     [self.pageViewController didMoveToParentViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
-    NSLog(@"start page view load");
 
     //for menu control
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -92,8 +91,6 @@ int static startIndex = 0;
 
 - (void)syncTitle:(int) index {
     
-    NSLog(@"changing title %d", index);
-    
     if (index == 0) {
         [_screenTitle setTitle:@"Highbrow" forState:UIControlStateNormal];
     } else if (index == 1) {
@@ -105,8 +102,6 @@ int static startIndex = 0;
 }
 
 - (ArticleViewController *)viewControllerAtIndex:(int) index {
-
-    NSLog(@"PLS");
     
     CGFloat bottom = 0;
     

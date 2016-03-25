@@ -39,7 +39,6 @@
         
         //articleHTML = [[NSString alloc] init];
         articleHTML = stuffToRender;
-        NSLog(@"articleHTML = %@", articleHTML);
     }
     return self;
 }
@@ -60,7 +59,6 @@
 
 -(NSString*) articleContent {
     if (!articleHTML) {
-        NSLog(@"Article HTML does not already exist");
         NSString *html = [NSString stringWithContentsOfURL:_url encoding:NSUTF8StringEncoding error:NULL];
         
         // Use Ono to parse the document for the article-text HTML
@@ -75,7 +73,6 @@
         articleHTML = [[NSString alloc] init];
         articleHTML = stuffToRender;
     } else {
-        NSLog(@"Article HTML already loaded");
     }
     return articleHTML;
 }

@@ -55,11 +55,9 @@
         for (NSString* section in _sharedInstance.sectionNames) {
             NSURL *sectionURL = [baseURL URLByAppendingPathComponent:section];
             NSMutableArray *articlesForSection = [_sharedInstance parseSection:sectionURL];
-            //NSLog(@"Section %@ Articles=%@", section, articlesForSection);
             
             [_sharedInstance.sections setObject:articlesForSection forKey:section];
         }
-        //NSLog(@"Sections are %@", [_sharedInstance.sections allKeys]);
         
     });
     return _sharedInstance;
@@ -97,9 +95,6 @@
         
         // TODO: parse subsection
         
-        //NSLog(@"%@\n", title);
-        //NSLog(@"\n%@\n%@\n%@\n%@\n%@\n%@\n\n", title, url, author, date, image, abstract);
-        
         Article *article = [[Article alloc] initWithTitle:title url:url date:date author:author abstract:abstract image:image];
         [articles addObject:article];
     }];
@@ -108,7 +103,6 @@
 
 // return NSArray of articles for given sectionName
 - (NSArray *)articlesForSection:(NSString *)sectionName {
-    //NSLog(@"called with key %@ keys in dict are %@", sectionName, [_sections allKeys]);
     return [_sections objectForKey:sectionName];
 }
 
