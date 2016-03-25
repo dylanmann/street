@@ -66,7 +66,7 @@
     bottom += 100;
     
     NSMutableString* htmlToRender = [[_article articleContent] mutableCopy];
-    //htmlToRender = [NSMutableString stringWithFormat:@"<span style=\"font-family: %@; font-size: %i\">%@</span>", @"Effra", 14, htmlToRender];
+    htmlToRender = [NSMutableString stringWithFormat:@"<span style=\"font-family: %@; font-size: %i\">%@</span>", @"Helvetica Neue", 40, htmlToRender];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     WKWebView *webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, 500) configuration:config];
