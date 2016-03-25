@@ -118,7 +118,8 @@ int static startIndex = 0;
     UILabel *label = [[UILabel alloc] init];
     label.backgroundColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
-    label.font = [label.font fontWithSize:30];
+    //label.font = [label.font fontWithSize:30];
+    label.font = [UIFont fontWithName:@"Effra" size:35];
     label.textColor = [UIColor blackColor];
     label.numberOfLines = 0;
     label.frame = CGRectMake(0,self.view.frame.size.height/2,320,150);
@@ -150,7 +151,7 @@ int static startIndex = 0;
     Article *a1 = (Article *) articlesInSection[1];
     Article *a2 = (Article *) articlesInSection[2];
     
-    label.text = a.title;
+    label.text = [a.title uppercaseString];
     NSURL *imageUrl = a.image;
     
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];

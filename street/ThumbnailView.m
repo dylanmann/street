@@ -23,17 +23,17 @@
     self = [self initWithFrame:frame];
     
     if(self = [super init]){
-        NSLog(@"inited");
+        //NSLog(@"inited");
         [self setBackgroundColor:[UIColor grayColor]];
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor redColor];
         label.textAlignment = NSTextAlignmentCenter;
-        label.font = [label.font fontWithSize:30];
+        label.font = [UIFont fontWithName:@"Effra" size:25];
         label.textColor = [UIColor blackColor];
         label.numberOfLines = 0;
         label.frame = CGRectMake(5,self.frame.size.height/2 +5,self.frame.size.width -10,self.frame.size.height/2 -10);
         label.adjustsFontSizeToFitWidth = YES;
-        label.text = title;
+        label.text = [title uppercaseString];
         NSURL *imageUrl = image;
         
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];

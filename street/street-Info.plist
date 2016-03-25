@@ -37,6 +37,13 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Effra_Std_Bd.ttf</string>
+		<string>Effra_Std.BdIt.ttf</string>
+		<string>Effra_Std_Lt.ttf</string>
+		<string>Effra_Std_Md.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -59,7 +59,8 @@
             
             [_sharedInstance.sections setObject:articlesForSection forKey:section];
         }
-        NSLog(@"Sections are %@", [_sharedInstance.sections allKeys]);
+        //NSLog(@"Sections are %@", [_sharedInstance.sections allKeys]);
+        
     });
     return _sharedInstance;
 }

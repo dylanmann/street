@@ -10,6 +10,10 @@
 		01FB866A169E2D8B00A0A1A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB8669169E2D8B00A0A1A8 /* UIKit.framework */; };
 		01FB866C169E2D8B00A0A1A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB866B169E2D8B00A0A1A8 /* Foundation.framework */; };
 		01FB866E169E2D8B00A0A1A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */; };
+		5228E2301CA4C85D00E5707D /* Effra_Std_Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5228E22C1CA4C85D00E5707D /* Effra_Std_Bd.ttf */; };
+		5228E2311CA4C85D00E5707D /* Effra_Std_BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5228E22D1CA4C85D00E5707D /* Effra_Std_BdIt.ttf */; };
+		5228E2321CA4C85D00E5707D /* Effra_Std_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5228E22E1CA4C85D00E5707D /* Effra_Std_Lt.ttf */; };
+		5228E2331CA4C85D00E5707D /* Effra_Std_Md.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5228E22F1CA4C85D00E5707D /* Effra_Std_Md.ttf */; };
 		874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */; };
 		87712D971C8221390047B9BC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87712D961C8221390047B9BC /* AboutViewController.m */; };
 		879B91351C8392E1004DE9BB /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 879B91341C8392E1004DE9BB /* SwipeView.m */; };
@@ -46,6 +50,10 @@
 		01FB866B169E2D8B00A0A1A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4EE902381964A22200AA3B42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		5228E22C1CA4C85D00E5707D /* Effra_Std_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Bd.ttf; sourceTree = SOURCE_ROOT; };
+		5228E22D1CA4C85D00E5707D /* Effra_Std_BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_BdIt.ttf; sourceTree = SOURCE_ROOT; };
+		5228E22E1CA4C85D00E5707D /* Effra_Std_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Lt.ttf; sourceTree = SOURCE_ROOT; };
+		5228E22F1CA4C85D00E5707D /* Effra_Std_Md.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Md.ttf; sourceTree = SOURCE_ROOT; };
 		5CF087F45ECE0EBD1FAB5685 /* Pods-Street.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.debug.xcconfig"; sourceTree = "<group>"; };
 		676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.release.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.release.xcconfig"; sourceTree = "<group>"; };
 		874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Street/SWRevealViewController/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
@@ -154,6 +162,10 @@
 		01FB8670169E2D8B00A0A1A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5228E22C1CA4C85D00E5707D /* Effra_Std_Bd.ttf */,
+				5228E22D1CA4C85D00E5707D /* Effra_Std_BdIt.ttf */,
+				5228E22E1CA4C85D00E5707D /* Effra_Std_Lt.ttf */,
+				5228E22F1CA4C85D00E5707D /* Effra_Std_Md.ttf */,
 				87CFE7A01C792A89001D60A3 /* street-Prefix.pch */,
 				87CFE7AD1C792B4F001D60A3 /* street-Info.plist */,
 				87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */,
@@ -330,10 +342,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5228E2301CA4C85D00E5707D /* Effra_Std_Bd.ttf in Resources */,
 				87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */,
+				5228E2331CA4C85D00E5707D /* Effra_Std_Md.ttf in Resources */,
 				87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */,
 				87CFE7B41C792B63001D60A3 /* reveal-icon@2x.png in Resources */,
+				5228E2311CA4C85D00E5707D /* Effra_Std_BdIt.ttf in Resources */,
 				87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */,
+				5228E2321CA4C85D00E5707D /* Effra_Std_Lt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
