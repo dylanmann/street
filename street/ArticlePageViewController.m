@@ -161,6 +161,8 @@ int static startIndex = 0;
     UIScrollView *scrollBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 3 * self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/4)];
     [scrollBar addSubview:[[ThumbnailView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:a1.title image:a1.image]];
     [scrollBar addSubview:[[ThumbnailView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:a2.title image:a2.image]];
+    [scrollBar setContentSize:CGSizeMake(self.view.frame.size.width * 2, self.view.frame.size.height / 4)];
+    scrollBar.pagingEnabled = YES;
     
     
 //    articleURL = a.url;
