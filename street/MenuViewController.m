@@ -30,6 +30,7 @@ NSArray *menuItems;
     
     SWUITableViewCell *senderCell = sender;
     NSString *label = senderCell.textLabel.text;
+    //label.font = [UIFont fontWithName:@"Effra" size:24];
 
     if ([label  isEqual: @"Highbrow"] || [label  isEqual: @"Home"]) {
         [ArticlePageViewController changeStartIndex: 0];

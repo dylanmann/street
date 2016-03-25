@@ -117,7 +117,7 @@ int static startIndex = 0;
     label.font = [UIFont fontWithName:@"Effra" size:24];
     label.textColor = [UIColor blackColor];
     label.numberOfLines = 0;
-    label.frame = CGRectMake(10,self.view.frame.size.height/2,self.view.frame.size.width - 20,self.view.frame.size.height/4);
+    label.frame = CGRectMake(10,self.view.frame.size.height/4 + 100,self.view.frame.size.width - 20,self.view.frame.size.height/8);
     bottom += 150;
     NSString *section;
     
@@ -147,7 +147,7 @@ int static startIndex = 0;
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
     
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
-    imageview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2);
+    imageview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/3 + 50);
     imageview.contentMode = UIViewContentModeScaleAspectFit;
      
     UIScrollView *scrollBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 3 * self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/4)];

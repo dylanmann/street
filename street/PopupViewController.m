@@ -46,17 +46,18 @@
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_article.image]];
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
     imageview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2);
+    imageview.contentMode = UIViewContentModeScaleAspectFit;
     
     bottom += self.view.frame.size.height / 2;
     
     UILabel *label = [[UILabel alloc] init];
     label.backgroundColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
-    label.font = [label.font fontWithSize:30];
+    label.font = [UIFont fontWithName:@"Effra" size:24];
     label.textColor = [UIColor blackColor];
     label.numberOfLines = 0;
     label.frame = CGRectMake(0, bottom, self.view.frame.size.width, 100);
-    [label setText:_article.title];
+    [label setText:[_article.title uppercaseString]];
     bottom += 100;
     
     NSMutableString* htmlToRender = [[_article articleContent] mutableCopy];
