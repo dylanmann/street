@@ -29,7 +29,11 @@ int static startIndex = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.translucent = NO;
+    //self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1];
+    //self.navigationController.navigationBar.titleTextAttributes
+    self.navigationController.navigationBar.translucent = YES;
 
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
@@ -117,7 +121,7 @@ int static startIndex = 0;
     label.font = [UIFont fontWithName:@"Effra" size:24];
     label.textColor = [UIColor blackColor];
     label.numberOfLines = 0;
-    label.frame = CGRectMake(10,self.view.frame.size.height/4 + 100,self.view.frame.size.width - 20,self.view.frame.size.height/8);
+    label.frame = CGRectMake(10,self.view.frame.size.height/4 + 120,self.view.frame.size.width - 20,self.view.frame.size.height/8);
     bottom += 150;
     NSString *section;
     
@@ -147,7 +151,7 @@ int static startIndex = 0;
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
     
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
-    imageview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/3 + 50);
+    imageview.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height/3 + 50);
     imageview.contentMode = UIViewContentModeScaleAspectFit;
      
     UIScrollView *scrollBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 3 * self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/4)];
@@ -169,7 +173,7 @@ int static startIndex = 0;
     }
     
     // insert teal rectangle here
-    UIView *tealBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/3 + 190, self.view.frame.size.width, self.view.frame.size.height/100)];
+    UIView *tealBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/3 + 210, self.view.frame.size.width, self.view.frame.size.height/100)];
     tealBar.backgroundColor = [UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1];
 
     
