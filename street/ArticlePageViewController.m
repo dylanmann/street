@@ -12,6 +12,7 @@
 #import "ArticleData.h"
 #import <WebKit/WebKit.h>
 #import "ThumbnailView.h"
+#import "PopupViewController.h"
 
 @interface ArticlePageViewController () <UIPageViewControllerDataSource>
 
@@ -119,7 +120,6 @@ int static startIndex = 0;
     label.numberOfLines = 0;
     label.frame = CGRectMake(0,self.view.frame.size.height/2,320,150);
     bottom += 150;
-    NSURL *articleURL;
     NSString *section;
     
     //TODO: Also some issues with how the button's title changes. dumb fix for now.
@@ -139,12 +139,8 @@ int static startIndex = 0;
     
     ArticleData* articleData = [ArticleData sharedInstance];
     NSArray *articlesInSection = [articleData articlesForSection:section];
-    
-    //TODO: eventually will not be initializing article text and html in this place
-    
+
     Article *a = (Article *) articlesInSection[0];
-    Article *a1 = (Article *) articlesInSection[1];
-    Article *a2 = (Article *) articlesInSection[2];
     
     label.text = [a.title uppercaseString];
     NSURL *imageUrl = a.image;
@@ -154,38 +150,44 @@ int static startIndex = 0;
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
     imageview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2);
     imageview.contentMode = UIViewContentModeScaleAspectFit;
-    
+     
     UIScrollView *scrollBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 3 * self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/4)];
-    [scrollBar addSubview:[[ThumbnailView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:a1.title image:a1.image]];
-    [scrollBar addSubview:[[ThumbnailView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:a2.title image:a2.image]];
-    [scrollBar setContentSize:CGSizeMake(self.view.frame.size.width * 2, self.view.frame.size.height / 4)];
+    
     scrollBar.pagingEnabled = YES;
-    
-    
-//    articleURL = a.url;
-//    a = [[Article alloc] initWithURL:articleURL];
+    [scrollBar setContentSize:CGSizeMake(self.view.frame.size.width * ([articlesInSection count] - 1) / 2, self.view.frame.size.height / 4)];
 
-//    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-//    WKWebView *webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, 500) configuration:config];
-//    [webview loadHTMLString:a.articleHTML baseURL:NULL];
-//    bottom += webview.bounds.size.height;
-    
-    
-    
+    for (int i = 1; i < [articlesInSection count]; i++) {
+        Article *article = articlesInSection[i];
+        
+        int offset = (i - 1) * self.view.frame.size.width / 2;
+        ThumbnailView *thumbnail = [[ThumbnailView alloc] initWithFrame:CGRectMake(offset, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:article.title image:article.image];
+        thumbnail.article = article;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(presentArticle:)];
+        
+        [thumbnail addGestureRecognizer:tap];
+        [scrollBar addSubview:thumbnail];
+    }
+
     
     [avc.view addSubview:imageview];
     [avc.view addSubview:label];
     [avc.view addSubview:scrollBar];
-    //    [sv addSubview:webview];
-//    [sv setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
-    
-//     UIView *small = [[UIView alloc] initWithFrame:self.view.bounds];
-//     [small addSubview:imageview];
-//     [small addSubview:label];
-//    
-//     [avc.view addSubview:small];
     
     return avc;
+}
+
+- (void)presentArticle:(UITapGestureRecognizer *)sender {
+    
+    ThumbnailView* thumb = (ThumbnailView *)sender.view;
+    Article* article = thumb.article;
+    NSLog(@"%@", article.title);
+    
+    PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self presentViewController:nc animated:YES completion:nil];
+    
 }
 
 /*
