@@ -167,10 +167,15 @@ int static startIndex = 0;
         [thumbnail addGestureRecognizer:tap];
         [scrollBar addSubview:thumbnail];
     }
+    
+    // insert teal rectangle here
+    UIView *tealBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/3 + 190, self.view.frame.size.width, self.view.frame.size.height/100)];
+    tealBar.backgroundColor = [UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1];
 
     
     [avc.view addSubview:imageview];
     [avc.view addSubview:label];
+    [avc.view addSubview:tealBar];
     [avc.view addSubview:scrollBar];
     
     return avc;
