@@ -31,7 +31,7 @@ NSArray *menuItems;
     SWUITableViewCell *senderCell = sender;
     NSString *label = senderCell.textLabel.text;
 
-    if ([label  isEqual: @"Highbrow"]) {
+    if ([label  isEqual: @"Highbrow"] || [label  isEqual: @"Home"]) {
         [ArticlePageViewController changeStartIndex: 0];
     } else if ([label  isEqual: @"Word on the Street"]) {
          //NSLog(@"here");

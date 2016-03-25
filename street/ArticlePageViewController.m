@@ -114,11 +114,10 @@ int static startIndex = 0;
     UILabel *label = [[UILabel alloc] init];
     label.backgroundColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
-    //label.font = [label.font fontWithSize:30];
     label.font = [UIFont fontWithName:@"Effra" size:24];
     label.textColor = [UIColor blackColor];
     label.numberOfLines = 0;
-    label.frame = CGRectMake(0,self.view.frame.size.height/2,320,150);
+    label.frame = CGRectMake(10,self.view.frame.size.height/2,self.view.frame.size.width - 20,self.view.frame.size.height/4);
     bottom += 150;
     NSString *section;
     

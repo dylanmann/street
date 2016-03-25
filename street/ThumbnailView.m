@@ -23,9 +23,9 @@
     self = [self initWithFrame:frame];
     
     if(self = [super init]){
-        [self setBackgroundColor:[UIColor grayColor]];
+        [self setBackgroundColor:[UIColor whiteColor]];
         UILabel *label = [[UILabel alloc] init];
-        label.backgroundColor = [UIColor redColor];
+        label.backgroundColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
         label.font = [UIFont fontWithName:@"Effra" size:14];
         label.textColor = [UIColor blackColor];
