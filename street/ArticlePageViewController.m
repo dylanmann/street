@@ -11,6 +11,7 @@
 #import "Article.h"
 #import "ArticleData.h"
 #import <WebKit/WebKit.h>
+#import "ThumbnailView.h"
 
 @interface ArticlePageViewController () <UIPageViewControllerDataSource>
 
@@ -121,7 +122,7 @@ int static startIndex = 0;
     label.textColor = [UIColor blackColor];
     label.numberOfLines = 0;
     label.frame = CGRectMake(0,self.view.frame.size.height/2,320,150);
-    bottom += 300;
+    bottom += 150;
     NSURL *articleURL;
     NSString *section;
     
@@ -146,6 +147,8 @@ int static startIndex = 0;
     //TODO: eventually will not be initializing article text and html in this place
     
     Article *a = (Article *) articlesInSection[0];
+    Article *a1 = (Article *) articlesInSection[1];
+    Article *a2 = (Article *) articlesInSection[2];
     
     label.text = a.title;
     NSURL *imageUrl = a.image;
@@ -154,21 +157,28 @@ int static startIndex = 0;
     
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
     imageview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2);
-
-    articleURL = a.url;
-    a = [[Article alloc] initWithURL:articleURL];
-
-    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-    WKWebView *webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, 500) configuration:config];
-    [webview loadHTMLString:a.articleHTML baseURL:NULL];
-    bottom += webview.bounds.size.height;
     
-    UIScrollView *sv = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    [sv addSubview:imageview];
-    [sv addSubview:label];
-    [sv addSubview:webview];
-    [sv setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
-    [avc.view addSubview:sv];
+    UIScrollView *scrollBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 3 * self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/4)];
+    [scrollBar addSubview:[[ThumbnailView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:a1.title image:a1.image]];
+    [scrollBar addSubview:[[ThumbnailView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:a2.title image:a2.image]];
+    
+    
+//    articleURL = a.url;
+//    a = [[Article alloc] initWithURL:articleURL];
+
+//    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+//    WKWebView *webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, 500) configuration:config];
+//    [webview loadHTMLString:a.articleHTML baseURL:NULL];
+//    bottom += webview.bounds.size.height;
+    
+    
+    
+    
+    [avc.view addSubview:imageview];
+    [avc.view addSubview:label];
+    [avc.view addSubview:scrollBar];
+    //    [sv addSubview:webview];
+//    [sv setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
     
 //     UIView *small = [[UIView alloc] initWithFrame:self.view.bounds];
 //     [small addSubview:imageview];
