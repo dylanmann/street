@@ -48,7 +48,6 @@
                                         nil] 
                               forState:UIControlStateNormal];
     [self.navigationItem setLeftBarButtonItem:close];
-    
 
     // this is used to keep track of the current y position of the content
     bottom = 0;
@@ -70,6 +69,17 @@
     [label setText:[_article.title uppercaseString]];
     bottom += 100;
     
+    UILabel *title = [[UILabel alloc] init];
+    title.text = label.text;
+    title.font = [UIFont fontWithName:@"Effra" size:24];
+    [title sizeToFit];
+    
+    title.numberOfLines = 1;
+    title.adjustsFontSizeToFitWidth=YES;
+    title.lineBreakMode = NSLineBreakByClipping;
+    
+    [self.navigationItem setTitleView:title];
+
     NSMutableString* htmlToRender = [[_article articleContent] mutableCopy];
     htmlToRender = [NSMutableString stringWithFormat:@"<span style=\"font-family: %@; font-size: %i\">%@</span>", @"Helvetica Neue", 40, htmlToRender];
     
