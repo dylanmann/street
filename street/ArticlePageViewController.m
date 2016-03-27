@@ -33,7 +33,7 @@ int static startIndex = 0;
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1];
     //self.navigationController.navigationBar.titleTextAttributes
-    self.navigationController.navigationBar.translucent = YES;
+//    self.navigationController.navigationBar.translucent = YES;
 
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
@@ -96,13 +96,10 @@ int static startIndex = 0;
 
 - (void)syncTitle:(int) index {
     
-    if (index == 0) {
-        [_screenTitle setTitle:@"HIGHBROW" forState:UIControlStateNormal];
-    } else if (index == 1) {
-        [_screenTitle setTitle:@"WORD ON THE STREET" forState:UIControlStateNormal];
-    } else if (index == 2) {
-        [_screenTitle setTitle:@"EGO" forState:UIControlStateNormal];
-    }
+    NSString *title = [ArticleData sharedInstance].sectionNames[index];
+    title = [[title uppercaseString] stringByReplacingOccurrencesOfString:@"-" withString:@" "];
+    
+    [_screenTitle setTitle:title forState:UIControlStateNormal];
     
 }
 
@@ -116,7 +113,7 @@ int static startIndex = 0;
     bottom += self.view.frame.size.height / 2;
     
     UILabel *label = [[UILabel alloc] init];
-    label.backgroundColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont fontWithName:@"Effra" size:24];
     label.textColor = [UIColor blackColor];
@@ -127,14 +124,7 @@ int static startIndex = 0;
     
     //TODO: Also some issues with how the button's title changes. dumb fix for now.
     //Issue is because afterVC and beforeVC also call this method
-    
-    if (index == 0) {
-        section = @"highbrow";
-    } else if (index == 1) {
-        section = @"word-on-the-street";
-    } else if (index == 2) {
-        section = @"ego";
-    }
+    section = [ArticleData sharedInstance].sectionNames[index];
     
     _screenTitle.titleLabel.numberOfLines = 1;
     _screenTitle.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -151,6 +141,7 @@ int static startIndex = 0;
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
     
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
+
     imageview.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height/3 + 50);
     imageview.contentMode = UIViewContentModeScaleAspectFit;
      
@@ -165,7 +156,7 @@ int static startIndex = 0;
         int offset = (i - 1) * self.view.frame.size.width / 2;
         ThumbnailView *thumbnail = [[ThumbnailView alloc] initWithFrame:CGRectMake(offset, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:article.title image:article.image];
         thumbnail.article = article;
-        
+
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(presentArticle:)];
         
         [thumbnail addGestureRecognizer:tap];
