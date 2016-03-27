@@ -21,6 +21,7 @@
 {
     WKWebView *webview;
     UIScrollView *scrollView;
+    CGFloat bottom;
 }
 - (id)initWithArticle:(Article *)article {
     if (self = [super init]) {
@@ -50,7 +51,7 @@
     
 
     // this is used to keep track of the current y position of the content
-    CGFloat bottom = 0;
+    bottom = 0;
     
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_article.image]];
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
@@ -73,11 +74,10 @@
     htmlToRender = [NSMutableString stringWithFormat:@"<span style=\"font-family: %@; font-size: %i\">%@</span>", @"Helvetica Neue", 40, htmlToRender];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-    webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, 500) configuration:config];
+    webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, self.view.frame.size.height - bottom) configuration:config];
     
     
     [webview loadHTMLString:htmlToRender baseURL:NULL];
-    bottom += webview.bounds.size.height;
     
     
     
@@ -88,9 +88,6 @@
     [scrollView setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
     [self.view addSubview:scrollView];
 
-    [webview.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,25 +95,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc
-{
-    [webview.scrollView removeObserver:self forKeyPath:@"contentSize" context:nil];
-}
-
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context
-{
-    if (object == webview.scrollView && [keyPath isEqual:@"contentSize"]) {
-        // we are here because the contentSize of the WebView's scrollview changed.
-        
-        CGSize size = scrollView.frame.size;
-        [scrollView setContentSize: CGRectMake(0, 0, size.width, 3 * size.height / 4 + webview.scrollView.contentSize.height).size];
-        [webview setFrame:CGRectMake(0, 3 * self.view.frame.size.height/4, size.width, webview.scrollView.contentSize.height)];
-        webview.scrollView.scrollEnabled = NO;
-    }
+-(void)viewDidAppear:(BOOL)animated {
+    CGSize size = scrollView.frame.size;
+    [scrollView setContentSize: CGRectMake(0, 0, size.width, bottom + webview.scrollView.contentSize.height).size];
+    [webview setFrame:CGRectMake(0, bottom, size.width, webview.scrollView.contentSize.height)];
+    webview.scrollView.scrollEnabled = NO;
 }
 
 /*
