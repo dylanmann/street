@@ -29,16 +29,17 @@ int static startIndex = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //self.navigationController.navigationBar.translucent = NO;
+   // self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1];
     //self.navigationController.navigationBar.titleTextAttributes
-//    self.navigationController.navigationBar.translucent = YES;
+    //self.navigationController.navigationBar.translucent = YES;
 
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
-    
+
     ArticleViewController *start = [self viewControllerAtIndex: startIndex];
+     
     [self syncTitle: startIndex];
     
     [self.pageViewController setViewControllers:@[start] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
@@ -55,8 +56,9 @@ int static startIndex = 0;
         [self.revealButtonItem setAction: @selector( revealToggle: )];
         [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     }
-    
+
 }
+
 
 + (void) changeStartIndex: (int) index {
     startIndex = index;
@@ -173,6 +175,7 @@ int static startIndex = 0;
     [avc.view addSubview:tealBar];
     [avc.view addSubview:scrollBar];
     
+    avc.navigationController.navigationBar.translucent = NO;
     return avc;
 }
 

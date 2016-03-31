@@ -26,6 +26,10 @@
  http://www.34st.com/section/tech
  */
 
+/*Home page
+ http://www.34st.com/
+*/
+
 @interface ArticleData ()
 
 @property NSMutableDictionary* sections;
@@ -44,7 +48,7 @@
         _sharedInstance = [[self alloc] init];
         
         // right now only load the first three sections so the initial load is faster
-        _sharedInstance.sectionNames = @[@"highbrow", @"word-on-the-street", @"ego", @"music", @"film", @"vice-and-virtue", @"arts", @"lowbrow", @"letter", @"features", @"letter", @"features", @"tech"];
+        _sharedInstance.sectionNames = @[@"home", @"highbrow", @"word-on-the-street", @"ego", @"music", @"film", @"vice-and-virtue", @"arts", @"lowbrow", @"letter", @"features", @"letter", @"features", @"tech"];
         
         _sharedInstance.sections = [[NSMutableDictionary alloc] init];
         
@@ -53,7 +57,14 @@
         // TODO: make this asynchronous/multi-threaded
         // for each section, load the first page of articles
         for (NSString* section in _sharedInstance.sectionNames) {
-            NSURL *sectionURL = [baseURL URLByAppendingPathComponent:section];
+            NSURL *sectionURL;
+            
+            if ([section isEqualToString:@"home"]) {
+                sectionURL = [NSURL URLWithString:@"http://www.34st.com/"];
+            } else {
+                sectionURL = [baseURL URLByAppendingPathComponent:section];
+            }
+            
             NSMutableArray *articlesForSection = [_sharedInstance parseSection:sectionURL];
             
             [_sharedInstance.sections setObject:articlesForSection forKey:section];

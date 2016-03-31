@@ -26,19 +26,19 @@ NSArray *menuItems;
 //when a section is pressed in the menu, switch the ArticlePageViewController to the right index
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
-    //NSLog(@"segue here");
-    
     SWUITableViewCell *senderCell = sender;
     NSString *label = senderCell.textLabel.text;
-    //label.font = [UIFont fontWithName:@"Effra" size:24];
 
-    if ([label  isEqual: @"HIGHBROW"] || [label  isEqual: @"HOME"]) {
+    
+    if ([label  isEqual: @"HOME"]) {
         [ArticlePageViewController changeStartIndex: 0];
+    } else if ([label  isEqual: @"HIGHBROW"]) {
+        [ArticlePageViewController changeStartIndex: 1];
     } else if ([label  isEqual: @"WORD ON THE STREET"]) {
          //NSLog(@"here");
-        [ArticlePageViewController changeStartIndex: 1];
-    } else if ([label  isEqual: @"EGO"]) {
         [ArticlePageViewController changeStartIndex: 2];
+    } else if ([label  isEqual: @"EGO"]) {
+        [ArticlePageViewController changeStartIndex: 3];
     }
     
 }
