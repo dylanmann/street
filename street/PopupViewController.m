@@ -10,6 +10,9 @@
 #import "Article.h"
 #import <WebKit/WebKit.h>
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
+
 @interface PopupViewController ()
 
 @property (nonatomic, strong) Article *article;
@@ -89,11 +92,19 @@
     
     [webview loadHTMLString:htmlToRender baseURL:NULL];
     
+    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+    content.contentURL = [NSURL
+                          URLWithString:@"https://www.facebook.com/FacebookDevelopers"];
+    FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
+    shareButton.shareContent = content;
+    shareButton.center = self.view.center;
+//    [self.view addSubview:shareButton];
     
     
     scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [scrollView addSubview:imageview];
     [scrollView addSubview:label];
+    [scrollView addSubview:shareButton];
     [scrollView addSubview:webview];
     [scrollView setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
     [self.view addSubview:scrollView];
