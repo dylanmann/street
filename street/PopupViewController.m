@@ -108,7 +108,9 @@
     [scrollView addSubview:webview];
     [scrollView setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
     [self.view addSubview:scrollView];
-
+    
+    // fix content size issue by adding observers for contentsize
+    [webview.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -116,13 +118,23 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    CGSize size = scrollView.frame.size;
-    [scrollView setContentSize: CGRectMake(0, 0, size.width, bottom + webview.scrollView.contentSize.height).size];
-    [webview setFrame:CGRectMake(0, bottom, size.width, webview.scrollView.contentSize.height)];
-    webview.scrollView.scrollEnabled = NO;
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if (object == webview.scrollView && [keyPath isEqual:@"contentSize"]) {
+        CGSize size = scrollView.frame.size;
+        [scrollView setContentSize: CGRectMake(0, 0, size.width, bottom + webview.scrollView.contentSize.height).size];
+        [webview setFrame:CGRectMake(0, bottom, size.width, webview.scrollView.contentSize.height)];
+        webview.scrollView.scrollEnabled = NO;
+    }
 }
 
+- (void)dealloc
+{
+    [webview.scrollView removeObserver:self forKeyPath:@"contentSize" context:nil];
+}
 /*
 #pragma mark - Navigation
 
