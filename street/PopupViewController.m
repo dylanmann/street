@@ -22,6 +22,7 @@
 @implementation PopupViewController
 
 {
+    int fontSize;
     WKWebView *webview;
     UIScrollView *scrollView;
     CGFloat bottom;
@@ -44,6 +45,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    fontSize = 40;
+    
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"BACK" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     [close setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                         [UIFont fontWithName:@"Effra" size:12.0], NSFontAttributeName,
@@ -51,6 +54,7 @@
                                         nil] 
                               forState:UIControlStateNormal];
     [self.navigationItem setLeftBarButtonItem:close];
+    
 
     // this is used to keep track of the current y position of the content
     bottom = 0;
@@ -84,7 +88,7 @@
     [self.navigationItem setTitleView:title];
 
     NSMutableString* htmlToRender = [[_article articleContent] mutableCopy];
-    htmlToRender = [NSMutableString stringWithFormat:@"<span style=\"font-family: %@; font-size: %i\">%@</span>", @"Helvetica Neue", 40, htmlToRender];
+    htmlToRender = [NSMutableString stringWithFormat:@"<span id=toplevel style=\"font-family: %@; font-size: %i\">%@</span>", @"Helvetica Neue", fontSize, htmlToRender];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, self.view.frame.size.height - bottom) configuration:config];
@@ -97,9 +101,19 @@
                           URLWithString:@"https://www.facebook.com/FacebookDevelopers"];
     FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
     shareButton.shareContent = content;
-    shareButton.center = self.view.center;
-//    [self.view addSubview:shareButton];
+    shareButton.center = CGPointMake(self.view.center.x - 30, self.view.center.y);
     
+    UIButton *minusButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [minusButton setBackgroundColor:[UIColor grayColor]];
+    [minusButton setFrame:CGRectMake(self.view.center.x + 20, self.view.center.y - 15, 30, 30)];
+    [minusButton setTitle:@"-" forState:UIControlStateNormal];
+    [minusButton addTarget:self action:@selector(decreaseTextSize) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [plusButton setBackgroundColor:[UIColor grayColor]];
+    [plusButton setFrame:CGRectMake(self.view.center.x + 55, self.view.center.y - 15, 30, 30)];
+    [plusButton setTitle:@"+" forState:UIControlStateNormal];
+    [plusButton addTarget:self action:@selector(increaseTextSize) forControlEvents:UIControlEventTouchUpInside];
     
     scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [scrollView addSubview:imageview];
@@ -107,10 +121,28 @@
     [scrollView addSubview:shareButton];
     [scrollView addSubview:webview];
     [scrollView setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
+    
+    [scrollView addSubview:minusButton];
+    [scrollView addSubview:plusButton];
     [self.view addSubview:scrollView];
     
     // fix content size issue by adding observers for contentsize
     [webview.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)increaseTextSize {
+    fontSize = MIN(fontSize + 10, 90);
+    [self changeText];
+}
+
+- (void)decreaseTextSize {
+    fontSize = MAX(fontSize - 10, 20);
+    [self changeText];
+}
+
+- (void)changeText {
+    NSString *js = [NSString stringWithFormat:@"document.getElementById(\"toplevel\").style.fontSize = %i", fontSize];
+    [webview evaluateJavaScript:js completionHandler:NULL];
 }
 
 - (void)didReceiveMemoryWarning {
