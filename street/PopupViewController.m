@@ -98,7 +98,7 @@
     
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
     content.contentURL = [NSURL
-                          URLWithString:@"https://www.facebook.com/FacebookDevelopers"];
+                          URLWithString:_article.url];
     FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
     shareButton.shareContent = content;
     shareButton.center = CGPointMake(self.view.center.x - 30, self.view.center.y);
