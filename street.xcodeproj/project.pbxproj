@@ -158,6 +158,7 @@
 		01FB866F169E2D8B00A0A1A8 /* street */ = {
 			isa = PBXGroup;
 			children = (
+				5281C1221CB47D5200C7DD47 /* App_Icons.xcassets */,
 				BFFBB7771C83B590006A3983 /* Application */,
 				BFFBB77A1C83B5BF006A3983 /* Controller */,
 				BFFBB7791C83B5B5006A3983 /* View */,
@@ -241,7 +242,6 @@
 				BF5B5E021CA4B3C0004CBE14 /* ThumbnailView.h */,
 				BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */,
 				87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */,
-				5281C1221CB47D5200C7DD47 /* App_Icons.xcassets */,
 				5209A6CA1CA79AC6003D0343 /* LaunchScreen.storyboard */,
 				879B91331C8392DC004DE9BB /* SwipeView.h */,
 				879B91341C8392E1004DE9BB /* SwipeView.m */,
@@ -541,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CF087F45ECE0EBD1FAB5685 /* Pods-Street.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Street/street-Prefix.pch";
 				INFOPLIST_FILE = "Street/street-Info.plist";
@@ -556,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Street/street-Prefix.pch";
 				INFOPLIST_FILE = "Street/street-Info.plist";
