@@ -97,8 +97,7 @@
     [webview loadHTMLString:htmlToRender baseURL:NULL];
     
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-    content.contentURL = [NSURL
-                          URLWithString:_article.url];
+    content.contentURL = _article.url;
     FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
     shareButton.shareContent = content;
     shareButton.center = CGPointMake(self.view.center.x - 30, self.view.center.y);
@@ -136,7 +135,7 @@
 }
 
 - (void)decreaseTextSize {
-    fontSize = MAX(fontSize - 10, 20);
+    fontSize = MAX(fontSize - 10, 50);
     [self changeText];
 }
 
