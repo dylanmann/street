@@ -28,27 +28,25 @@ int static startIndex = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.frame = CGRectMake(0, 0, 375, 603);
     
-   // self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1];
-    //self.navigationController.navigationBar.titleTextAttributes
-    //self.navigationController.navigationBar.translucent = YES;
 
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
 
     ArticleViewController *start = [self viewControllerAtIndex: startIndex];
-     
+    
     [self syncTitle: startIndex];
     
     [self.pageViewController setViewControllers:@[start] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-    self.pageViewController.view.frame = self.view.bounds;
     [self addChildViewController:self.pageViewController];
     [self.pageViewController didMoveToParentViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
 
-    //for menu control
+    //handles the menu opening
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -56,7 +54,6 @@ int static startIndex = 0;
         [self.revealButtonItem setAction: @selector( revealToggle: )];
         [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     }
-
 }
 
 
@@ -72,12 +69,12 @@ int static startIndex = 0;
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     
     ArticleViewController *avc = (ArticleViewController *)viewController;
-    
-   [self syncTitle: avc.index];
 
     if ((avc.index == 0) || (avc.index == NSNotFound)) {
         return nil;
     }
+    
+    [self syncTitle: avc.index];
 
     return [self viewControllerAtIndex:avc.index - 1];
 }
@@ -85,13 +82,13 @@ int static startIndex = 0;
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
     ArticleViewController *avc = (ArticleViewController *)viewController;
-    
-    [self syncTitle: avc.index];
 
     //Assumes 11 sections
     if ((avc.index == 11) || (avc.index == NSNotFound)) {
         return nil;
     }
+    
+    [self syncTitle: avc.index];
 
     return [self viewControllerAtIndex:avc.index + 1];
 }
@@ -123,9 +120,8 @@ int static startIndex = 0;
     label.frame = CGRectMake(10,self.view.frame.size.height/4 + 120,self.view.frame.size.width - 20,self.view.frame.size.height/8);
     bottom += 150;
     NSString *section;
-    
-    //TODO: Also some issues with how the button's title changes. dumb fix for now.
-    //Issue is because afterVC and beforeVC also call this method
+
+    //pull the articles for a particular section
     section = [ArticleData sharedInstance].sectionNames[index];
     
     _screenTitle.titleLabel.numberOfLines = 1;
@@ -146,7 +142,8 @@ int static startIndex = 0;
 
     imageview.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height/3 + 50);
     imageview.contentMode = UIViewContentModeScaleAspectFit;
-     
+    
+    //create the thumbnail scroll bar with related articles
     UIScrollView *scrollBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 3 * self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/4)];
     
     scrollBar.pagingEnabled = YES;
@@ -174,8 +171,7 @@ int static startIndex = 0;
     [avc.view addSubview:label];
     [avc.view addSubview:tealBar];
     [avc.view addSubview:scrollBar];
-    
-    avc.navigationController.navigationBar.translucent = NO;
+
     return avc;
 }
 
@@ -183,7 +179,6 @@ int static startIndex = 0;
     
     ThumbnailView* thumb = (ThumbnailView *)sender.view;
     Article* article = thumb.article;
-    NSLog(@"%@", article.title);
     
     PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
@@ -191,15 +186,5 @@ int static startIndex = 0;
     [self presentViewController:nc animated:YES completion:nil];
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

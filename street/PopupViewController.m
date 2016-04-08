@@ -35,7 +35,6 @@
     return self;
 }
 
-// a hacky way of getting the navigation controller to work. need to fix in the next iteration
 - (void)dismiss {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
@@ -47,7 +46,7 @@
     
     fontSize = 40;
     
-    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"BACK" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
+    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     [close setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                         [UIFont fontWithName:@"Effra" size:12.0], NSFontAttributeName,
                                         [UIColor blackColor], NSForegroundColorAttributeName,

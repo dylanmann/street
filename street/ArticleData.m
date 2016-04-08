@@ -46,9 +46,8 @@
     
     dispatch_once(&oncePredicate, ^{
         _sharedInstance = [[self alloc] init];
-        
-        // right now only load the first three sections so the initial load is faster
-        _sharedInstance.sectionNames = @[@"home", @"highbrow", @"word-on-the-street", @"ego", @"music", @"film", @"vice-and-virtue", @"arts", @"lowbrow", @"letter", @"features", @"letter", @"features", @"tech"];
+
+        _sharedInstance.sectionNames = @[@"home", @"highbrow", @"word-on-the-street", @"ego", @"music", @"film", @"vice-and-virtue", @"arts", @"lowbrow", @"letter", @"features", @"tech"];
         
         _sharedInstance.sections = [[NSMutableDictionary alloc] init];
         

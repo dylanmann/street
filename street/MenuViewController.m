@@ -19,7 +19,7 @@ NSArray *menuItems;
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    menuItems = @[@"home", @"about", @"highbrow", @"wordOnStreet", @"ego"];
+    menuItems = @[@"home", @"about", @"highbrow", @"wordOnStreet", @"ego", @"music", @"film", @"viceAndVirtue", @"arts", @"lowbrow", @"letter", @"features", @"tech"];
     
 }
 
@@ -35,12 +35,26 @@ NSArray *menuItems;
     } else if ([label  isEqual: @"HIGHBROW"]) {
         [ArticlePageViewController changeStartIndex: 1];
     } else if ([label  isEqual: @"WORD ON THE STREET"]) {
-         //NSLog(@"here");
         [ArticlePageViewController changeStartIndex: 2];
     } else if ([label  isEqual: @"EGO"]) {
         [ArticlePageViewController changeStartIndex: 3];
+    } else if ([label  isEqual: @"MUSIC"]) {
+        [ArticlePageViewController changeStartIndex: 4];
+    } else if ([label  isEqual: @"FILM"]) {
+        [ArticlePageViewController changeStartIndex: 5];
+    } else if ([label  isEqual: @"VICE AND VIRTUE"]) {
+        [ArticlePageViewController changeStartIndex: 6];
+    } else if ([label  isEqual: @"ARTS"]) {
+        [ArticlePageViewController changeStartIndex: 7];
+    } else if ([label  isEqual: @"LOWBROW"]) {
+        [ArticlePageViewController changeStartIndex: 8];
+    } else if ([label  isEqual: @"LETTER"]) {
+        [ArticlePageViewController changeStartIndex: 9];
+    } else if ([label  isEqual: @"FEATURES"]) {
+        [ArticlePageViewController changeStartIndex: 10];
+    } else if ([label  isEqual: @"TECH"]) {
+        [ArticlePageViewController changeStartIndex: 11];
     }
-    
 }
 
 
