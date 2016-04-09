@@ -4,7 +4,7 @@
 //
 //  Created by Graham Mosley on 2/28/16.
 //  Copyright © 2016 CoDeveloper. All rights reserved.
-//
+//  View Controller inside of the ArticlePageViewController. Container for each screen of the carousel.
 
 #import "ArticleViewController.h"
 #import "Article.h"
@@ -25,10 +25,6 @@
 }
 
 - (id)initWithArticle:(Article *)art {
-    
-    if (self = [super init]) {
-        //do stuff here
-    }
     
     return self;
 }

@@ -4,7 +4,7 @@
 //
 //  Created by Graham Mosley on 3/24/16.
 //  Copyright © 2016 CoDeveloper. All rights reserved.
-//
+//  Each thumbnail image/title in the mini carousel at the bottom of the screen
 
 #import "ThumbnailView.h"
 

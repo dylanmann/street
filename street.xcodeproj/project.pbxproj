@@ -24,7 +24,6 @@
 		87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A71C792B3E001D60A3 /* MenuViewController.m */; };
 		87CFE7B01C792B57001D60A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7AF1C792B57001D60A3 /* main.m */; };
 		87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B11C792B63001D60A3 /* reveal-icon.png */; };
-		87CFE7B41C792B63001D60A3 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
 		BF5B5E041CA4B3C0004CBE14 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */; };
@@ -77,7 +76,6 @@
 		87CFE7AD1C792B4F001D60A3 /* street-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "street-Info.plist"; path = "Street/street-Info.plist"; sourceTree = SOURCE_ROOT; };
 		87CFE7AF1C792B57001D60A3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Street/main.m; sourceTree = SOURCE_ROOT; };
 		87CFE7B11C792B63001D60A3 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon.png"; path = "Street/reveal-icon.png"; sourceTree = SOURCE_ROOT; };
-		87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon@2x.png"; path = "Street/reveal-icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		BF5B5E021CA4B3C0004CBE14 /* ThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbnailView.h; path = street/ThumbnailView.h; sourceTree = SOURCE_ROOT; };
@@ -181,7 +179,6 @@
 				87CFE7AD1C792B4F001D60A3 /* street-Info.plist */,
 				87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */,
 				87CFE7B11C792B63001D60A3 /* reveal-icon.png */,
-				87CFE7B21C792B63001D60A3 /* reveal-icon@2x.png */,
 				87CFE7AF1C792B57001D60A3 /* main.m */,
 				4EE902371964A22200AA3B42 /* InfoPlist.strings */,
 			);
@@ -362,7 +359,6 @@
 				87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */,
 				5228E2331CA4C85D00E5707D /* Effra_Std_Md.ttf in Resources */,
 				87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */,
-				87CFE7B41C792B63001D60A3 /* reveal-icon@2x.png in Resources */,
 				5228E2311CA4C85D00E5707D /* Effra_Std_BdIt.ttf in Resources */,
 				87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */,
 				5209A6CD1CA7A2C4003D0343 /* logobutton.png in Resources */,

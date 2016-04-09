@@ -4,7 +4,7 @@
 //
 //  Created by Graham Mosley on 2/28/16.
 //  Copyright © 2016 CoDeveloper. All rights reserved.
-//
+//  Responsible for carousel display; main screen allowing user to scroll through sections and articles
 
 #import "ArticlePageViewController.h"
 #import "ArticleViewController.h"
@@ -66,33 +66,36 @@ int static startIndex = 0;
     // Dispose of any resources that can be recreated.
 }
 
+//load the articleViewController before the current one
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     
     ArticleViewController *avc = (ArticleViewController *)viewController;
+    
+    [self syncTitle: avc.index];
 
     if ((avc.index == 0) || (avc.index == NSNotFound)) {
         return nil;
     }
-    
-    [self syncTitle: avc.index];
 
     return [self viewControllerAtIndex:avc.index - 1];
 }
 
+//load the articleViewController after the current one
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
     ArticleViewController *avc = (ArticleViewController *)viewController;
+    
+    [self syncTitle: avc.index];
 
     //Assumes 11 sections
     if ((avc.index == 11) || (avc.index == NSNotFound)) {
         return nil;
     }
-    
-    [self syncTitle: avc.index];
 
     return [self viewControllerAtIndex:avc.index + 1];
 }
 
+//sync the title button to the current index we are on
 - (void)syncTitle:(int) index {
     
     NSString *title = [ArticleData sharedInstance].sectionNames[index];
@@ -102,6 +105,7 @@ int static startIndex = 0;
     
 }
 
+//load the view of the current index we are on
 - (ArticleViewController *)viewControllerAtIndex:(int) index {
     
     CGFloat bottom = 0;
@@ -175,6 +179,7 @@ int static startIndex = 0;
     return avc;
 }
 
+//when thumbnail clicked, open up a PopupViewController
 - (void)presentArticle:(UITapGestureRecognizer *)sender {
     
     ThumbnailView* thumb = (ThumbnailView *)sender.view;

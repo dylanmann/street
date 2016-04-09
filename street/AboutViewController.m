@@ -4,6 +4,7 @@
 //
 //  Created by Jenny Chen on 2/27/16.
 //  Copyright © 2016 CoDeveloper. All rights reserved.
+//  Displays a textview about what 34st Street is
 //
 
 #import "AboutViewController.h"

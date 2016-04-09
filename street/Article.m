@@ -4,7 +4,7 @@
 //
 //  Created by Graham Mosley on 2/28/16.
 //  Copyright © 2016 Graham Mosley. All rights reserved.
-//
+//  Class that represents an 34st article
 
 #import <Foundation/Foundation.h>
 #import "Ono.h"
@@ -36,8 +36,7 @@
         [document enumerateElementsWithXPath:@"//div[@class=\"article-text\"]" usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
             [stuffToRender appendString: [element description]];
         }];
-        
-        //articleHTML = [[NSString alloc] init];
+
         articleHTML = stuffToRender;
     }
     return self;

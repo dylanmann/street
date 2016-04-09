@@ -11,8 +11,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
-                                                             bundle: nil];
+    [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
     
     return YES;
 }

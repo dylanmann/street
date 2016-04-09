@@ -4,7 +4,7 @@
 //
 //  Created by Graham Mosley on 3/25/16.
 //  Copyright © 2016 CoDeveloper. All rights reserved.
-//
+//  Responsible for actually displaying the article when a thumbnail is pressed
 
 #import "PopupViewController.h"
 #import "Article.h"
@@ -46,6 +46,7 @@
     
     fontSize = 40;
     
+    //create and set the action of the close button
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     [close setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                         [UIFont fontWithName:@"Effra" size:12.0], NSFontAttributeName,
@@ -58,6 +59,7 @@
     // this is used to keep track of the current y position of the content
     bottom = 0;
     
+    //set up and load the article text, image, and title
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_article.image]];
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
     imageview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2);
@@ -92,15 +94,16 @@
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, self.view.frame.size.height - bottom) configuration:config];
     
-    
     [webview loadHTMLString:htmlToRender baseURL:NULL];
     
+    //set up Facebook share link
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
     content.contentURL = _article.url;
     FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
     shareButton.shareContent = content;
     shareButton.center = CGPointMake(self.view.center.x - 30, self.view.center.y);
     
+    //set up ability to change font size
     UIButton *minusButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [minusButton setBackgroundColor:[UIColor grayColor]];
     [minusButton setFrame:CGRectMake(self.view.center.x + 20, self.view.center.y - 15, 30, 30)];
@@ -134,7 +137,7 @@
 }
 
 - (void)decreaseTextSize {
-    fontSize = MAX(fontSize - 10, 50);
+    fontSize = MAX(fontSize - 10, 40);
     [self changeText];
 }
 

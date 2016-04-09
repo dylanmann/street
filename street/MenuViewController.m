@@ -1,7 +1,10 @@
 //
 //  MenuViewController.m
+//  street
 //
 //  Created by Jenny Chen on 2/20/16
+//  Copyright © 2016 CoDeveloper. All rights reserved.
+//  Handles displaying the menu after the button is pressed
 //
 
 #import "MenuViewController.h"
@@ -28,7 +31,6 @@ NSArray *menuItems;
 {
     SWUITableViewCell *senderCell = sender;
     NSString *label = senderCell.textLabel.text;
-
     
     if ([label  isEqual: @"HOME"]) {
         [ArticlePageViewController changeStartIndex: 0];

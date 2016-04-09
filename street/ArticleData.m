@@ -5,7 +5,7 @@
 //
 //  Created by Graham Mosley on 2/28/16.
 //  Copyright © 2016 Graham Mosley. All rights reserved.
-//
+//  Retrieves 34st articles from website
 
 #import <Foundation/Foundation.h>
 #import "ArticleData.h"
