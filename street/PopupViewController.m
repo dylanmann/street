@@ -160,7 +160,6 @@
     {
         manual = TRUE;
         [scrollView setContentSize:[correctSize CGSizeValue]];
-        NSLog(@"Manual    %f", [correctSize CGSizeValue].height);
     }
 }
 
@@ -175,14 +174,10 @@
                        context:(void *)context
 {
     if (object == webview.scrollView && [keyPath isEqual:@"contentSize"] && !manual) {
-        if(manual) {
-            NSLog(@"didn't work");
-        }
         CGSize size = scrollView.frame.size;
         [scrollView setContentSize: CGRectMake(0, 0, size.width, bottom + webview.scrollView.contentSize.height).size];
         [webview setFrame:CGRectMake(0, bottom, size.width, webview.scrollView.contentSize.height)];
         webview.scrollView.scrollEnabled = NO;
-        NSLog(@"auto    %f", scrollView.contentSize.height);
     }
 }
 

@@ -26,6 +26,7 @@
 		87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B11C792B63001D60A3 /* reveal-icon.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
+		BF5599B51CBB0B4C000B565F /* MainArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5599B41CBB0B4C000B565F /* MainArticleView.m */; };
 		BF5B5E041CA4B3C0004CBE14 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */; };
 		BF9B14911CA4F272007B512B /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9B14901CA4F272007B512B /* PopupViewController.m */; };
 		BFC0143E1C9C7088004CC863 /* street_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC0143D1C9C7088004CC863 /* street_Tests.m */; };
@@ -78,6 +79,8 @@
 		87CFE7B11C792B63001D60A3 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon.png"; path = "Street/reveal-icon.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5599B31CBB0B4C000B565F /* MainArticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainArticleView.h; path = street/MainArticleView.h; sourceTree = SOURCE_ROOT; };
+		BF5599B41CBB0B4C000B565F /* MainArticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainArticleView.m; path = street/MainArticleView.m; sourceTree = SOURCE_ROOT; };
 		BF5B5E021CA4B3C0004CBE14 /* ThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbnailView.h; path = street/ThumbnailView.h; sourceTree = SOURCE_ROOT; };
 		BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbnailView.m; path = street/ThumbnailView.m; sourceTree = SOURCE_ROOT; };
 		BF9B148F1CA4F272007B512B /* PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopupViewController.h; path = street/PopupViewController.h; sourceTree = SOURCE_ROOT; };
@@ -238,6 +241,8 @@
 			children = (
 				BF5B5E021CA4B3C0004CBE14 /* ThumbnailView.h */,
 				BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */,
+				BF5599B31CBB0B4C000B565F /* MainArticleView.h */,
+				BF5599B41CBB0B4C000B565F /* MainArticleView.m */,
 				87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */,
 				5209A6CA1CA79AC6003D0343 /* LaunchScreen.storyboard */,
 				879B91331C8392DC004DE9BB /* SwipeView.h */,
@@ -432,6 +437,7 @@
 				BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */,
 				BFFBB7731C83AFBD006A3983 /* Article.m in Sources */,
 				BFEDD46B1C9B194700497922 /* ArticleViewController.m in Sources */,
+				BF5599B51CBB0B4C000B565F /* MainArticleView.m in Sources */,
 				879B91351C8392E1004DE9BB /* SwipeView.m in Sources */,
 				874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */,
 				87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */,

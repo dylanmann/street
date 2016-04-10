@@ -10,8 +10,8 @@
 
 @implementation ThumbnailView
 
--(id) initWithFrame:(CGRect)frame title:(NSString *)title image:(NSURL *)image {
-
+-(id) initWithFrame:(CGRect)frame title:(NSString *)title image:(NSURL *)imageUrl
+{
     self = [self initWithFrame:frame];
     
     if(self = [super init]){
@@ -25,14 +25,12 @@
         label.frame = CGRectMake(5,self.frame.size.height/2 +5,self.frame.size.width -10,self.frame.size.height/2 -10);
         label.adjustsFontSizeToFitWidth = YES;
         label.text = [title uppercaseString];
-        NSURL *imageUrl = image;
         
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
         
         UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
         imageview.frame = CGRectMake(5, 5, self.frame.size.width - 10, self.frame.size.height / 2 - 10);
         imageview.contentMode = UIViewContentModeScaleAspectFit;
-        
         
         [self addSubview:label];
         [self addSubview:imageview];
