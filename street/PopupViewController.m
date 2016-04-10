@@ -26,6 +26,8 @@
     WKWebView *webview;
     UIScrollView *scrollView;
     CGFloat bottom;
+    NSMutableDictionary *sizes;
+    BOOL manual;
 }
 - (id)initWithArticle:(Article *)article {
     if (self = [super init]) {
@@ -58,6 +60,9 @@
 
     // this is used to keep track of the current y position of the content
     bottom = 0;
+    
+    sizes = [NSMutableDictionary dictionary];
+    manual = FALSE;
     
     //set up and load the article text, image, and title
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_article.image]];
@@ -132,18 +137,31 @@
 }
 
 - (void)increaseTextSize {
+    NSValue *correctSize = [NSValue valueWithCGSize:scrollView.contentSize];
+    [sizes setObject:correctSize forKey: [NSNumber numberWithInt:fontSize]];
     fontSize = MIN(fontSize + 10, 90);
     [self changeText];
 }
 
 - (void)decreaseTextSize {
+    NSValue *correctSize = [NSValue valueWithCGSize:scrollView.contentSize];
+    [sizes setObject:correctSize forKey: [NSNumber numberWithInt:fontSize]];
     fontSize = MAX(fontSize - 10, 40);
     [self changeText];
 }
 
 - (void)changeText {
+    manual = FALSE;
     NSString *js = [NSString stringWithFormat:@"document.getElementById(\"toplevel\").style.fontSize = %i", fontSize];
     [webview evaluateJavaScript:js completionHandler:NULL];
+    
+    NSValue *correctSize = [sizes objectForKey: [NSNumber numberWithInt:fontSize]];
+    if (correctSize != nil)
+    {
+        manual = TRUE;
+        [scrollView setContentSize:[correctSize CGSizeValue]];
+        NSLog(@"Manual    %f", [correctSize CGSizeValue].height);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -156,11 +174,15 @@
                         change:(NSDictionary *)change
                        context:(void *)context
 {
-    if (object == webview.scrollView && [keyPath isEqual:@"contentSize"]) {
+    if (object == webview.scrollView && [keyPath isEqual:@"contentSize"] && !manual) {
+        if(manual) {
+            NSLog(@"didn't work");
+        }
         CGSize size = scrollView.frame.size;
         [scrollView setContentSize: CGRectMake(0, 0, size.width, bottom + webview.scrollView.contentSize.height).size];
         [webview setFrame:CGRectMake(0, bottom, size.width, webview.scrollView.contentSize.height)];
         webview.scrollView.scrollEnabled = NO;
+        NSLog(@"auto    %f", scrollView.contentSize.height);
     }
 }
 
