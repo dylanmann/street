@@ -67,7 +67,7 @@
     //set up and load the article text, image, and title
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_article.image]];
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
-    imageview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2);
+    imageview.frame = CGRectMake(10, 0, self.view.frame.size.width - 20, self.view.frame.size.height/2);
     imageview.contentMode = UIViewContentModeScaleAspectFit;
     
     bottom += self.view.frame.size.height / 2;
@@ -97,7 +97,7 @@
     htmlToRender = [NSMutableString stringWithFormat:@"<span id=toplevel style=\"font-family: %@; font-size: %i\">%@</span>", @"Helvetica Neue", fontSize, htmlToRender];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-    webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, bottom, self.view.frame.size.width, self.view.frame.size.height - bottom) configuration:config];
+    webview = [[WKWebView alloc] initWithFrame:CGRectMake(10, bottom, self.view.frame.size.width - 20, self.view.frame.size.height - bottom) configuration:config];
     
     [webview loadHTMLString:htmlToRender baseURL:NULL];
     

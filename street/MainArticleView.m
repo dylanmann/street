@@ -27,7 +27,7 @@
 
         UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
         
-        imageview.frame = CGRectMake(0, 20, self.frame.size.width, self.frame.size.height/2 + 50);
+        imageview.frame = CGRectMake(10, 20, self.frame.size.width - 20, self.frame.size.height/2 + 50);
         imageview.contentMode = UIViewContentModeScaleAspectFit;
     
         [imageview setBackgroundColor: [UIColor clearColor]];
