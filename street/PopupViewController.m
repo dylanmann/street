@@ -100,6 +100,7 @@
     webview = [[WKWebView alloc] initWithFrame:CGRectMake(10, bottom, self.view.frame.size.width - 20, self.view.frame.size.height - bottom) configuration:config];
     
     [webview loadHTMLString:htmlToRender baseURL:NULL];
+    webview.navigationDelegate = self;
     
     //set up Facebook share link
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
@@ -181,6 +182,31 @@
         [webview setFrame:CGRectMake(0, bottom, size.width, webview.scrollView.contentSize.height)];
         webview.scrollView.scrollEnabled = NO;
     }
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+
+{
+    NSURL *url = navigationAction.request.URL;
+
+    if (navigationAction.navigationType != 0) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+        return;
+    }
+    
+    if ([url.host isEqualToString:@"www.34st.com"]) {
+        Article* article  = [[[Article alloc] init] initWithURL: url];
+       // TODO: add random stuff (e.g. title, image, etc.) associated with the article
+        PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
+        UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nc animated:YES completion:nil];
+        
+    //only open in Safari if link is clicked and is not from 34st
+    } else if (navigationAction.navigationType == 0) {
+        [[UIApplication sharedApplication] openURL: url];
+    }
+    
+     decisionHandler(WKNavigationActionPolicyCancel);
 }
 
 - (void)dealloc

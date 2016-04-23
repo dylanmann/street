@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 @class Article;
 
 
-@interface PopupViewController : UIViewController
+@interface PopupViewController : UIViewController <WKNavigationDelegate>
 
 -(id)initWithArticle:(Article *)article;
 
