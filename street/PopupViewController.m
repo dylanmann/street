@@ -9,6 +9,7 @@
 #import "PopupViewController.h"
 #import "Article.h"
 #import <WebKit/WebKit.h>
+#import <Social/Social.h>
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
@@ -28,6 +29,7 @@
     CGFloat bottom;
     NSMutableDictionary *sizes;
     BOOL manual;
+    UIImage *image;
 }
 - (id)initWithArticle:(Article *)article {
     if (self = [super init]) {
@@ -65,7 +67,7 @@
     manual = FALSE;
     
     //set up and load the article text, image, and title
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_article.image]];
+    image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_article.image]];
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
     imageview.frame = CGRectMake(10, 0, self.view.frame.size.width - 20, self.view.frame.size.height/2);
     imageview.contentMode = UIViewContentModeScaleAspectFit;
@@ -107,20 +109,28 @@
     content.contentURL = _article.url;
     FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
     shareButton.shareContent = content;
-    shareButton.center = CGPointMake(self.view.center.x - 30, self.view.center.y);
+    shareButton.center = CGPointMake(self.view.center.x - 83, self.view.center.y);
+    
+    //set up Twitter share link
+    UIButton *twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [twitterButton addTarget:self action:@selector(shareToTwitter) forControlEvents:UIControlEventTouchUpInside];
+    [twitterButton setFrame:CGRectMake(self.view.center.x, self.view.center.y - 12, 85, 34)];
+    [twitterButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [twitterButton setImage:[UIImage imageNamed:@"tweet_button"] forState:UIControlStateNormal];
+    twitterButton.center = CGPointMake(self.view.center.x, self.view.center.y);
     
     //set up ability to change font size
     UIButton *minusButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [minusButton setBackgroundColor:[UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1]];
     [minusButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [minusButton setFrame:CGRectMake(self.view.center.x + 20, self.view.center.y - 15, 30, 30)];
+    [minusButton setFrame:CGRectMake(self.view.center.x + 48, self.view.center.y - 15, 30, 30)];
     [minusButton setTitle:@"-" forState:UIControlStateNormal];
     [minusButton addTarget:self action:@selector(decreaseTextSize) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [plusButton setBackgroundColor:[UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1]];
     [plusButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [plusButton setFrame:CGRectMake(self.view.center.x + 55, self.view.center.y - 15, 30, 30)];
+    [plusButton setFrame:CGRectMake(self.view.center.x + 82, self.view.center.y - 15, 30, 30)];
     [plusButton setTitle:@"+" forState:UIControlStateNormal];
     [plusButton addTarget:self action:@selector(increaseTextSize) forControlEvents:UIControlEventTouchUpInside];
     
@@ -133,6 +143,8 @@
     
     [scrollView addSubview:minusButton];
     [scrollView addSubview:plusButton];
+    [scrollView addSubview:twitterButton];
+
     [self.view addSubview:scrollView];
     
     // fix content size issue by adding observers for contentsize
@@ -207,6 +219,14 @@
     }
     
      decisionHandler(WKNavigationActionPolicyCancel);
+}
+
+-(void)shareToTwitter {
+    SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [tweetSheet setInitialText:[NSString stringWithFormat:@"Check out %@ at 34st.com!", _article.title]];
+    [tweetSheet addURL: _article.url];
+    [tweetSheet addImage: image];
+    [self presentViewController:tweetSheet animated:YES completion:nil];
 }
 
 - (void)dealloc
