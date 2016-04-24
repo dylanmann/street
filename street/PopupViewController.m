@@ -125,17 +125,19 @@
     
     //set up ability to change font size
     UIButton *minusButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [minusButton setBackgroundColor:[UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1]];
+    [minusButton setBackgroundColor:[UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1]];
     [minusButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [minusButton setFrame:CGRectMake(self.view.center.x + 48, self.view.center.y - 15, 30, 30)];
-    [minusButton setTitle:@"-" forState:UIControlStateNormal];
+    [minusButton setTitle:@"A" forState:UIControlStateNormal];
+    minusButton.titleLabel.font = [UIFont systemFontOfSize:12 weight:0.45];
     [minusButton addTarget:self action:@selector(decreaseTextSize) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [plusButton setBackgroundColor:[UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1]];
+    [plusButton setBackgroundColor:[UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1]];
     [plusButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [plusButton setFrame:CGRectMake(self.view.center.x + 82, self.view.center.y - 15, 30, 30)];
-    [plusButton setTitle:@"+" forState:UIControlStateNormal];
+    [plusButton setTitle:@"A" forState:UIControlStateNormal];
+    plusButton.titleLabel.font = [UIFont systemFontOfSize:27 weight:0.5];
     [plusButton addTarget:self action:@selector(increaseTextSize) forControlEvents:UIControlEventTouchUpInside];
     
     scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
