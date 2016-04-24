@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "Article.h"
 #import "ArticleData.h"
+#import "SearchData.h"
 
 @interface street_Tests : XCTestCase
 
@@ -25,6 +26,16 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
+
+-(void)testSearch {
+    NSLog(@"TEST STARTED");
+    NSArray *articles = [SearchData articlesByTerm:@"roundup"];
+    NSLog(@"%lu", (unsigned long)[articles count]);
+    for (Article * a in articles) {
+        NSLog(@"%@", a.title);
+    };
+}
+
 -(void)testInitWithURL {
     NSLog(@"TEST STARTED INIT");
     
