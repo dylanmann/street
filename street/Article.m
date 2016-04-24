@@ -36,11 +36,16 @@
         
         _title = [document firstChildWithXPath:@"//h1"].stringValue;
         _url = url;
+        NSLog(@"%@", [document firstChildWithXPath:@"//aside/div/div[2]"].stringValue);
         _date = [dateFormatter dateFromString:[document firstChildWithXPath:@"//aside/div/div[2]"].stringValue];
-        _author = [document firstChildWithXPath:@"//aside/div/div[1]"].stringValue;
+        
+        NSString *unformattedAuthor = [document firstChildWithXPath:@"//aside/div/div[1]"].stringValue;
+        unformattedAuthor = [unformattedAuthor stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        _author = [unformattedAuthor stringByReplacingOccurrencesOfString:@"By " withString:@""];
         _abstract = [document firstChildWithXPath:@"//p[@class=\"smaller abstract\"]"].stringValue;
         NSString *imageURLString =[document firstChildWithXPath:@"//figure/a/@href"].stringValue;
-        imageURLString = [imageURLString stringByReplacingOccurrencesOfString:@"f.png" withString:@"t.png"];
+        imageURLString = [imageURLString stringByReplacingOccurrencesOfString:@"f.jpg" withString:@"t.jpg"];
         _image = [NSURL URLWithString:imageURLString];
         articleHTML = stuffToRender;
     }

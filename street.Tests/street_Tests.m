@@ -25,6 +25,19 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
+-(void)testInitWithURL {
+    NSLog(@"TEST STARTED INIT");
+    
+    Article *a = [[Article alloc] initWithURL:[NSURL URLWithString:@"http://www.34st.com/article/2016/01/the-fifth-wave-to-see-or-not-to-see"]];
+    
+    NSLog(@"Title %@", a.title);
+    NSLog(@"author %@", a.author);
+    NSLog(@"date %@", a.date);
+    NSLog(@"html %@", a.articleHTML);
+    NSLog(@"abstract %@", a.abstract);
+    NSLog(@"image %@", a.image);
+}
+
 
 - (void)testArticleDataInstance {
     NSLog(@"TEST STARTED");
@@ -40,8 +53,6 @@
     }
     
     // get an array of all articles in a section
-    // currently there's no way to request more than the first page of articles (15) for each section
-    // but it should be (relatively) easy to implement
     NSArray *egoArticles = [articleData articlesForSection:@"ego"];
     
     // get an individual article
