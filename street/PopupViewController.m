@@ -222,7 +222,8 @@
 }
 
 -(void)shareToTwitter {
-    SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    SLComposeViewController *tweetSheet = [SLComposeViewController
+                                           composeViewControllerForServiceType:SLServiceTypeTwitter];
     [tweetSheet setInitialText:[NSString stringWithFormat:@"Check out %@ at 34st.com!", _article.title]];
     [tweetSheet addURL: _article.url];
     [tweetSheet addImage: image];
