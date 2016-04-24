@@ -11,9 +11,6 @@
 #import <WebKit/WebKit.h>
 #import <Social/Social.h>
 
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKShareKit/FBSDKShareKit.h>
-
 @interface PopupViewController ()
 
 @property (nonatomic, strong) Article *article;
@@ -108,12 +105,20 @@
     webview.allowsBackForwardNavigationGestures = false;;
     
     
+//    //set up Facebook share link
+//    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+//    content.contentURL = _article.url;
+//    FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
+//    shareButton.shareContent = content;
+//    shareButton.center = CGPointMake(self.view.center.x - 83, self.view.center.y);
+    
     //set up Facebook share link
-    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-    content.contentURL = _article.url;
-    FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
-    shareButton.shareContent = content;
-    shareButton.center = CGPointMake(self.view.center.x - 83, self.view.center.y);
+    UIButton *facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [facebookButton addTarget:self action:@selector(shareToFacebook) forControlEvents:UIControlEventTouchUpInside];
+    [facebookButton setFrame:CGRectMake(self.view.center.x, self.view.center.y - 12, 85, 34)];
+    [facebookButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [facebookButton setImage:[UIImage imageNamed:@"tweet_button"] forState:UIControlStateNormal];
+    facebookButton.center = CGPointMake(self.view.center.x - 90, self.view.center.y);
     
     //set up Twitter share link
     UIButton *twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -143,12 +148,13 @@
     scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [scrollView addSubview:imageview];
     [scrollView addSubview:label];
-    [scrollView addSubview:shareButton];
+    //[scrollView addSubview:shareButton];
     [scrollView addSubview:webview];
     [scrollView setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
     
     [scrollView addSubview:minusButton];
     [scrollView addSubview:plusButton];
+    [scrollView addSubview:facebookButton];
     [scrollView addSubview:twitterButton];
 
     [self.view addSubview:scrollView];
@@ -239,6 +245,11 @@
     [tweetSheet addURL: _article.url];
     [tweetSheet addImage: image];
     [self presentViewController:tweetSheet animated:YES completion:nil];
+}
+
+-(void)shareToFacebook {
+    NSString *facebookShareURLString = [NSString stringWithFormat:@"https://www.facebook.com/sharer/sharer.php?u=%@", [_article.url absoluteString]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:facebookShareURLString]];
 }
 
 - (void)dealloc
