@@ -539,6 +539,7 @@
 		};
 		01FB868A169E2D8B00A0A1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CF087F45ECE0EBD1FAB5685 /* Pods-Street.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -554,6 +555,7 @@
 		};
 		01FB868B169E2D8B00A0A1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

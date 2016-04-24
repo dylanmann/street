@@ -16,13 +16,6 @@
 
 @synthesize articleHTML;
 
-//@synthesize title;
-//@synthesize url;
-//@synthesize date;
-//@synthesize author;
-//@synthesize abstract;
-//@synthesize image;
-
 -(id) initWithURL:(NSURL *)url {
     if( self = [super init] )
     {
@@ -36,7 +29,19 @@
         [document enumerateElementsWithXPath:@"//div[@class=\"article-text\"]" usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
             [stuffToRender appendString: [element description]];
         }];
-
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"MM/dd/yy hh:mma";
+        dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+        
+        _title = [document firstChildWithXPath:@"//h1"].stringValue;
+        _url = url;
+        _date = [dateFormatter dateFromString:[document firstChildWithXPath:@"//aside/div/div[2]"].stringValue];
+        _author = [document firstChildWithXPath:@"//aside/div/div[1]"].stringValue;
+        _abstract = [document firstChildWithXPath:@"//p[@class=\"smaller abstract\"]"].stringValue;
+        NSString *imageURLString =[document firstChildWithXPath:@"//figure/a/@href"].stringValue;
+        imageURLString = [imageURLString stringByReplacingOccurrencesOfString:@"f.png" withString:@"t.png"];
+        _image = [NSURL URLWithString:imageURLString];
         articleHTML = stuffToRender;
     }
     return self;
@@ -71,7 +76,6 @@
         
         articleHTML = [[NSString alloc] init];
         articleHTML = stuffToRender;
-    } else {
     }
     return articleHTML;
 }
