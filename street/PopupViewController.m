@@ -63,6 +63,7 @@
     // this is used to keep track of the current y position of the content
     bottom = 0;
     
+    // used for memoization of contentsizes for the webview so that recalculation is unnecessary
     sizes = [NSMutableDictionary dictionary];
     manual = FALSE;
     
@@ -103,6 +104,8 @@
     
     [webview loadHTMLString:htmlToRender baseURL:NULL];
     webview.navigationDelegate = self;
+    webview.allowsBackForwardNavigationGestures = false;;
+    
     
     //set up Facebook share link
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
@@ -146,6 +149,9 @@
     [scrollView addSubview:twitterButton];
 
     [self.view addSubview:scrollView];
+    
+    scrollView.maximumZoomScale = 1.0;
+    scrollView.minimumZoomScale = 1.0;
     
     // fix content size issue by adding observers for contentsize
     [webview.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
