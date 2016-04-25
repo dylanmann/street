@@ -8,13 +8,8 @@
 //
 
 #import "SearchViewController.h"
-#import "SearchResultsTableViewController.h"
 
-@interface SearchViewController () <UISearchResultsUpdating>
-
-@property (nonatomic, strong) NSArray *articles;
-@property (nonatomic, strong) UISearchController *searchController;
-@property (nonatomic, strong) NSMutableArray *searchResults;
+@interface SearchViewController ()
 
 @end
 
@@ -22,96 +17,79 @@
 
 @implementation SearchViewController
 
+- (void)dismiss {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.articles = @[ @"ugh", @"blah"]; //CURRENTLY HARDCODED - NEEDS TO BE CHANGED TO ARTICLE TITLES. MAKE SURE TITLES ARE LOWERCASE.
-
-    UINavigationController *searchResultsController = [[self storyboard] instantiateViewControllerWithIdentifier:@"TableSearchResultsNavController"];
+    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
+    [close setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                   [UIFont fontWithName:@"Effra" size:12.0], NSFontAttributeName,
+                                   [UIColor blackColor], NSForegroundColorAttributeName,
+                                   nil]
+                         forState:UIControlStateNormal];
+    [self.navigationItem setLeftBarButtonItem:close];
     
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
-
-    self.searchController.searchResultsUpdater = self;
-
-    self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
+    [self.view setBackgroundColor: [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1]];
     
-    self.tableView.tableHeaderView = self.searchController.searchBar;
+    NSString *script = @"<script>\
+    (function() {\
+        var cx = '012007667445641334091:4gqr8mbajym';\
+        var gcse = document.createElement('script');\
+        gcse.type = 'text/javascript';\
+        gcse.async = true;\
+        gcse.src = 'https://www.google.com/cse/cse.js?cx=' + cx;\
+        var s = document.getElementsByTagName('script')[0];\
+        s.parentNode.insertBefore(gcse, s);\
+    })();\
+    </script>\
+    <gcse:search></gcse:search>";
     
+    NSString *htmlToRender = [NSString stringWithFormat: @"<head> <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" </head><span id=toplevel style=\"font-family: %@; font-size: 20\"><body><div>%@</div></body></span>", @"Helvetica Neue", script];
+    
+    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+    WKWebView *webview = [[WKWebView alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 20, self.view.frame.size.height) configuration:config];
+    webview.navigationDelegate = self;
+    [webview loadHTMLString:htmlToRender baseURL:NULL];
+    webview.allowsBackForwardNavigationGestures = false;
+    
+    [self.view addSubview:webview];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.articles count];
-}
-
-
--(UITableViewCell *)tableView:(UITableView *)tableView
-        cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = [_articles objectAtIndex:indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text =[_articles objectAtIndex:indexPath.row];
+    NSURL *url = navigationAction.request.URL;
     
-    return cell;
-}
-
-#pragma mark - UISearchControllerDelegate & UISearchResultsDelegate
-
-// Called when the search bar becomes first responder
-- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
-{
-    
-    // Set searchString equal to what's typed into the searchbar
-    NSString *searchString = [self.searchController.searchBar.text lowercaseString];
-    // [myString lowercaseString]
-    
-    [self updateFilteredContentForArticleName:searchString];
-    
-    if (self.searchController.searchResultsController) {
-        
-        UINavigationController *navController = (UINavigationController *)self.searchController.searchResultsController;
-        
-        // Present SearchResultsTableViewController as the topViewController
-        SearchResultsTableViewController *vc = (SearchResultsTableViewController *)navController.topViewController;
-        
-        // Update searchResults
-        vc.searchResults = self.searchResults;
-        
-        // And reload the tableView with the new data
-        [vc.tableView reloadData];
+    if (navigationAction.navigationType != 0) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+        return;
     }
-}
-
-
-// Update self.searchResults based on searchString, which is the argument in passed to this method
-- (void)updateFilteredContentForArticleName:(NSString *)articleName
-{
-
-    if (articleName == nil) {
-        
-        // If empty the search results are the same as the original data
-        self.searchResults = [self.articles mutableCopy];
-    } else {
-        NSMutableArray *searchResults = [[NSMutableArray alloc] init];
-        
-        for (NSString *title in _articles) {
-            if ([title containsString: articleName]) {
-                [searchResults addObject: title];
-            }
-        }
-            self.searchResults = searchResults;
-        }
+    
+    if ([url.host isEqualToString:@"www.34st.com"]) {
+        Article* article  = [[[Article alloc] init] initWithURL: url];
+        PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
+        UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nc animated:YES completion:nil];
+    
+        //   only open in Safari if link is clicked and is not from 34st
+    } else if (navigationAction.navigationType == 0) {
+            [webView loadRequest:navigationAction.request];
     }
 
+    [webView loadRequest:navigationAction.request];
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation {
+    Article* article  = [[[Article alloc] init] initWithURL: webView.URL];
+    PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self.presentingViewController presentViewController:nc animated:YES completion:nil];
+}
 
 @end
 

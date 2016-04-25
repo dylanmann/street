@@ -27,11 +27,9 @@
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
 		87FD95B61CCDE95500E2CB05 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FD95B51CCDE95500E2CB05 /* SearchViewController.m */; };
-		87FD95BA1CCDE9B700E2CB05 /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FD95B91CCDE9B700E2CB05 /* SearchResultsTableViewController.m */; };
 		BF26CECF1CCDC3E900B67808 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF26CECE1CCDC3E900B67808 /* Social.framework */; };
 		BF5599B51CBB0B4C000B565F /* MainArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5599B41CBB0B4C000B565F /* MainArticleView.m */; };
 		BF5B5E041CA4B3C0004CBE14 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */; };
-		BF888E2A1CCD84D900B4163D /* SearchData.m in Sources */ = {isa = PBXBuildFile; fileRef = BF888E291CCD84D900B4163D /* SearchData.m */; };
 		BF8997BA1CCD354100E279EB /* tweet_button.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8997B91CCD354100E279EB /* tweet_button.png */; };
 		BF9B14911CA4F272007B512B /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9B14901CA4F272007B512B /* PopupViewController.m */; };
 		BFC0143E1C9C7088004CC863 /* street_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC0143D1C9C7088004CC863 /* street_Tests.m */; };
@@ -92,8 +90,6 @@
 		BF5599B41CBB0B4C000B565F /* MainArticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainArticleView.m; path = street/MainArticleView.m; sourceTree = SOURCE_ROOT; };
 		BF5B5E021CA4B3C0004CBE14 /* ThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbnailView.h; path = street/ThumbnailView.h; sourceTree = SOURCE_ROOT; };
 		BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbnailView.m; path = street/ThumbnailView.m; sourceTree = SOURCE_ROOT; };
-		BF888E281CCD84D900B4163D /* SearchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchData.h; sourceTree = SOURCE_ROOT; };
-		BF888E291CCD84D900B4163D /* SearchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchData.m; sourceTree = SOURCE_ROOT; };
 		BF8997B91CCD354100E279EB /* tweet_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweet_button.png; sourceTree = SOURCE_ROOT; };
 		BF9B148F1CA4F272007B512B /* PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopupViewController.h; path = street/PopupViewController.h; sourceTree = SOURCE_ROOT; };
 		BF9B14901CA4F272007B512B /* PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopupViewController.m; path = street/PopupViewController.m; sourceTree = SOURCE_ROOT; };
@@ -248,8 +244,6 @@
 				BFFBB7701C83AFBD006A3983 /* Article.m */,
 				BFFBB7711C83AFBD006A3983 /* ArticleData.h */,
 				BFFBB7721C83AFBD006A3983 /* ArticleData.m */,
-				BF888E281CCD84D900B4163D /* SearchData.h */,
-				BF888E291CCD84D900B4163D /* SearchData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -465,7 +459,6 @@
 				87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */,
 				BF9B14911CA4F272007B512B /* PopupViewController.m in Sources */,
 				87712D971C8221390047B9BC /* AboutViewController.m in Sources */,
-				BF888E2A1CCD84D900B4163D /* SearchData.m in Sources */,
 				87CFE7B01C792B57001D60A3 /* main.m in Sources */,
 				87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */,
 				BF5B5E041CA4B3C0004CBE14 /* ThumbnailView.m in Sources */,

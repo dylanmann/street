@@ -14,6 +14,7 @@
 #import "ThumbnailView.h"
 #import "PopupViewController.h"
 #import "MainArticleView.h"
+#import "SearchViewController.h"
 
 @interface ArticlePageViewController () <UIPageViewControllerDataSource>
 
@@ -47,6 +48,13 @@ int static startIndex = 0;
     [self.pageViewController didMoveToParentViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
 
+    UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStylePlain target:self action:@selector(search)];
+    [search setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                   [UIFont fontWithName:@"Effra" size:12.0], NSFontAttributeName,
+                                   [UIColor whiteColor], NSForegroundColorAttributeName,
+                                   nil]
+                         forState:UIControlStateNormal];
+    [self.navigationItem setRightBarButtonItem:search];
     //handles the menu opening
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -166,6 +174,15 @@ int static startIndex = 0;
 }
 
 //when thumbnail clicked, open up a PopupViewController
+- (void)search {
+    
+    SearchViewController *searchController = [SearchViewController new];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:searchController];
+    
+    [self presentViewController:nc animated:YES completion:nil];
+}
+
+//when thumbnail clicked, open up a PopupViewController
 - (void)presentArticle:(UITapGestureRecognizer *)sender {
     
     ThumbnailView* thumb = (ThumbnailView *)sender.view;
@@ -175,7 +192,6 @@ int static startIndex = 0;
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
     
     [self presentViewController:nc animated:YES completion:nil];
-    
 }
 
 @end

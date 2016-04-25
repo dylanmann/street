@@ -114,10 +114,7 @@
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"width: \\d+px;" options:NSRegularExpressionCaseInsensitive error:&error];
         NSString *modifiedString = [regex stringByReplacingMatchesInString:yourString options:0 range:NSMakeRange(0, [yourString length]) withTemplate:@"width: 100%;"];
         
-        
         htmlToRender = [NSMutableString stringWithFormat:@"<head> <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" </head><span id=toplevel style=\"font-family: %@; font-size: %i\"><body>%@</body></span>", @"Helvetica Neue", fontSize, modifiedString];
-        
-        //NSLog(@"%@", htmlToRender);
         
         [webview loadHTMLString:htmlToRender baseURL:NULL];
 
@@ -159,7 +156,6 @@
     scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [scrollView addSubview:imageview];
     [scrollView addSubview:label];
-    //[scrollView addSubview:shareButton];
     [scrollView addSubview:webview];
     [scrollView setContentSize:CGRectMake(0, 0, self.view.frame.size.width, bottom).size];
     
