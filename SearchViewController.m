@@ -86,10 +86,16 @@
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation {
     Article* article  = [[[Article alloc] init] initWithURL: webView.URL];
     PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
     
-    [self.presentingViewController presentViewController:nc animated:YES completion:nil];
+    NSArray *viewControllers = self.navigationController.viewControllers;
+    NSMutableArray *newViewControllers = [NSMutableArray array];
+    
+    // preserve the root view controller
+    [newViewControllers addObject:[viewControllers objectAtIndex:0]];
+    // add the new view controller
+    [newViewControllers addObject:vc];
+    // animatedly change the navigation stack
+    [self.navigationController setViewControllers:newViewControllers animated:YES];
 }
-
 @end
 
