@@ -95,7 +95,19 @@
 
     // html head tags to disable zooming, and also a span to enable fontsize changes.
     NSMutableString* htmlToRender = [[_article articleContent] mutableCopy];
-    htmlToRender = [NSMutableString stringWithFormat:@"<head> <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" </head><span id=toplevel style=\"font-family: %@; font-size: %i\"><body>%@</body></span>", @"Helvetica Neue", fontSize, htmlToRender];
+    
+    NSString *htmlImmutable = [htmlToRender stringByReplacingOccurrencesOfString:@"f.jpg" withString:@"t.jpg"];
+    htmlImmutable = [htmlImmutable stringByReplacingOccurrencesOfString:@"f.JPG" withString:@"t.JPG"];
+    
+    NSString *yourString = htmlImmutable;
+    NSError *error = nil;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"width: \\d+px;" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSString *modifiedString = [regex stringByReplacingMatchesInString:yourString options:0 range:NSMakeRange(0, [yourString length]) withTemplate:@"width: 100%;"];
+    
+    
+    htmlToRender = [NSMutableString stringWithFormat:@"<head> <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" </head><span id=toplevel style=\"font-family: %@; font-size: %i\"><body>%@</body></span>", @"Helvetica Neue", fontSize, modifiedString];
+    
+    NSLog(@"%@", htmlToRender);
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     webview = [[WKWebView alloc] initWithFrame:CGRectMake(10, bottom, self.view.frame.size.width - 20, self.view.frame.size.height - bottom) configuration:config];
