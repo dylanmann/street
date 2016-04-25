@@ -82,7 +82,7 @@
     label.backgroundColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont fontWithName:@"Effra" size:24];
-    label.textColor = [UIColor whiteColor];
+    label.textColor = [UIColor blackColor];
     label.numberOfLines = 0;
     label.frame = CGRectMake(0, bottom, self.view.frame.size.width, 100);
     [label setText:[_article.title uppercaseString]];
@@ -156,7 +156,7 @@
     [plusButton setTitle:@"A" forState:UIControlStateNormal];
     plusButton.titleLabel.font = [UIFont systemFontOfSize:27 weight:0.5];
     [plusButton addTarget:self action:@selector(increaseTextSize) forControlEvents:UIControlEventTouchUpInside];
-    
+        
     scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [scrollView addSubview:imageview];
     [scrollView addSubview:label];
