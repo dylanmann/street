@@ -13,8 +13,6 @@
 
 @end
 
-//TODO: NEEDS A BACK BUTTON SO CAN EXIT SEARCH
-
 @implementation SearchViewController
 
 - (void)dismiss {
@@ -24,13 +22,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1];
+    
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     [close setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                    [UIFont fontWithName:@"Effra" size:12.0], NSFontAttributeName,
-                                   [UIColor blackColor], NSForegroundColorAttributeName,
+                                   [UIColor whiteColor], NSForegroundColorAttributeName,
                                    nil]
                          forState:UIControlStateNormal];
     [self.navigationItem setLeftBarButtonItem:close];
+    
+    UILabel *title = [[UILabel alloc] init];
+    title.text = @"SEARCH";
+    title.font = [UIFont fontWithName:@"Effra" size:24];
+    title.textColor = [UIColor whiteColor];
+    [title sizeToFit];
+    
+    title.numberOfLines = 1;
+    title.adjustsFontSizeToFitWidth=YES;
+    title.lineBreakMode = NSLineBreakByClipping;
+    
+    [self.navigationItem setTitleView:title];
+    
     
     [self.view setBackgroundColor: [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1]];
     
@@ -50,7 +65,9 @@
     NSString *htmlToRender = [NSString stringWithFormat: @"<head> <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" </head><span id=toplevel style=\"font-family: %@; font-size: 20\"><body><div>%@</div></body></span>", @"Helvetica Neue", script];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-    WKWebView *webview = [[WKWebView alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 20, self.view.frame.size.height) configuration:config];
+    WKWebView *webview = [[WKWebView alloc] initWithFrame:CGRectMake(5, 0, self.view.frame.size.width - 10, self.view.frame.size.height - 5) configuration:config];
+    [webview.scrollView setContentSize:self.view.frame.size];
+    webview.scrollView.scrollEnabled = NO;
     webview.navigationDelegate = self;
     [webview loadHTMLString:htmlToRender baseURL:NULL];
     webview.allowsBackForwardNavigationGestures = false;

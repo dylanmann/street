@@ -83,8 +83,6 @@
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		87FD95B51CCDE95500E2CB05 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = SOURCE_ROOT; };
 		87FD95B71CCDE96A00E2CB05 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = SOURCE_ROOT; };
-		87FD95B81CCDE99600E2CB05 /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewController.h; sourceTree = SOURCE_ROOT; };
-		87FD95B91CCDE9B700E2CB05 /* SearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewController.m; sourceTree = SOURCE_ROOT; };
 		BF26CECE1CCDC3E900B67808 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BF5599B31CBB0B4C000B565F /* MainArticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainArticleView.h; path = street/MainArticleView.h; sourceTree = SOURCE_ROOT; };
 		BF5599B41CBB0B4C000B565F /* MainArticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainArticleView.m; path = street/MainArticleView.m; sourceTree = SOURCE_ROOT; };
@@ -268,8 +266,6 @@
 				BFEDD4671C9B194700497922 /* ArticlePageViewController.m */,
 				87FD95B51CCDE95500E2CB05 /* SearchViewController.m */,
 				87FD95B71CCDE96A00E2CB05 /* SearchViewController.h */,
-				87FD95B81CCDE99600E2CB05 /* SearchResultsTableViewController.h */,
-				87FD95B91CCDE9B700E2CB05 /* SearchResultsTableViewController.m */,
 				BF9B148F1CA4F272007B512B /* PopupViewController.h */,
 				BF9B14901CA4F272007B512B /* PopupViewController.m */,
 				BFEDD4681C9B194700497922 /* ArticleViewController.h */,

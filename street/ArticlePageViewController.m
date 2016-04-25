@@ -50,7 +50,7 @@ int static startIndex = 0;
 
     UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStylePlain target:self action:@selector(search)];
     [search setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                   [UIFont fontWithName:@"Effra" size:12.0], NSFontAttributeName,
+                                   [UIFont fontWithName:@"Effra" size:14.0], NSFontAttributeName,
                                    [UIColor whiteColor], NSForegroundColorAttributeName,
                                    nil]
                          forState:UIControlStateNormal];
@@ -190,6 +190,8 @@ int static startIndex = 0;
     
     PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    nc.navigationBar.barTintColor = [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1];
     
     [self presentViewController:nc animated:YES completion:nil];
 }

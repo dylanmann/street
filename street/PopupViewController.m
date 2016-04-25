@@ -39,21 +39,24 @@
 
 - (void)dismiss {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
-    fontSize = 20;
+    fontSize = 15;
     
     //create and set the action of the close button
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     [close setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                         [UIFont fontWithName:@"Effra" size:12.0], NSFontAttributeName,
-                                        [UIColor blackColor], NSForegroundColorAttributeName,
+                                        [UIColor whiteColor], NSForegroundColorAttributeName,
                                         nil] 
                               forState:UIControlStateNormal];
     [self.navigationItem setLeftBarButtonItem:close];
@@ -79,7 +82,7 @@
     label.backgroundColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont fontWithName:@"Effra" size:24];
-    label.textColor = [UIColor blackColor];
+    label.textColor = [UIColor whiteColor];
     label.numberOfLines = 0;
     label.frame = CGRectMake(0, bottom, self.view.frame.size.width, 100);
     [label setText:[_article.title uppercaseString]];
@@ -88,6 +91,7 @@
     UILabel *title = [[UILabel alloc] init];
     title.text = label.text;
     title.font = [UIFont fontWithName:@"Effra" size:24];
+    title.textColor = [UIColor whiteColor];
     [title sizeToFit];
     
     title.numberOfLines = 1;
@@ -98,7 +102,6 @@
 
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     webview = [[WKWebView alloc] initWithFrame:CGRectMake(10, bottom, self.view.frame.size.width - 20, self.view.frame.size.height - bottom) configuration:config];
-    
     
     webview.navigationDelegate = self;
     webview.allowsBackForwardNavigationGestures = false;;
@@ -179,14 +182,14 @@
 - (void)increaseTextSize {
     NSValue *correctSize = [NSValue valueWithCGSize:scrollView.contentSize];
     [sizes setObject:correctSize forKey: [NSNumber numberWithInt:fontSize]];
-    fontSize = MIN(fontSize + 10, 40);
+    fontSize = MIN(fontSize + 5, 35);
     [self changeText];
 }
 
 - (void)decreaseTextSize {
     NSValue *correctSize = [NSValue valueWithCGSize:scrollView.contentSize];
     [sizes setObject:correctSize forKey: [NSNumber numberWithInt:fontSize]];
-    fontSize = MAX(fontSize - 10, 20);
+    fontSize = MAX(fontSize - 5, 15);
     [self changeText];
 }
 
