@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1];
     self.navigationController.navigationBar.translucent = YES;
     
     SWRevealViewController *revealViewController = self.revealViewController;

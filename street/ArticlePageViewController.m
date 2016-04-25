@@ -33,7 +33,7 @@ int static startIndex = 0;
     
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1];
 
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
@@ -156,7 +156,7 @@ int static startIndex = 0;
     
     // insert teal rectangle here
     UIView *tealBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/3 + 210, self.view.frame.size.width, self.view.frame.size.height/100)];
-    tealBar.backgroundColor = [UIColor colorWithRed:41.0/255.0 green:150.0/255.0 blue:178.0/255.0 alpha:1];
+    tealBar.backgroundColor = [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1];
 
     [avc.view addSubview:mainArticleView];
     [avc.view addSubview:tealBar];

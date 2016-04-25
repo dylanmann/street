@@ -17,6 +17,7 @@
 		5228E2321CA4C85D00E5707D /* Effra_Std_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5228E22E1CA4C85D00E5707D /* Effra_Std_Lt.ttf */; };
 		5228E2331CA4C85D00E5707D /* Effra_Std_Md.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5228E22F1CA4C85D00E5707D /* Effra_Std_Md.ttf */; };
 		5281C1231CB47D5200C7DD47 /* App_Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5281C1221CB47D5200C7DD47 /* App_Icons.xcassets */; };
+		528D5CE71CCD9EA40038ADE1 /* facebook_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 528D5CE61CCD9EA40038ADE1 /* facebook_button.png */; };
 		874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */; };
 		87712D971C8221390047B9BC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87712D961C8221390047B9BC /* AboutViewController.m */; };
 		87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A21C792B2F001D60A3 /* AppDelegate.m */; };
@@ -61,6 +62,7 @@
 		5228E22E1CA4C85D00E5707D /* Effra_Std_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Lt.ttf; sourceTree = SOURCE_ROOT; };
 		5228E22F1CA4C85D00E5707D /* Effra_Std_Md.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Md.ttf; sourceTree = SOURCE_ROOT; };
 		5281C1221CB47D5200C7DD47 /* App_Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App_Icons.xcassets; sourceTree = SOURCE_ROOT; };
+		528D5CE61CCD9EA40038ADE1 /* facebook_button.png */ = {isa = PBXFileReference; explicitFileType = image.png; path = facebook_button.png; sourceTree = SOURCE_ROOT; };
 		5CF087F45ECE0EBD1FAB5685 /* Pods-Street.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.debug.xcconfig"; sourceTree = "<group>"; };
 		676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.release.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.release.xcconfig"; sourceTree = "<group>"; };
 		874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Street/SWRevealViewController/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
@@ -172,6 +174,7 @@
 		01FB8670169E2D8B00A0A1A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				528D5CE61CCD9EA40038ADE1 /* facebook_button.png */,
 				BF8997B91CCD354100E279EB /* tweet_button.png */,
 				5209A6CC1CA7A2C4003D0343 /* logobutton.png */,
 				5228E22C1CA4C85D00E5707D /* Effra_Std_Bd.ttf */,
@@ -367,6 +370,7 @@
 				5209A6CD1CA7A2C4003D0343 /* logobutton.png in Resources */,
 				BF8997BA1CCD354100E279EB /* tweet_button.png in Resources */,
 				5228E2321CA4C85D00E5707D /* Effra_Std_Lt.ttf in Resources */,
+				528D5CE71CCD9EA40038ADE1 /* facebook_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
