@@ -26,6 +26,7 @@
 		87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B11C792B63001D60A3 /* reveal-icon.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
+		BF26CECF1CCDC3E900B67808 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF26CECE1CCDC3E900B67808 /* Social.framework */; };
 		BF5599B51CBB0B4C000B565F /* MainArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5599B41CBB0B4C000B565F /* MainArticleView.m */; };
 		BF5B5E041CA4B3C0004CBE14 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */; };
 		BF8997BA1CCD354100E279EB /* tweet_button.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8997B91CCD354100E279EB /* tweet_button.png */; };
@@ -79,6 +80,7 @@
 		87CFE7B11C792B63001D60A3 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon.png"; path = "Street/reveal-icon.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		BF26CECE1CCDC3E900B67808 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BF5599B31CBB0B4C000B565F /* MainArticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainArticleView.h; path = street/MainArticleView.h; sourceTree = SOURCE_ROOT; };
 		BF5599B41CBB0B4C000B565F /* MainArticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainArticleView.m; path = street/MainArticleView.m; sourceTree = SOURCE_ROOT; };
 		BF5B5E021CA4B3C0004CBE14 /* ThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbnailView.h; path = street/ThumbnailView.h; sourceTree = SOURCE_ROOT; };
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF26CECF1CCDC3E900B67808 /* Social.framework in Frameworks */,
 				BFFBB7761C83B459006A3983 /* WebKit.framework in Frameworks */,
 				01FB866A169E2D8B00A0A1A8 /* UIKit.framework in Frameworks */,
 				01FB866C169E2D8B00A0A1A8 /* Foundation.framework in Frameworks */,
@@ -148,6 +151,7 @@
 		01FB8668169E2D8B00A0A1A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF26CECE1CCDC3E900B67808 /* Social.framework */,
 				BFFBB7751C83B459006A3983 /* WebKit.framework */,
 				01FB8669169E2D8B00A0A1A8 /* UIKit.framework */,
 				01FB866B169E2D8B00A0A1A8 /* Foundation.framework */,
