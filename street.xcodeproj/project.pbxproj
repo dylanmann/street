@@ -26,6 +26,7 @@
 		87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B11C792B63001D60A3 /* reveal-icon.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
+		87F5B4E51CCE7B6900B17189 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 87F5B4E41CCE7B6900B17189 /* search.png */; };
 		87FD95B61CCDE95500E2CB05 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FD95B51CCDE95500E2CB05 /* SearchViewController.m */; };
 		BF26CECF1CCDC3E900B67808 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF26CECE1CCDC3E900B67808 /* Social.framework */; };
 		BF5599B51CBB0B4C000B565F /* MainArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5599B41CBB0B4C000B565F /* MainArticleView.m */; };
@@ -81,6 +82,7 @@
 		87CFE7B11C792B63001D60A3 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon.png"; path = "Street/reveal-icon.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		87F5B4E41CCE7B6900B17189 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = SOURCE_ROOT; };
 		87FD95B51CCDE95500E2CB05 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = SOURCE_ROOT; };
 		87FD95B71CCDE96A00E2CB05 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = SOURCE_ROOT; };
 		BF26CECE1CCDC3E900B67808 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -191,6 +193,7 @@
 				87CFE7A01C792A89001D60A3 /* street-Prefix.pch */,
 				87CFE7AD1C792B4F001D60A3 /* street-Info.plist */,
 				87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */,
+				87F5B4E41CCE7B6900B17189 /* search.png */,
 				87CFE7B11C792B63001D60A3 /* reveal-icon.png */,
 				87CFE7AF1C792B57001D60A3 /* main.m */,
 				4EE902371964A22200AA3B42 /* InfoPlist.strings */,
@@ -376,6 +379,7 @@
 				87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */,
 				5228E2311CA4C85D00E5707D /* Effra_Std_BdIt.ttf in Resources */,
 				87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */,
+				87F5B4E51CCE7B6900B17189 /* search.png in Resources */,
 				5209A6CD1CA7A2C4003D0343 /* logobutton.png in Resources */,
 				BF8997BA1CCD354100E279EB /* tweet_button.png in Resources */,
 				5228E2321CA4C85D00E5707D /* Effra_Std_Lt.ttf in Resources */,

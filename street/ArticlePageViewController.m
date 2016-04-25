@@ -48,13 +48,10 @@ int static startIndex = 0;
     [self.pageViewController didMoveToParentViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
 
-    UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStylePlain target:self action:@selector(search)];
-    [search setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                   [UIFont fontWithName:@"Effra" size:14.0], NSFontAttributeName,
-                                   [UIColor whiteColor], NSForegroundColorAttributeName,
-                                   nil]
-                         forState:UIControlStateNormal];
+    UIImage *image = [[UIImage imageNamed:@"search.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(search)];
     [self.navigationItem setRightBarButtonItem:search];
+    
     //handles the menu opening
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
