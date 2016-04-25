@@ -45,7 +45,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    fontSize = 40;
+    fontSize = 20;
     
     //create and set the action of the close button
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
@@ -95,7 +95,7 @@
 
     // html head tags to disable zooming, and also a span to enable fontsize changes.
     NSMutableString* htmlToRender = [[_article articleContent] mutableCopy];
-    htmlToRender = [NSMutableString stringWithFormat:@"<head <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" /><span id=toplevel style=\"font-family: %@; font-size: %i\"><body>%@</body></span>", @"Helvetica Neue", fontSize, htmlToRender];
+    htmlToRender = [NSMutableString stringWithFormat:@"<head> <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" </head><span id=toplevel style=\"font-family: %@; font-size: %i\"><body>%@</body></span>", @"Helvetica Neue", fontSize, htmlToRender];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     webview = [[WKWebView alloc] initWithFrame:CGRectMake(10, bottom, self.view.frame.size.width - 20, self.view.frame.size.height - bottom) configuration:config];
@@ -171,14 +171,14 @@
 - (void)increaseTextSize {
     NSValue *correctSize = [NSValue valueWithCGSize:scrollView.contentSize];
     [sizes setObject:correctSize forKey: [NSNumber numberWithInt:fontSize]];
-    fontSize = MIN(fontSize + 10, 90);
+    fontSize = MIN(fontSize + 10, 40);
     [self changeText];
 }
 
 - (void)decreaseTextSize {
     NSValue *correctSize = [NSValue valueWithCGSize:scrollView.contentSize];
     [sizes setObject:correctSize forKey: [NSNumber numberWithInt:fontSize]];
-    fontSize = MAX(fontSize - 10, 40);
+    fontSize = MAX(fontSize - 10, 20);
     [self changeText];
 }
 
