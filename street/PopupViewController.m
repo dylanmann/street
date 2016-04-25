@@ -175,6 +175,7 @@
     webview.scrollView.maximumZoomScale = 1.0;
     webview.scrollView.minimumZoomScale = 1.0;
     
+    
     // fix content size issue by adding observers for contentsize
     [webview.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
 }
@@ -218,7 +219,7 @@
 {
     if (object == webview.scrollView && [keyPath isEqual:@"contentSize"] && !manual) {
         CGSize size = scrollView.frame.size;
-        [scrollView setContentSize: CGRectMake(0, 0, size.width, bottom + webview.scrollView.contentSize.height).size];
+        [scrollView setContentSize: CGRectMake(0, 0, size.width, bottom + 100 + webview.scrollView.contentSize.height).size];
         [webview setFrame:CGRectMake(0, bottom, size.width, webview.scrollView.contentSize.height)];
         webview.scrollView.scrollEnabled = NO;
     }
