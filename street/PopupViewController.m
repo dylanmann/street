@@ -10,6 +10,7 @@
 #import "Article.h"
 #import <WebKit/WebKit.h>
 #import <Social/Social.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface PopupViewController ()
 
@@ -65,8 +66,9 @@
     manual = FALSE;
     
     //set up and load the article text, image, and title
-    image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_article.image]];
-    UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
+    UIImageView *imageview = [[UIImageView alloc] init];
+    [imageview setImageWithURL:_article.image];
+    
     imageview.frame = CGRectMake(10, 0, self.view.frame.size.width - 20, self.view.frame.size.height/2);
     imageview.contentMode = UIViewContentModeScaleAspectFit;
     
@@ -107,7 +109,7 @@
     
     htmlToRender = [NSMutableString stringWithFormat:@"<head> <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" </head><span id=toplevel style=\"font-family: %@; font-size: %i\"><body>%@</body></span>", @"Helvetica Neue", fontSize, modifiedString];
     
-    NSLog(@"%@", htmlToRender);
+    //NSLog(@"%@", htmlToRender);
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     webview = [[WKWebView alloc] initWithFrame:CGRectMake(10, bottom, self.view.frame.size.width - 20, self.view.frame.size.height - bottom) configuration:config];
