@@ -51,34 +51,46 @@
         
         _sharedInstance.sections = [[NSMutableDictionary alloc] init];
         
-        NSURL* baseURL = [NSURL URLWithString:@"http://www.34st.com/section/"];
+        NSURL *baseURL = [NSURL URLWithString:@"http://www.34st.com/section/"];
         
-        // TODO: make this asynchronous/multi-threaded
         // for each section, load the first page of articles
         for (NSString* section in _sharedInstance.sectionNames) {
             NSURL *sectionURL;
             
             if ([section isEqualToString:@"home"]) {
-                sectionURL = [NSURL URLWithString:@"http://www.34st.com/"];
-            } else {
-                sectionURL = [baseURL URLByAppendingPathComponent:section];
+                continue;
             }
             
-            NSMutableArray *articlesForSection = [_sharedInstance parseSection:sectionURL];
-            
-            [_sharedInstance.sections setObject:articlesForSection forKey:section];
+            sectionURL = [baseURL URLByAppendingPathComponent:section];
+
+            NSURLSession *session = [NSURLSession sharedSession];
+            [[session dataTaskWithURL:sectionURL
+                    completionHandler:^(NSData *data,
+                                        NSURLResponse *response,
+                                        NSError *error) {
+                        if (data) {
+                            NSMutableArray *articlesForSection = [_sharedInstance parseSection:data];
+                            [_sharedInstance.sections setObject:articlesForSection forKey:section];
+                        }
+            }] resume];
         }
         
+        NSData *homeData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://www.34st.com/"]];
+        NSMutableArray *articlesForSection = [_sharedInstance parseSection:homeData];
+        [_sharedInstance.sections setObject:articlesForSection forKey:@"home"];
     });
     return _sharedInstance;
 }
 
 // given a sectionURL, creates an Array of Articles
-- (NSMutableArray *)parseSection:(NSURL *)sectionURL {
+- (NSMutableArray *)parseSection:(NSData *)sectionURL {
     
     NSMutableArray *articles = [[NSMutableArray alloc] init];
     
-    NSString *sectionHTML = [NSString stringWithContentsOfURL:sectionURL encoding:NSUTF8StringEncoding error:NULL];
+//    NSString *sectionHTML = [NSString stringWithContentsOfURL:sectionURL encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSString *sectionHTML = [[NSString alloc] initWithData:sectionURL encoding:NSUTF8StringEncoding];
+    
     ONOXMLDocument* articlesDoc = [ONOXMLDocument HTMLDocumentWithString:sectionHTML encoding:NSUTF8StringEncoding error:NULL];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
