@@ -10,6 +10,7 @@
 #import "Article.h"
 #import <WebKit/WebKit.h>
 #import <Social/Social.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface PopupViewController ()
 
@@ -45,7 +46,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    fontSize = 40;
+    fontSize = 20;
     
     //create and set the action of the close button
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
@@ -65,8 +66,9 @@
     manual = FALSE;
     
     //set up and load the article text, image, and title
-    image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_article.image]];
-    UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
+    UIImageView *imageview = [[UIImageView alloc] init];
+    [imageview setImageWithURL:_article.image];
+    
     imageview.frame = CGRectMake(10, 0, self.view.frame.size.width - 20, self.view.frame.size.height/2);
     imageview.contentMode = UIViewContentModeScaleAspectFit;
     
@@ -93,31 +95,40 @@
     
     [self.navigationItem setTitleView:title];
 
-    // html head tags to disable zooming, and also a span to enable fontsize changes.
-    NSMutableString* htmlToRender = [[_article articleContent] mutableCopy];
-    htmlToRender = [NSMutableString stringWithFormat:@"<head <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" /><span id=toplevel style=\"font-family: %@; font-size: %i\"><body>%@</body></span>", @"Helvetica Neue", fontSize, htmlToRender];
-    
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     webview = [[WKWebView alloc] initWithFrame:CGRectMake(10, bottom, self.view.frame.size.width - 20, self.view.frame.size.height - bottom) configuration:config];
     
-    [webview loadHTMLString:htmlToRender baseURL:NULL];
+    
     webview.navigationDelegate = self;
     webview.allowsBackForwardNavigationGestures = false;;
     
-    
-//    //set up Facebook share link
-//    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-//    content.contentURL = _article.url;
-//    FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
-//    shareButton.shareContent = content;
-//    shareButton.center = CGPointMake(self.view.center.x - 83, self.view.center.y);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // html head tags to disable zooming, and also a span to enable fontsize changes.
+        NSMutableString* htmlToRender = [[_article articleContent] mutableCopy];
+        
+        NSString *htmlImmutable = [htmlToRender stringByReplacingOccurrencesOfString:@"f.jpg" withString:@"t.jpg"];
+        htmlImmutable = [htmlImmutable stringByReplacingOccurrencesOfString:@"f.JPG" withString:@"t.JPG"];
+        
+        NSString *yourString = htmlImmutable;
+        NSError *error = nil;
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"width: \\d+px;" options:NSRegularExpressionCaseInsensitive error:&error];
+        NSString *modifiedString = [regex stringByReplacingMatchesInString:yourString options:0 range:NSMakeRange(0, [yourString length]) withTemplate:@"width: 100%;"];
+        
+        
+        htmlToRender = [NSMutableString stringWithFormat:@"<head> <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi\" </head><span id=toplevel style=\"font-family: %@; font-size: %i\"><body>%@</body></span>", @"Helvetica Neue", fontSize, modifiedString];
+        
+        //NSLog(@"%@", htmlToRender);
+        
+        [webview loadHTMLString:htmlToRender baseURL:NULL];
+
+    });
     
     //set up Facebook share link
     UIButton *facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [facebookButton addTarget:self action:@selector(shareToFacebook) forControlEvents:UIControlEventTouchUpInside];
     [facebookButton setFrame:CGRectMake(self.view.center.x, self.view.center.y - 12, 85, 34)];
     [facebookButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [facebookButton setImage:[UIImage imageNamed:@"tweet_button"] forState:UIControlStateNormal];
+    [facebookButton setImage:[UIImage imageNamed:@"facebook_button"] forState:UIControlStateNormal];
     facebookButton.center = CGPointMake(self.view.center.x - 90, self.view.center.y);
     
     //set up Twitter share link
@@ -171,14 +182,14 @@
 - (void)increaseTextSize {
     NSValue *correctSize = [NSValue valueWithCGSize:scrollView.contentSize];
     [sizes setObject:correctSize forKey: [NSNumber numberWithInt:fontSize]];
-    fontSize = MIN(fontSize + 10, 90);
+    fontSize = MIN(fontSize + 10, 40);
     [self changeText];
 }
 
 - (void)decreaseTextSize {
     NSValue *correctSize = [NSValue valueWithCGSize:scrollView.contentSize];
     [sizes setObject:correctSize forKey: [NSNumber numberWithInt:fontSize]];
-    fontSize = MAX(fontSize - 10, 40);
+    fontSize = MAX(fontSize - 10, 20);
     [self changeText];
 }
 
@@ -225,7 +236,6 @@
     
     if ([url.host isEqualToString:@"www.34st.com"]) {
         Article* article  = [[[Article alloc] init] initWithURL: url];
-       // TODO: add random stuff (e.g. title, image, etc.) associated with the article
         PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
         [self presentViewController:nc animated:YES completion:nil];

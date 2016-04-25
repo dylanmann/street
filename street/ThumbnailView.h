@@ -14,6 +14,6 @@
 
 @property (nonatomic, strong) Article* article;
 
--(id)initWithFrame:(CGRect)frame title:(NSString *)title image:(NSURL*)image;
+-(id)initWithFrame:(CGRect)frame article:(Article *)article;
 
 @end

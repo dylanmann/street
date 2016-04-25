@@ -22,6 +22,8 @@
 @property NSString *abstract;
 @property NSURL *image;
 
+@property NSData *imageData;
+
 
 -(id)initWithURL:(NSURL *)url;
 

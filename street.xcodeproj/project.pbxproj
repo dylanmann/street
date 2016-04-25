@@ -17,6 +17,7 @@
 		5228E2321CA4C85D00E5707D /* Effra_Std_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5228E22E1CA4C85D00E5707D /* Effra_Std_Lt.ttf */; };
 		5228E2331CA4C85D00E5707D /* Effra_Std_Md.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5228E22F1CA4C85D00E5707D /* Effra_Std_Md.ttf */; };
 		5281C1231CB47D5200C7DD47 /* App_Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5281C1221CB47D5200C7DD47 /* App_Icons.xcassets */; };
+		528D5CE71CCD9EA40038ADE1 /* facebook_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 528D5CE61CCD9EA40038ADE1 /* facebook_button.png */; };
 		874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */; };
 		87712D971C8221390047B9BC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87712D961C8221390047B9BC /* AboutViewController.m */; };
 		87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A21C792B2F001D60A3 /* AppDelegate.m */; };
@@ -25,6 +26,9 @@
 		87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B11C792B63001D60A3 /* reveal-icon.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
+		87FD95B61CCDE95500E2CB05 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FD95B51CCDE95500E2CB05 /* SearchViewController.m */; };
+		87FD95BA1CCDE9B700E2CB05 /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FD95B91CCDE9B700E2CB05 /* SearchResultsTableViewController.m */; };
+		BF26CECF1CCDC3E900B67808 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF26CECE1CCDC3E900B67808 /* Social.framework */; };
 		BF5599B51CBB0B4C000B565F /* MainArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5599B41CBB0B4C000B565F /* MainArticleView.m */; };
 		BF5B5E041CA4B3C0004CBE14 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */; };
 		BF888E2A1CCD84D900B4163D /* SearchData.m in Sources */ = {isa = PBXBuildFile; fileRef = BF888E291CCD84D900B4163D /* SearchData.m */; };
@@ -62,6 +66,7 @@
 		5228E22E1CA4C85D00E5707D /* Effra_Std_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Lt.ttf; sourceTree = SOURCE_ROOT; };
 		5228E22F1CA4C85D00E5707D /* Effra_Std_Md.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Effra_Std_Md.ttf; sourceTree = SOURCE_ROOT; };
 		5281C1221CB47D5200C7DD47 /* App_Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App_Icons.xcassets; sourceTree = SOURCE_ROOT; };
+		528D5CE61CCD9EA40038ADE1 /* facebook_button.png */ = {isa = PBXFileReference; explicitFileType = image.png; path = facebook_button.png; sourceTree = SOURCE_ROOT; };
 		5CF087F45ECE0EBD1FAB5685 /* Pods-Street.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.debug.xcconfig"; sourceTree = "<group>"; };
 		676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.release.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.release.xcconfig"; sourceTree = "<group>"; };
 		874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Street/SWRevealViewController/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
@@ -78,6 +83,11 @@
 		87CFE7B11C792B63001D60A3 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon.png"; path = "Street/reveal-icon.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		87FD95B51CCDE95500E2CB05 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = SOURCE_ROOT; };
+		87FD95B71CCDE96A00E2CB05 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = SOURCE_ROOT; };
+		87FD95B81CCDE99600E2CB05 /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewController.h; sourceTree = SOURCE_ROOT; };
+		87FD95B91CCDE9B700E2CB05 /* SearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewController.m; sourceTree = SOURCE_ROOT; };
+		BF26CECE1CCDC3E900B67808 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BF5599B31CBB0B4C000B565F /* MainArticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainArticleView.h; path = street/MainArticleView.h; sourceTree = SOURCE_ROOT; };
 		BF5599B41CBB0B4C000B565F /* MainArticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainArticleView.m; path = street/MainArticleView.m; sourceTree = SOURCE_ROOT; };
 		BF5B5E021CA4B3C0004CBE14 /* ThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbnailView.h; path = street/ThumbnailView.h; sourceTree = SOURCE_ROOT; };
@@ -107,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF26CECF1CCDC3E900B67808 /* Social.framework in Frameworks */,
 				BFFBB7761C83B459006A3983 /* WebKit.framework in Frameworks */,
 				01FB866A169E2D8B00A0A1A8 /* UIKit.framework in Frameworks */,
 				01FB866C169E2D8B00A0A1A8 /* Foundation.framework in Frameworks */,
@@ -149,6 +160,7 @@
 		01FB8668169E2D8B00A0A1A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF26CECE1CCDC3E900B67808 /* Social.framework */,
 				BFFBB7751C83B459006A3983 /* WebKit.framework */,
 				01FB8669169E2D8B00A0A1A8 /* UIKit.framework */,
 				01FB866B169E2D8B00A0A1A8 /* Foundation.framework */,
@@ -175,6 +187,7 @@
 		01FB8670169E2D8B00A0A1A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				528D5CE61CCD9EA40038ADE1 /* facebook_button.png */,
 				BF8997B91CCD354100E279EB /* tweet_button.png */,
 				5209A6CC1CA7A2C4003D0343 /* logobutton.png */,
 				5228E22C1CA4C85D00E5707D /* Effra_Std_Bd.ttf */,
@@ -259,6 +272,10 @@
 			children = (
 				BFEDD4661C9B194700497922 /* ArticlePageViewController.h */,
 				BFEDD4671C9B194700497922 /* ArticlePageViewController.m */,
+				87FD95B51CCDE95500E2CB05 /* SearchViewController.m */,
+				87FD95B71CCDE96A00E2CB05 /* SearchViewController.h */,
+				87FD95B81CCDE99600E2CB05 /* SearchResultsTableViewController.h */,
+				87FD95B91CCDE9B700E2CB05 /* SearchResultsTableViewController.m */,
 				BF9B148F1CA4F272007B512B /* PopupViewController.h */,
 				BF9B14901CA4F272007B512B /* PopupViewController.m */,
 				BFEDD4681C9B194700497922 /* ArticleViewController.h */,
@@ -372,6 +389,7 @@
 				5209A6CD1CA7A2C4003D0343 /* logobutton.png in Resources */,
 				BF8997BA1CCD354100E279EB /* tweet_button.png in Resources */,
 				5228E2321CA4C85D00E5707D /* Effra_Std_Lt.ttf in Resources */,
+				528D5CE71CCD9EA40038ADE1 /* facebook_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFEDD46A1C9B194700497922 /* ArticlePageViewController.m in Sources */,
+				87FD95B61CCDE95500E2CB05 /* SearchViewController.m in Sources */,
 				BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */,
 				BFFBB7731C83AFBD006A3983 /* Article.m in Sources */,
 				BFEDD46B1C9B194700497922 /* ArticleViewController.m in Sources */,
