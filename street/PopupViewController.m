@@ -117,7 +117,7 @@
     [facebookButton addTarget:self action:@selector(shareToFacebook) forControlEvents:UIControlEventTouchUpInside];
     [facebookButton setFrame:CGRectMake(self.view.center.x, self.view.center.y - 12, 85, 34)];
     [facebookButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [facebookButton setImage:[UIImage imageNamed:@"tweet_button"] forState:UIControlStateNormal];
+    [facebookButton setImage:[UIImage imageNamed:@"facebook_button"] forState:UIControlStateNormal];
     facebookButton.center = CGPointMake(self.view.center.x - 90, self.view.center.y);
     
     //set up Twitter share link
