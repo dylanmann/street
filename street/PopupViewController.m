@@ -116,14 +116,6 @@
     webview.navigationDelegate = self;
     webview.allowsBackForwardNavigationGestures = false;;
     
-    
-//    //set up Facebook share link
-//    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-//    content.contentURL = _article.url;
-//    FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
-//    shareButton.shareContent = content;
-//    shareButton.center = CGPointMake(self.view.center.x - 83, self.view.center.y);
-    
     //set up Facebook share link
     UIButton *facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [facebookButton addTarget:self action:@selector(shareToFacebook) forControlEvents:UIControlEventTouchUpInside];

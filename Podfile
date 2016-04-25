@@ -6,6 +6,5 @@ platform :ios, '8.0'
 target 'Street' do
   pod 'Ono'
   pod 'AFNetworking', '~> 3.0'
-  pod 'FBSDKShareKit'
 end
 
