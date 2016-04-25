@@ -24,9 +24,8 @@
  http://www.34st.com/section/letter
  http://www.34st.com/section/features
  http://www.34st.com/section/tech
- */
 
-/*Home page
+ Home page
  http://www.34st.com/
 */
 

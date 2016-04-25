@@ -139,13 +139,13 @@ int static startIndex = 0;
     UIScrollView *scrollBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 3 * self.view.frame.size.height/4, self.view.frame.size.width, self.view.frame.size.height/4)];
     
     scrollBar.pagingEnabled = YES;
-    [scrollBar setContentSize:CGSizeMake(self.view.frame.size.width * MIN(6, ([articlesInSection count] - 1)) / 2, self.view.frame.size.height / 4)];
+    [scrollBar setContentSize:CGSizeMake(self.view.frame.size.width * MIN(14, ([articlesInSection count] - 1)) / 2, self.view.frame.size.height / 4)];
 
-    for (int i = 1; i < MIN([articlesInSection count], 7); i++) {
+    for (int i = 1; i < MIN([articlesInSection count], 15); i++) {
         Article *article = articlesInSection[i];
         
         int offset = (i - 1) * self.view.frame.size.width / 2;
-        ThumbnailView *thumbnail = [[ThumbnailView alloc] initWithFrame:CGRectMake(offset, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) title:article.title image:article.image];
+        ThumbnailView *thumbnail = [[ThumbnailView alloc] initWithFrame:CGRectMake(offset, 0, self.view.frame.size.width/2, self.view.frame.size.height/4) article:article];
         thumbnail.article = article;
 
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(presentArticle:)];

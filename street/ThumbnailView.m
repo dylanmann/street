@@ -7,11 +7,11 @@
 //  Each thumbnail image/title in the mini carousel at the bottom of the screen
 
 #import "ThumbnailView.h"
+#import "Article.h"
 
 @implementation ThumbnailView
 
--(id) initWithFrame:(CGRect)frame title:(NSString *)title image:(NSURL *)imageUrl
-{
+-(id) initWithFrame:(CGRect)frame article:(Article *)article {
     self = [self initWithFrame:frame];
     
     if(self = [super init]){
@@ -24,9 +24,9 @@
         label.numberOfLines = 0;
         label.frame = CGRectMake(5,self.frame.size.height/2 +5,self.frame.size.width -10,self.frame.size.height/2 -10);
         label.adjustsFontSizeToFitWidth = YES;
-        label.text = [title uppercaseString];
+        label.text = [article.title uppercaseString];
         
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:article.image]];
         
         UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
         imageview.frame = CGRectMake(5, 5, self.frame.size.width - 10, self.frame.size.height / 2 - 10);
