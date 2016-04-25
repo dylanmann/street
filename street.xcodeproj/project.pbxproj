@@ -26,6 +26,8 @@
 		87CFE7B31C792B63001D60A3 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B11C792B63001D60A3 /* reveal-icon.png */; };
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
+		87FD95B61CCDE95500E2CB05 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FD95B51CCDE95500E2CB05 /* SearchViewController.m */; };
+		87FD95BA1CCDE9B700E2CB05 /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FD95B91CCDE9B700E2CB05 /* SearchResultsTableViewController.m */; };
 		BF26CECF1CCDC3E900B67808 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF26CECE1CCDC3E900B67808 /* Social.framework */; };
 		BF5599B51CBB0B4C000B565F /* MainArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5599B41CBB0B4C000B565F /* MainArticleView.m */; };
 		BF5B5E041CA4B3C0004CBE14 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */; };
@@ -80,6 +82,10 @@
 		87CFE7B11C792B63001D60A3 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon.png"; path = "Street/reveal-icon.png"; sourceTree = SOURCE_ROOT; };
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		87FD95B51CCDE95500E2CB05 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = SOURCE_ROOT; };
+		87FD95B71CCDE96A00E2CB05 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = SOURCE_ROOT; };
+		87FD95B81CCDE99600E2CB05 /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewController.h; sourceTree = SOURCE_ROOT; };
+		87FD95B91CCDE9B700E2CB05 /* SearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewController.m; sourceTree = SOURCE_ROOT; };
 		BF26CECE1CCDC3E900B67808 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BF5599B31CBB0B4C000B565F /* MainArticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainArticleView.h; path = street/MainArticleView.h; sourceTree = SOURCE_ROOT; };
 		BF5599B41CBB0B4C000B565F /* MainArticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainArticleView.m; path = street/MainArticleView.m; sourceTree = SOURCE_ROOT; };
@@ -261,6 +267,10 @@
 			children = (
 				BFEDD4661C9B194700497922 /* ArticlePageViewController.h */,
 				BFEDD4671C9B194700497922 /* ArticlePageViewController.m */,
+				87FD95B51CCDE95500E2CB05 /* SearchViewController.m */,
+				87FD95B71CCDE96A00E2CB05 /* SearchViewController.h */,
+				87FD95B81CCDE99600E2CB05 /* SearchResultsTableViewController.h */,
+				87FD95B91CCDE9B700E2CB05 /* SearchResultsTableViewController.m */,
 				BF9B148F1CA4F272007B512B /* PopupViewController.h */,
 				BF9B14901CA4F272007B512B /* PopupViewController.m */,
 				BFEDD4681C9B194700497922 /* ArticleViewController.h */,
@@ -441,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFEDD46A1C9B194700497922 /* ArticlePageViewController.m in Sources */,
+				87FD95B61CCDE95500E2CB05 /* SearchViewController.m in Sources */,
 				BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */,
 				BFFBB7731C83AFBD006A3983 /* Article.m in Sources */,
 				BFEDD46B1C9B194700497922 /* ArticleViewController.m in Sources */,
@@ -449,6 +460,7 @@
 				87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */,
 				BF9B14911CA4F272007B512B /* PopupViewController.m in Sources */,
 				87712D971C8221390047B9BC /* AboutViewController.m in Sources */,
+				87FD95BA1CCDE9B700E2CB05 /* SearchResultsTableViewController.m in Sources */,
 				87CFE7B01C792B57001D60A3 /* main.m in Sources */,
 				87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */,
 				BF5B5E041CA4B3C0004CBE14 /* ThumbnailView.m in Sources */,

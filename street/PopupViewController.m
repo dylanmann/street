@@ -236,7 +236,6 @@
     
     if ([url.host isEqualToString:@"www.34st.com"]) {
         Article* article  = [[[Article alloc] init] initWithURL: url];
-       // TODO: add random stuff (e.g. title, image, etc.) associated with the article
         PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
         [self presentViewController:nc animated:YES completion:nil];
