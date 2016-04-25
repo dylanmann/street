@@ -8,6 +8,7 @@
 
 #import "ThumbnailView.h"
 #import "Article.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @implementation ThumbnailView
 
@@ -25,10 +26,9 @@
         label.frame = CGRectMake(5,self.frame.size.height/2 +5,self.frame.size.width -10,self.frame.size.height/2 -10);
         label.adjustsFontSizeToFitWidth = YES;
         label.text = [article.title uppercaseString];
-        
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:article.image]];
-        
-        UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
+
+        UIImageView *imageview = [[UIImageView alloc] init];
+        [imageview setImageWithURL:article.image];
         imageview.frame = CGRectMake(5, 5, self.frame.size.width - 10, self.frame.size.height / 2 - 10);
         imageview.contentMode = UIViewContentModeScaleAspectFit;
         
