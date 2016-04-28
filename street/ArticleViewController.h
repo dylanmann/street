@@ -14,6 +14,4 @@
 
 @property (nonatomic) int index;
 
-- (id)initWithArticle:(Article *)art;
-
 @end

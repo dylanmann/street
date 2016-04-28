@@ -2,7 +2,7 @@
 //  SearchViewController.h
 //  street
 //
-//  Created by Jenny Chen on 4/25/16.
+//  Created by Dylan Mann on 4/25/16.
 //  Copyright © 2016 CoDeveloper. All rights reserved.
 //
 

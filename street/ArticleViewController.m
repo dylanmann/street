@@ -13,31 +13,15 @@
 
 @end
 
+// basic view controller that exists to hold section content.  Know's it's index relative to the ArticlePageViewController
 @implementation ArticleViewController
 
+// called when initialized
 - (id)init {
-    
     if (self = [super init]) {
         self.index = 10;
     }
-    
     return self;
 }
-
-- (id)initWithArticle:(Article *)art {
-    
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
