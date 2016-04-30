@@ -251,7 +251,7 @@ Email sternlicht@34st.com to get in with Street. </string>
                                     <segue destination="5LO-oQ-zpe" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="bv8-zi-qTO"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="wordOnStreet" textLabel="TiB-Jq-TbK" style="IBUITableViewCellStyleDefault" id="b8A-1w-ktB" customClass="SWUITableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="word on the street" textLabel="TiB-Jq-TbK" style="IBUITableViewCellStyleDefault" id="b8A-1w-ktB" customClass="SWUITableViewCell">
                                 <rect key="frame" x="0.0" y="154" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b8A-1w-ktB" id="OCh-ZA-VYp">
@@ -335,7 +335,7 @@ Email sternlicht@34st.com to get in with Street. </string>
                                     <segue destination="5LO-oQ-zpe" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="zZU-7e-ioQ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="viceAndVirtue" textLabel="3Wa-QW-NKM" style="IBUITableViewCellStyleDefault" id="SS8-GW-Jxc" customClass="SWUITableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="vice and virtue" textLabel="3Wa-QW-NKM" style="IBUITableViewCellStyleDefault" id="SS8-GW-Jxc" customClass="SWUITableViewCell">
                                 <rect key="frame" x="0.0" y="330" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SS8-GW-Jxc" id="rq7-E0-6lR">

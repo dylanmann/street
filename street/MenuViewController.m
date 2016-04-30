@@ -22,7 +22,7 @@ NSArray *menuItems;
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    menuItems = @[@"home", @"about", @"highbrow", @"wordOnStreet", @"ego", @"music", @"film", @"viceAndVirtue", @"arts", @"lowbrow", @"letter", @"features", @"tech"];
+    menuItems = @[@"home", @"about", @"highbrow", @"word on the street", @"ego", @"music", @"film", @"vice and virtue", @"arts", @"lowbrow", @"letter", @"features", @"tech"];
     
 }
 
