@@ -4,7 +4,7 @@
 //
 //  Created by Jenny Chen on 2/20/16
 //  Copyright © 2016 CoDeveloper. All rights reserved.
-//  Handles displaying the menu after the button is pressed
+//  Handles displaying the menu after the hamburger button is pressed
 //
 
 #import "MenuViewController.h"
@@ -16,7 +16,7 @@
 @implementation MenuViewController
 NSArray *menuItems;
 
-
+//displays the menu; menuItems are the list of sections
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,7 +26,7 @@ NSArray *menuItems;
     
 }
 
-//when a section is pressed in the menu, switch the ArticlePageViewController to the right index
+//when a section is pressed in the menu, switch the ArticlePageViewController to the right index so that the right section is displayed
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
     SWUITableViewCell *senderCell = sender;
@@ -67,16 +67,20 @@ NSArray *menuItems;
     return 1;
 }
 
+//the number of sections in the menu
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return menuItems.count;
 }
 
+//displays each cell object; labels each cell with the corresponding menuItems section
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.textLabel.text = [CellIdentifier uppercaseString];
+    
     
     return cell;
 }

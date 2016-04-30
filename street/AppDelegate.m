@@ -11,6 +11,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //sets main storyboard for the app
     [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
     
     return YES;

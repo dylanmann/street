@@ -26,12 +26,14 @@
 
 @implementation ArticlePageViewController
 
+//controls which index and corresponding section screen is on
 int static startIndex = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 0, 375, 603);
     
+    //sets the navigation bar color to teal
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1];
@@ -39,6 +41,7 @@ int static startIndex = 0;
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
 
+    //ensures correct section and section title are displayed
     ArticleViewController *start = [self viewControllerAtIndex: startIndex];
     
     [self syncTitle: startIndex];
@@ -48,6 +51,7 @@ int static startIndex = 0;
     [self.pageViewController didMoveToParentViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
 
+    //search button
     UIImage *image = [[UIImage imageNamed:@"search.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(search)];
     [self.navigationItem setRightBarButtonItem:search];
@@ -62,14 +66,9 @@ int static startIndex = 0;
     }
 }
 
-
+//change the index that the controller should be set to
 + (void) changeStartIndex: (int) index {
     startIndex = index;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 //load the articleViewController before the current one
