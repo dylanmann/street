@@ -265,9 +265,13 @@
         PopupViewController *vc = [[PopupViewController alloc] initWithArticle:article];
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
         [self presentViewController:nc animated:YES completion:nil];
+    } else {
+        // open in Safari if link is clicked and is not from 34st
+        [[UIApplication sharedApplication] openURL: url];
     }
-    // open in Safari if link is clicked and is not from 34st
-    [[UIApplication sharedApplication] openURL: url];
+    
+    decisionHandler(WKNavigationActionPolicyCancel);
+    
 }
 
 // method called when twitter sharing button is clicked
