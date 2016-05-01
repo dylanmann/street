@@ -5,7 +5,7 @@
 //
 //  Created by Graham Mosley on 2/28/16.
 //  Copyright © 2016 Graham Mosley. All rights reserved.
-//  Retrieves 34st articles from website
+//  Retrieves 34st articles from website using xpath matching on individual article blocks
 
 #import <Foundation/Foundation.h>
 #import "ArticleData.h"
@@ -43,11 +43,10 @@
  
     static dispatch_once_t oncePredicate;
     
+    // built in singleton method for Objective-C
     dispatch_once(&oncePredicate, ^{
         _sharedInstance = [[self alloc] init];
-
         _sharedInstance.sectionNames = @[@"home", @"highbrow", @"word-on-the-street", @"ego", @"music", @"film", @"vice-and-virtue", @"arts", @"lowbrow", @"letter", @"features", @"tech"];
-        
         _sharedInstance.sections = [[NSMutableDictionary alloc] init];
         
         NSURL *baseURL = [NSURL URLWithString:@"http://www.34st.com/section/"];
@@ -62,6 +61,7 @@
             
             sectionURL = [baseURL URLByAppendingPathComponent:section];
 
+            // parse Sections asynchronously and store the results for later getting
             NSURLSession *session = [NSURLSession sharedSession];
             [[session dataTaskWithURL:sectionURL
                     completionHandler:^(NSData *data,
@@ -73,7 +73,7 @@
                         }
             }] resume];
         }
-        
+        // get homeData not asynchronously so that it loads immediately upon viewing
         NSData *homeData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://www.34st.com/"]];
         NSMutableArray *articlesForSection = [_sharedInstance parseSection:homeData];
         [_sharedInstance.sections setObject:articlesForSection forKey:@"home"];
@@ -86,36 +86,33 @@
     
     NSMutableArray *articles = [[NSMutableArray alloc] init];
     
-//    NSString *sectionHTML = [NSString stringWithContentsOfURL:sectionURL encoding:NSUTF8StringEncoding error:NULL];
-    
+    // get html from section webpage and create ONO doc for parsing
     NSString *sectionHTML = [[NSString alloc] initWithData:sectionURL encoding:NSUTF8StringEncoding];
-    
     ONOXMLDocument* articlesDoc = [ONOXMLDocument HTMLDocumentWithString:sectionHTML encoding:NSUTF8StringEncoding error:NULL];
     
+    // DateFormatter for parsing date
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"MM/dd/yy hh:mma";
     dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
     
-    // for each article, parse information
+    // for each article, parse information using xpath matching on each article display on each section page
     NSString *articlesXPath = @"//article[@class = 'standard hidden-xs']/div[@class = 'media']";
     [articlesDoc enumerateElementsWithXPath:articlesXPath usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
         
+        // get all the important article info using xpath
         NSString *title = [element firstChildWithXPath:@"./div/h4/a"].stringValue;
         NSURL *url = [NSURL URLWithString:[element firstChildWithXPath:@"./div/h4/a/@href"].stringValue];
-        
+
         NSString *dateString = [element firstChildWithXPath:@"./div/aside/p/span[2]"].stringValue;
         NSDate *date = [dateFormatter dateFromString:dateString];
         
         NSString *authorWithoutTrim = [element firstChildWithXPath:@"./div/aside/p/span[1]"].stringValue;
-        
         NSString *author = [authorWithoutTrim stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
         NSString *abstract = [element firstChildWithXPath:@"./div/p[not(contains(@class, \" \"))]"].stringValue;
-        
         NSURL *image = [NSURL URLWithString:[element firstChildWithXPath:@"./a/div/img/@src"].stringValue];
         
-        // TODO: parse subsection
-        
+        // initialize article object and add to articles array
         Article *article = [[Article alloc] initWithTitle:title url:url date:date author:author abstract:abstract image:image];
         [articles addObject:article];
     }];

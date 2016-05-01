@@ -11,12 +11,14 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
 @implementation ThumbnailView
-
+// initialization method specifying a frame and an article to init with
 -(id) initWithFrame:(CGRect)frame article:(Article *)article {
     self = [self initWithFrame:frame];
     
     if(self = [super init]){
         [self setBackgroundColor:[UIColor whiteColor]];
+        
+        // create label for article title
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
@@ -27,6 +29,7 @@
         label.adjustsFontSizeToFitWidth = YES;
         label.text = [article.title uppercaseString];
 
+        // create ImageView for article image
         UIImageView *imageview = [[UIImageView alloc] init];
         [imageview setImageWithURL:article.image];
         imageview.frame = CGRectMake(5, 5, self.frame.size.width - 10, self.frame.size.height / 2 - 10);

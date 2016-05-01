@@ -14,6 +14,7 @@
 
 @implementation HomeViewController
 
+// called when ViewController is presented.  Create UINavigation Bar and reveal button item
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -59,6 +60,8 @@
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
     // Call whatever function you need to visually restore
+    
+    [super applicationFinishedRestoringState];
 }
 
 @end
