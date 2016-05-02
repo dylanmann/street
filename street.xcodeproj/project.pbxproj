@@ -19,6 +19,7 @@
 		5281C1231CB47D5200C7DD47 /* App_Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5281C1221CB47D5200C7DD47 /* App_Icons.xcassets */; };
 		528D5CE71CCD9EA40038ADE1 /* facebook_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 528D5CE61CCD9EA40038ADE1 /* facebook_button.png */; };
 		874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */; };
+		8751ACBD1CD80E0C007241AC /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8751ACBC1CD80E0C007241AC /* SearchViewController.m */; };
 		87712D971C8221390047B9BC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87712D961C8221390047B9BC /* AboutViewController.m */; };
 		87CFE7A31C792B2F001D60A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A21C792B2F001D60A3 /* AppDelegate.m */; };
 		87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CFE7A71C792B3E001D60A3 /* MenuViewController.m */; };
@@ -27,7 +28,6 @@
 		87CFE7B61C792B80001D60A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */; };
 		87F211711C7A636C00E88C90 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F2116F1C7A636C00E88C90 /* MainStoryboard.storyboard */; };
 		87F5B4E51CCE7B6900B17189 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 87F5B4E41CCE7B6900B17189 /* search.png */; };
-		87FD95B61CCDE95500E2CB05 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FD95B51CCDE95500E2CB05 /* SearchViewController.m */; };
 		BF26CECF1CCDC3E900B67808 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF26CECE1CCDC3E900B67808 /* Social.framework */; };
 		BF5599B51CBB0B4C000B565F /* MainArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5599B41CBB0B4C000B565F /* MainArticleView.m */; };
 		BF5B5E041CA4B3C0004CBE14 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5B5E031CA4B3C0004CBE14 /* ThumbnailView.m */; };
@@ -69,6 +69,8 @@
 		5CF087F45ECE0EBD1FAB5685 /* Pods-Street.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.debug.xcconfig"; sourceTree = "<group>"; };
 		676F8FB3D1737B0FF0E1959F /* Pods-Street.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.release.xcconfig"; path = "Pods/Target Support Files/Pods-Street/Pods-Street.release.xcconfig"; sourceTree = "<group>"; };
 		874ABDB61C7AE1B300B767D4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Street/SWRevealViewController/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
+		8751ACBC1CD80E0C007241AC /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = street/SearchViewController.m; sourceTree = SOURCE_ROOT; };
+		8751ACBE1CD80E13007241AC /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = street/SearchViewController.h; sourceTree = SOURCE_ROOT; };
 		87712D931C8220B30047B9BC /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = street/AboutViewController.h; sourceTree = SOURCE_ROOT; };
 		87712D961C8221390047B9BC /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = street/AboutViewController.m; sourceTree = SOURCE_ROOT; };
 		8789094E1C7ADD0A00977837 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Street/SWRevealViewController/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
@@ -83,8 +85,6 @@
 		87CFE7B51C792B80001D60A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Street/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		87F211701C7A636C00E88C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Street/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		87F5B4E41CCE7B6900B17189 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = SOURCE_ROOT; };
-		87FD95B51CCDE95500E2CB05 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = SOURCE_ROOT; };
-		87FD95B71CCDE96A00E2CB05 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = SOURCE_ROOT; };
 		BF26CECE1CCDC3E900B67808 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BF5599B31CBB0B4C000B565F /* MainArticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainArticleView.h; path = street/MainArticleView.h; sourceTree = SOURCE_ROOT; };
 		BF5599B41CBB0B4C000B565F /* MainArticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainArticleView.m; path = street/MainArticleView.m; sourceTree = SOURCE_ROOT; };
@@ -267,8 +267,8 @@
 			children = (
 				BFEDD4661C9B194700497922 /* ArticlePageViewController.h */,
 				BFEDD4671C9B194700497922 /* ArticlePageViewController.m */,
-				87FD95B51CCDE95500E2CB05 /* SearchViewController.m */,
-				87FD95B71CCDE96A00E2CB05 /* SearchViewController.h */,
+				8751ACBC1CD80E0C007241AC /* SearchViewController.m */,
+				8751ACBE1CD80E13007241AC /* SearchViewController.h */,
 				BF9B148F1CA4F272007B512B /* PopupViewController.h */,
 				BF9B14901CA4F272007B512B /* PopupViewController.m */,
 				BFEDD4681C9B194700497922 /* ArticleViewController.h */,
@@ -450,11 +450,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFEDD46A1C9B194700497922 /* ArticlePageViewController.m in Sources */,
-				87FD95B61CCDE95500E2CB05 /* SearchViewController.m in Sources */,
 				BFFBB7741C83AFBD006A3983 /* ArticleData.m in Sources */,
 				BFFBB7731C83AFBD006A3983 /* Article.m in Sources */,
 				BFEDD46B1C9B194700497922 /* ArticleViewController.m in Sources */,
 				BF5599B51CBB0B4C000B565F /* MainArticleView.m in Sources */,
+				8751ACBD1CD80E0C007241AC /* SearchViewController.m in Sources */,
 				874ABDB71C7AE1B300B767D4 /* SWRevealViewController.m in Sources */,
 				87CFE7AB1C792B3F001D60A3 /* MenuViewController.m in Sources */,
 				BF9B14911CA4F272007B512B /* PopupViewController.m in Sources */,
