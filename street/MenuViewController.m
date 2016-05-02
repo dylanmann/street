@@ -16,12 +16,13 @@
 @implementation MenuViewController
 NSArray *menuItems;
 
-//displays the menu; menuItems are the list of sections
+//displays the menu
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    //list of sections in 34st.com
     menuItems = @[@"home", @"about", @"highbrow", @"word on the street", @"ego", @"music", @"film", @"vice and virtue", @"arts", @"lowbrow", @"letter", @"features", @"tech"];
     
 }
@@ -29,7 +30,7 @@ NSArray *menuItems;
 //when a section is pressed in the menu, switch the ArticlePageViewController to the right index so that the right section is displayed
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
-    SWUITableViewCell *senderCell = sender;
+    UITableViewCell *senderCell = sender;
     NSString *label = senderCell.textLabel.text;
     
     if ([label  isEqual: @"HOME"]) {
@@ -62,23 +63,25 @@ NSArray *menuItems;
 
 #pragma mark - Table view data source
 
+//only one section in the tableview
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
-//the number of sections in the menu
+//the number of rows in the menu is the same as the number of sections
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return menuItems.count;
 }
 
-//displays each cell object; labels each cell with the corresponding menuItems section
+//displays each cell object in the table
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    //labels each cell with the corresponding correct menuItems section
     cell.textLabel.text = [CellIdentifier uppercaseString];
     
     

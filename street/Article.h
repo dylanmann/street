@@ -4,7 +4,7 @@
 //
 //  Created by Graham Mosley on 2/28/16.
 //  Copyright © 2016 Graham Mosley. All rights reserved.
-//
+//  Interface for an article object
 
 #ifndef Article_h
 #define Article_h
@@ -13,8 +13,6 @@
 
 // this is deprecated, use the articleContent method instead
 @property NSString* articleHTML;
-
-// TODO: add properties for section and subsection
 @property NSString *title;
 @property NSURL *url;
 @property NSDate *date;
@@ -24,7 +22,7 @@
 
 @property NSData *imageData;
 
-
+// Use this to initialize an article through URL
 -(id)initWithURL:(NSURL *)url;
 
 // Use this to create an article

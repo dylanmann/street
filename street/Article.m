@@ -16,6 +16,7 @@
 
 @synthesize articleHTML;
 
+//initialize an Article through the URL
 -(id) initWithURL:(NSURL *)url {
     if( self = [super init] )
     {
@@ -52,6 +53,7 @@
     return self;
 }
 
+//initialize an article through its title, date, author, abstract, and image
 -(id)initWithTitle:(NSString *)title url:(NSURL *)url date:(NSDate *)date author:(NSString *)author abstract:(NSString *)abstract image:(NSURL *)image {
     
     if(self = [super init]){
@@ -66,6 +68,7 @@
     return self;
 }
 
+//parse for the article content/HTML
 -(NSString*) articleContent {
     if (!articleHTML) {
         NSString *html = [NSString stringWithContentsOfURL:_url encoding:NSUTF8StringEncoding error:NULL];

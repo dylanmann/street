@@ -5,7 +5,6 @@
 //  Created by Dylan Mann on 4/25/16.
 //  Copyright © 2016 CoDeveloper. All rights reserved.
 //  Uses code from Jason Hoffman
-//
 
 #import "SearchViewController.h"
 

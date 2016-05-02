@@ -18,7 +18,7 @@
 
 @implementation AboutViewController
 
-//sets navigation bar to teal; initializes menu
+//called to display the view controller - sets navigation bar to teal and initializes menu
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -4,7 +4,7 @@
 //
 //  Created by Graham Mosley on 2/28/16.
 //  Copyright © 2016 Graham Mosley. All rights reserved.
-//
+//  Interface for retrieving articles
 
 #ifndef ArticleData_h
 #define ArticleData_h

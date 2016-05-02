@@ -4,7 +4,7 @@
 //
 //  Created by Graham Mosley on 4/10/16.
 //  Copyright © 2016 CoDeveloper. All rights reserved.
-//
+//  Interface 
 
 #import <UIKit/UIKit.h>
 @class Article;

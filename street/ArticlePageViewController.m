@@ -29,6 +29,7 @@
 //controls which index and corresponding section screen is on
 int static startIndex = 0;
 
+//loads the main screen with the main article and thumbnails
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 0, 375, 603);

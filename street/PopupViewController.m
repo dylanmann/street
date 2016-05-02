@@ -48,13 +48,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // initialize navaigation bar as turquise
+    // initialize navaigation bar as turquoise
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:56.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    //set initial font size
     fontSize = 15;
     
     //create and set the action of the close button
