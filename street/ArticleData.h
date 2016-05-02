@@ -15,8 +15,10 @@
 
 @property NSArray* sectionNames;
 
+// invoke this method to get singleton instance
 + (ArticleData*)sharedInstance;
 
+// return NSArray of articles for given sectionName
 - (NSArray*)articlesForSection:(NSString *)sectionName;
 
 @end

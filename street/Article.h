@@ -11,7 +11,7 @@
 
 @interface Article : NSObject
 
-// this is deprecated, use the articleContent method instead
+// Article properties
 @property NSString* articleHTML;
 @property NSString *title;
 @property NSURL *url;
