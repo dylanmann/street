@@ -23,5 +23,4 @@
 
 @end
 
-
 #endif /* ArticleData_h */

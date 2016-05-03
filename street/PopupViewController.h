@@ -13,6 +13,7 @@
 
 @interface PopupViewController : UIViewController <WKNavigationDelegate>
 
+// initialization method to create controller with an article
 -(id)initWithArticle:(Article *)article;
 
 @end

@@ -11,7 +11,6 @@
 
 @interface ThumbnailView : UIScrollView
 
-
 @property (nonatomic, strong) Article* article;
 
 // initialization method specifying a frame and an article to init with

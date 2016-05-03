@@ -81,9 +81,9 @@ NSArray *menuItems;
     
     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     //labels each cell with the corresponding correct menuItems section
     cell.textLabel.text = [CellIdentifier uppercaseString];
-    
     
     return cell;
 }

@@ -73,6 +73,7 @@
                         }
             }] resume];
         }
+        
         // get homeData not asynchronously so that it loads immediately upon viewing
         NSData *homeData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://www.34st.com/"]];
         NSMutableArray *articlesForSection = [_sharedInstance parseSection:homeData];

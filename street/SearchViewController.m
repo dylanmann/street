@@ -4,7 +4,7 @@
 //
 //  Created by Dylan Mann on 4/25/16.
 //  Copyright © 2016 CoDeveloper. All rights reserved.
-//  Uses code from Jason Hoffman
+//  This is the View Controller that handles search within the app and is shown whenever the search button is pressed from the home page
 
 #import "SearchViewController.h"
 
@@ -12,7 +12,6 @@
 
 @end
 
-// This is the View Controller that handles search within the app and is shown whenever the search button is pressed from the home page
 @implementation SearchViewController
 
 //method called when close button is clicked
